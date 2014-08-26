@@ -1,0 +1,11 @@
+OBJS = ejemplo.tex
+
+CC = pdflatex
+
+TARGET = ejemplo.pdf
+
+all: $(TARGET) $(OBJS)
+	$(CC) $(OBJS)
+
+clean:
+	rm -r *.log *.aux *.pdf #*.gz

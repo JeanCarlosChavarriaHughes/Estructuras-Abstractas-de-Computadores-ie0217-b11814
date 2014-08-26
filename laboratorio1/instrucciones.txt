@@ -1,0 +1,11 @@
+Investigue como compilar el archivo para generar como salida el
+archivo de extensión .pdf
+
+Para eso se debe abrir una terminal y ejecutar el comando
+
+pdflatex
+
+dentro del directorio donde esta el archivo fuente, generalmente
+es de extensio .tex
+
+

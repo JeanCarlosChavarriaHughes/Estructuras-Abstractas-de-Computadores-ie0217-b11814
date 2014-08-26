@@ -1,0 +1,164 @@
+\documentclass{article}
+% s e l e c c i o n a e l t i p o de documento
+\usepackage[spanish]{babel}
+%
+\usepackage[T1]{fontenc}
+\usepackage[latin1]{inputenc}
+\usepackage{graphicx}
+\begin{document}
+% i n i c i o d e l cuerpo d e l documento
+\title{Laboratorio 1}
+\author{Jean Carlos Chavarr\' ia Hughes B11814}
+\maketitle
+% t i t u l o d e l documento
+\begin{abstract}
+Laboratorio 1 de el curso IE 0217.
+\end{abstract}
+\section{Introducci\' on}
+Este documento corresponde al primer reporte de laboratorio del curso IE0217, en el cual se trabaj\' o con distintas herramientas de desarrollo de software, como \textbf{LaTeX}, \textbf{makefile} y \textbf{git}. 
+
+\section{Comentarios Importantes}
+
+\subsection*{LaTeX}
+
+La primera parte del laboratorio se enfocaba en el uso de la herramienta \textbf{LaTeX}, la cual es un editor de texto que funciona de manera muy diferente a los editores m\' as comerciales como \textit{Microsoft Word}, esto debido a que en esta herramienta, el texto se escribe programando las cadenas de caracteres, y adem\' as se debe programar el tipo de documento que se est\' a redactando, el insertar im\' agenes, cuadros, ecuaciones, entre otros.
+
+\bigskip
+
+Al comienzo puede resultar un poco dificil acostumbrarse al uso de una herramienta de este tipo, en tanto que muy probablemente se est\' a acostumbrado a obtener un documento tal y como se observa en pantalla. Sin embargo con un poco de practica, se pueden obtener resultados realmente admirable que muy dificilmente se van a obtener en otras aplicaciones. 
+
+\bigskip
+
+Esta parte de laboratorio fue muy sencilla de realizar ya que en ocaciones anteriores tuve la oportunidad de utilizar \textbf{LaTeX}, para otros documentos y reportes.
+
+\subsection*{makefile}
+
+\textbf{Makefile} es una herramienta realmente \' util y necesaria si se est\' a trabajando con desarrollo de software y se tienen muchas fuentes, o dependencias, donde muchas puede ser un n\' umero mayor a cinco. 
+
+\bigskip
+
+Esta herramienta permite automatizar la compilaci\' on de grandes proyectos pues en realidad funciona como un macro en donde se programa el orden de los ficheros que deben ser compilados y los compiladores que deben ser ejecutados, lo cual puede ser la parte m\' as complicada de la tarea. Sin embargo, una vez hecho esto, la compilaci\' on del proyecto se resume simplemente a la ejecuci\' on del comando:
+
+\begin{verbatim}
+makefile
+\end{verbatim}
+
+Adem\' as, si desea eliminar ficheros innesesarios que se crean despu\' es de la 
+compilaci\' on, simplemente es de ejecutar el comando:
+
+\begin{verbatim}
+make clean
+\end{verbatim}
+
+
+
+Resulta importante leer la documentaci\' on de una herramienta como \textbf{makefile} debido a que existen muchas reglas de sintaxis dif\' iciles de intuir como en otros lenguages m\' as vers\' atiles.\\
+
+Por ejemplo, uno de los problemas que experiment\' e fue erroes de espacio, los cuales al comienzo pens\' e que era un error de sintaxis, pero luego me enter\' e de que los espacios en blanco no es lo mismo que una tabulaci\' on. \textit{Bastante tieso, en este sentido}.
+
+\subsection*{git}
+
+Finalmente, la herramienta de desarrollo para trabajar en equipo o con diferentes ordenadores, \textbf{git}. Es una herramienta sumamente poderosa, que hasta al famoso \textit{Dropbox} no tiene nada que envidiar. Permite crear elementos llamados repositorios, los cuales consisten como en una carpeta almacenada dentro del servidor principal de git, y al cual se le pueden modificar los ficheros por una o varias personas, dependiendo de los permisos y otros aspectos.
+
+\bigskip
+
+En t\' erminos generales, la herramienta permite trabajar de manera remota, sobre un mismo proyecto, varios desarrolladores al mismo tiempo, mediante funciones como el \textit{git add}, el \textit{git commit} y el \textit{git push}, se actualizan archivos y carpetas dentro del repositorio.
+
+\bigskip
+
+Existen conceptos que resultan mucho m\' as f\' aciles de comprender al sentarse y hacer un par de l\' ineas de comandos, pero para mencionar un poco el funcionamiento:
+
+\begin{itemize}
+\item Crear un repositorio. Se crea una carpeta en el disco duro local, y se ejecuta el comando:
+\begin{verbatim}
+git init
+\end{verbatim}
+
+\item Agregar archivos al repositorio temporal.
+\begin{verbatim}
+git add nombre_del_archivo
+\end{verbatim}
+
+\item Agregar modificaciones al \' indice del repositorio:
+\begin{verbatim}
+git commit -a
+\end{verbatim}
+
+\item Actualizar el repositorio definitivamente.
+\begin{verbatim}
+git push
+\end{verbatim}
+
+\item Deshacer un cambio hecho en git add.
+\begin{verbatim}
+git chekout
+\end{verbatim}
+
+Estos fueron los comando m\' as b\' asicos. Hay muchos otros que permiten explotar la herramienta como un verdadero desarrollador. Y cabe destacar que es una herramienta multiplataforma, no solo funciona en distribuciones del sistema operativo \textit{Linux}, aunque talves no sea necesario expandir esta idea.
+\end{itemize}
+
+\subsection*{Openssh-server}
+Esta \' ultima secci\' on tiene que ver con el inicio de sesi\' on en una computadora distita.
+Resulta una operaci\' on bastante importante pero al mismo tiempo delicada pues puede ser v\' ictima de alg\' un individuo mal intensionado.
+
+\bigskip
+
+El paso principal es instalar la aplicaci\' on \textbf{openssh-server}, luego se debe realizar el comando:
+\begin{verbatim}
+ssh user@IP_adress
+\end{verbatim}
+Posteriormente, va a solicitar la contrase\~ na, y una vez digitada, se puede navegar por los directorios de la computadora de manera remota. \\
+Finalmente para salir de la aplicac\' on se ejecuta el comando:
+\begin{verbatim}
+exit.
+\end{verbatim}
+
+\section{Respuesta a Preguntas}
+\textbf{Investigue como compilar el archivo para generar como salida el archivo de extensi\' on .pdf}
+
+Hay uan manera muy sencilla en una terminal de linux. Primero se debe tener instalado la distribucion correcta de latex, luego en el directorio donde se encuentra el documento fuente, generalmente un \textit{.tex}, se ejecuta el comando: 
+
+\begin{verbatim}
+pdflatex ejemplo.tex
+\end{verbatim}
+
+Finalmente se hace el comando
+
+\begin{verbatim}
+evince ejemplo.pdf
+\end{verbatim}
+
+\textbf{Qu\' e hace el comando branch, Y las opciones d. Qu\' e hace la opci\' on D y porqu\' e se debe tener mucho cuidado.}
+
+En git se tiene el concepto de \textit{branch}, o rama, que es b\' asicamente un puntero sencillo que apunta a uno de los \textit{commits}. 
+Por defecto, se denomina \textit{master} y cada vez que se realiza un nuevo \textit{commit}, se actualiza el puntero a apuntar el \' ultimo \textit{commit}.\\
+
+Tal como lo menciona el manual de git, la opci\' on \textbf{-d} se encarga de 
+eliminar un \textit{branch}, pero antes verifica si se encuentra completamente mezclado en su rama de subida. En cambio, el comando \textbf{-D}, no verifica el estado, si ya est\' a mezclado o no, simplemente lo elimina.\\
+
+\textbf{Qu\' e hace la l\' inea: git checkout master.}
+
+Esta linea de comando se encarga de regresar el \textit{master branch}.
+En general, el comando \textit{checkout} se encarga de deseleccionar \textit{commits, branches and files}.
+
+\textbf{Qu\' e hace la l\' inea: git commit -amend -reset-author}.
+Esta linea b\' asicamente se encarga de evitar cometer errores con respecto al autor o el contacto utilizado al realizar un \textit{commit}, aunque en general lo que hace es reestablecer el nombre de usuario y el correo, como se puede deducir de la palabra \textit{amend}, tratar de rectificar un error.
+
+\textbf{C\' omo recuper\' o el trabajo borrado en el repositorio de Prueba 1}
+
+Si por accidente se elimin\' o un documento o archivo en el directorio, se puede tratar de restaurar mediante el uso del comando: 
+\begin{verbatim}
+git checkout --nombre_archivo.txt
+\end{verbatim}
+donde nombre de archivo representa el nombre del fichero eliminado.
+
+%%
+%%\textbf{¿Porqu\' e en la Prueba 2, el %%primer git status no muestra los %%cambios hechos por su compañero?}
+%%
+%%\textbf{¿C\' omo recupera el trabajo del %%repositorio de su compañero?}
+%%
+
+\textbf{\' Ultima parte del laboratorio}
+Las cuatro partes se realizaron efectivamente, se cre\' o una cuenta en LDAP, se agrego el \textit{ssh-key} a la cuenta, se inicializ\' o el nuevo repositorio \textit{ie-0217}.
+
+\end{document}
