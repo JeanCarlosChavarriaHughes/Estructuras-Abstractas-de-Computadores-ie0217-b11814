@@ -1,0 +1,22 @@
+Comentario1
+una manera de agregar un path al path del sistema es mediante
+el comando 'PATH=.:$PATH'
+
+PATH=.:/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games
+
+
+Comentario2
+La pregunta relacionada con return 0 y return 1, se puede tratar como
+una convencion, esto debido a que si se retira el return 0, el programa
+compila igual de bien y se ejecuta igual de bien.
+
+Comentario3
+Pero es una tecnica de los programadores para que otros programadores
+puedan entender mejor el cogido y tambien tomar desiciones en base al return dado por la funcion int main(void)
+
+Comentario4
+El probleam que me surgio con el makefile es el siguiente.
+Estaba ejecutandolo pero me tiraba errores, decia que el archivo o directorio <-r> no existia, tambien con el <-o> y el -c.
+
+Esto era debido a que al realizar copiar y pegar, el guion se copiaba como un largo diferente al que se necesitaba.
+

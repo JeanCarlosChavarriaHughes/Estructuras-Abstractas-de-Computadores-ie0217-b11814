@@ -1,0 +1,65 @@
+\documentclass{article}
+% s e l e c c i o n a e l t i p o de documento
+\usepackage[spanish]{babel}
+%
+\usepackage[T1]{fontenc}
+\usepackage[latin1]{inputenc}
+\usepackage{graphicx}
+\begin{document}
+% i n i c i o d e l cuerpo d e l documento
+\title{Laboratorio 1}
+\author{Jean Carlos Chavarr\' ia Hughes B11814}
+\maketitle
+% t i t u l o d e l documento
+\begin{abstract}
+Laboratorio 2 de el curso IE 0217.
+\end{abstract}
+\section{Introducci\' on}
+Este documento corresponde al reporte de segundo laboratorio del curso IE0217, en el cual se trabaj\' o con distintas librer\' ias de C++, tambien se practic\' o m\' as con \textbf{makefiles} y adem\' as se trabaj\' o con \textbf{doxygen}.
+
+\section{Comentarios Importantes}
+
+\subsection*{Librar\' ias}
+
+La primera parte del laboratorio se enfoc\' o en el uso de las librer\' ias y como compilarlas y ejecutarlas. Se trabaj\' o con el compilador \textbf{g++} y las banderas \textbf{-o} y \textbf{-c}. 
+
+\bigskip
+
+\begin{enumerate}
+\item  Porqu\' e se llama el programa de esta manera y no simplemente digitando hola.
+\item  Qu\' e debe hacerse para poder correrlo escribiendo simplemente hola.
+\item  Porqu\' e el devolver un 0 es signo de ejecuci\' on correcta y un valor distinto indica una condici\' on de error.
+
+\end{enumerate}
+
+\subsection*{Soluci\' on}
+
+\begin{enumerate}
+\item Sucede porque el directorio actual no se encuentra en el \textbf{PATH}.
+\item Se deberia agregar al \textbf{PATH} del siistema, pero por seguridad no est\' a, a diferencia de \textit{Windows}. Una manera de hacerlo es con el comando: 
+\begin{verbatim}
+PATH=.:$PATH:.
+\end{verbatim}
+\item En esta pregunta, el devolver un cero funciona como s\' imbolo de una correcta ejecuci
+' on, meramente por convenci\' on, ya que en realidad el programa compila y se ejecuta de manera correcta, con sea lo que sea que tenga el \textit{return}. Se hizo una prueba donde se elimin\' o el \begin{verbatim}
+return 0
+\end{verbatim}
+y el programa funci\' o correctamente.
+\end{enumerate}
+
+\subsection*{Makefile}
+
+Se debe tener especial cuidado a la hora de copiar el texto de \textbf{makefile}, esto debido a que algunos caracteres se copian como si fueran otros y adem\' as que se incluyen espacios extras donde no deberian existir.
+
+\bigskip
+
+El probleam que me surgi\' o con el makefile fue que estaba ejecutandolo pero me presentaba errores, debido a que \textit{ el archivo o directorio <-r> no exist\' ia, tambi\' en con el <-o> y el -c}.
+
+Esto era debido a que al realizar copiar y pegar, el gui\' on se copiaba como un gui\' on largo, diferente al que se necesitaba y fue un error muy dif\' icil de observar.
+
+
+\subsection*{Doxygen}
+
+
+
+\end{document}
