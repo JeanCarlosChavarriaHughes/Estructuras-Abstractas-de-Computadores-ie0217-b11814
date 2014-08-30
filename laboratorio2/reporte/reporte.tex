@@ -59,7 +59,20 @@ Esto era debido a que al realizar copiar y pegar, el gui\' on se copiaba como un
 
 
 \subsection*{Doxygen}
-
+Tal como se explica en la gu\' ia del laboratorio, \textbf{Doxygen} es una herramienta generadora de documentaci\' on que soporta m\' ultiples lenguajes de programaci \'on.\\
+\bigskip
+Algunos de los comandos m\' as importantes para mencionar son:
+\begin{verbatim}
+doxywizard ejemplo.cpp
+\end{verbatim}
+La l\' inea anterior se encarga de generar el documento fuente para la compilaci\' on del doxygen, para lo cual se permite utilizar la interfaz gr\' afica. Sin embargo tambien es posible configurar sin interfaz gr\' afica. Este documento generalmente se gestiona con una extensi\' on \textbf{.cnf}.\\
+\bigskip
+\begin{verbatim}
+doxygen doc.cnf
+\end{verbatim}
+En este caso, el fichero \textit{doc.cnf} fue el nombre que se le dio al archivo de configuraci\' on. Y solamente falta generar los manuales, para lo cual se ejecuta el comando anterior.\\
+\bigskip
+Todos estos pasos fueron automatizados mediante el uso del archivo \textbf{makefile}, como se puede observar en la carpeta \textit{parte3}.
 
 
 \end{document}
