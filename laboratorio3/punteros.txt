@@ -1,0 +1,9 @@
+Con respecto a los punteros, 
+
+&: obtiene la direccion de un puntero
+*: obtiene el contenido de un puntero
+
+
+Como obtiene la cantidad de memoria que esta usando un programa.
+Como obtiene la duracion de ejecucion de un programa en C.
+

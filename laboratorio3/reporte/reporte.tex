@@ -1,0 +1,117 @@
+\documentclass{article}
+% s e l e c c i o n a e l t i p o de documento
+\usepackage[spanish]{babel}
+%
+\usepackage[T1]{fontenc}
+\usepackage[latin1]{inputenc}
+\usepackage{graphicx}
+\usepackage{listing}
+\begin{document}
+% i n i c i o d e l cuerpo d e l documento
+\title{Laboratorio 2}
+\author{Jean Carlos Chavarr\' ia Hughes B11814}
+\maketitle
+% t i t u l o d e l documento
+\begin{abstract}
+Laboratorio 2 de el curso IE 0217.
+\end{abstract}
+\section{Introducci\' on}
+Este documento corresponde al reporte del tercer laboratorio del curso IE0217, en el cual se trabaj\' o con el concepto de punteros. Para lo cual se realizaron varias practicas donde se utilizaron punteros a punteros, punteros a funciones y punteros a arreglos.
+
+\section{Comentarios Importantes}
+
+\subsection*{Punteros}
+\begin{itemize}
+\item \textbf{Qu\' e pasa cuando se pasa una variable directamente a una funci\' on y trata de modificarse su valor?}\\
+
+Cuando se hace el llamado a una funci\' on y se para la variable directamente a la funcion, su valor no se modifica. Cuando se termine de ejecutar la funci\' on, la variable mantiene el valor inicial, esto debido a que las variables dentro de cada funci\' on solo existe dentro de su \' ambito y contexto.
+
+\item \textbf{Cu\' al es la diferencia entre paso por valor, paso por referencia y paso por puntero? Cu\' al es la diferencia entre C y C++ con respecto al tipo de paso de par\' ametros?}\\
+
+A diferencia del paso de par\' ametros por valor, cuando un par\' ametro se para por puntero, su valor si se modifica y esto debido a que el par\' ametro que se pasa act\' ua como un apuntador hacia la posici\' on de memoria donde se encuentra almacenado el par\' ametro en memoria.
+
+Ahora, con respecto al paso de par\' ametros por referencia, esta es una caracter\' istica que no existe en el lenguaje C, y se diferencian primero que nada en que se deben inicializar al declararse ya que no son en s\' i una variable sino una etiqueta de otra y se declaran poniendo el operador $\&$ despu\ es del tipo de dato.\\
+
+En gerenal, una referencia es como un sobrenombre que se da a una variable y el puntero es una variable que guarda la direcci\' on de memoria de la variable a la que apunta.
+
+
+\item \textbf{En el programa anterior hay dos funciones que se llaman igual: C\' omo hace el compilador para saber cual
+usar?}
+
+Sencillo, un compilador del lenguaje C++ no confunde funciones con el mismo nombre, si estan tienen argumentos diferentes, donde diferentes implica diferencia en nombre y tipo.
+
+
+\end{itemize}
+
+
+\subsection{Punteros vs Arreglos}
+\begin{itemize}
+\item \textbf{Cu\' al es la diferencia entre un puntero y un arreglo, en el programa se vio que un arreglo se puede asignar
+a un puntero, descomente la l\' nea que hace lo opuesto y compile de nuevo.}\\
+
+Un arreglo es  en s\' i mismo un apuntador al elemento \textit{Arreglo[0]}, es decir es un puntero al primer elemento del vector pues posee como contenido la direcci\' on al primer elemento.
+
+
+\textbf{PREGUNTAR PORQUE ESA LINEA NO COMPILA Y PORQUE ES QUE NO SE PUEDE}
+\end{itemize}
+
+\subsection{Punteros a punteros}
+Primero, en este c\' odigo es importante recalcar que posee un error, aunque no es posible saber si fue un error dolo o sin intenci\' on. En la l\' inea 32, se tiene que:
+
+\begin{listing}
+$cout<<i<<" -) "<<ptr$\_$arreglo[i]<<endl;$
+\end{listing}
+
+Se debe cambiar por:
+\begin{verbatim}
+	cout<<i<<" -) "<<&ptr_arreglo[i]<<endl;
+\end{verbatim}
+Ahora, si esta correci\' on no se realiza, el programa se compila correctamente pero presenta un error a la hora de ejecutarse, que indica: \textit{Violaci\' on de segmento (core generado)}.
+
+\begin{itemize}
+\item \textbf{Porqu\' e los cambios hechos a un puntero simple, no se mantienen, al regresar la funci\' on?}\\
+
+Los cambios no se mantienen al regresar de la funci\' on debido a que en la primer funci\' on lo que se realiza es una modificaci\' on a la variable \textit{mi$\_$arreglo}, en cambio en la segunda funci\' on los cambios si se mantienen debido a que esta realiza una modificaci\' on sobre el contenido del puntero interno. Esto se pudo comprobar al cambiar el orden en que se llaman las funciones.
+
+\item \textbf{Haga un diagrama, de la localizaci\' on de los punteros al ejecutarse la funci\' on, sea en el \' area de variables,
+heap o pila.}
+
+\end{itemize}
+
+\subsection{Punteros a funciones}
+\begin{itemize}
+\item \textbf{Qu\' e hace la directiva define SIZE 25?. Qu\'  ventajes y desventajas tiene el uso de macros? C\' omo se
+obtiene un resultado equivalente, pero esta vez mediante C++?}\\
+
+La directiva \begin{verbatim}
+define SIZE 25
+\end{verbatim}
+se encarga de generar un parametro general para todo el c\' odigo o programa. La principal ventaja de esta definici\' on es que permite tener acceso al par\' ametro en una sola l\' inea y cambiar todo el resto del c\' odigo, por ejemplo en programas muy extensos esto se vuelve necesariamente \' util.
+
+\item \textbf{Realice los cambios necesarios para poder realizar las operaciones anteriores con tipos de datos: float y double.}\\
+Los cambios se realizaron satisfactoriamente, como se puede observar en los archivos: \textit{punteros$\_$funciones2.cpp} y \textit{punteros$\_$funcioes3.cpp}
+
+\item \textbf{ Menciones al menos 3 utilidades de punteros a funciones.}\\
+\begin{itemize}
+\item el contenido de los bytes se interpreta como una direcci\' on.
+\item Proporciona los medios para que las funciones puedan modificar sus argumentos de llamada.
+\item Se utiliza como sistemas de asignaci\' on din\' amica de memoria en C.
+\item Hace posible el uso de ciertas estructuras de datos como listas o \' arboles binarios.
+\item Proporciona una manera de devolver varior datos desde una funci\' on mediante los argumentos de la misma.
+\end{itemize}
+
+\end{itemize}
+
+%%
+%%\begin{itemize}
+%\item \textbf{ Escriba una versi\' on con punteros de la funci\' on \textit{strcat(s, t)} que concatena la cadena t al final de $s$.}
+
+%\item \textbf{Escriba una versi\' on con punteros de la funci\' n \textit{strend(s, t)} que regresa 1 si la cadena t se presenta al final de s y 0 si no.}
+
+
+%\item \textbf{Escriba una versi\' on con punteros de la funci\' on \textit{strcpy(s, t, n)} que copia hasta n caracteres de t hacia s.}
+
+%\end{itemize}
+
+
+\end{document}

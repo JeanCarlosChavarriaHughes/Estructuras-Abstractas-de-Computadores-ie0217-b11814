@@ -1,0 +1,1361 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    
+    <title>How to Draw Vertical Arrays with Diagonal Arrows to Represent Memory in TikZ? - TeX - LaTeX Stack Exchange</title>
+    <link rel="shortcut icon" href="http://cdn.sstatic.net/tex/img/favicon.ico?v=8bd9630dcd9e">
+    <link rel="apple-touch-icon image_src" href="http://cdn.sstatic.net/tex/img/apple-touch-icon.png?v=0a90e8f91d4c">
+    <link rel="search" type="application/opensearchdescription+xml" title="TeX - LaTeX Stack Exchange" href="http://tex.stackexchange.com/opensearch.xml">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@StackTeX">
+    <meta name="twitter:domain" content="tex.stackexchange.com">
+    <meta name="og:type" content="website">
+    <meta name="og:image" content="http://cdn.sstatic.net/tex/img/apple-touch-icon@2.png?v=eaf26b461720">
+    <meta name="og:title" content="How to Draw Vertical Arrays with Diagonal Arrows to Represent Memory in TikZ?">
+    <meta name="og:description" content="I am trying to find a way to use TikZ to create as much as possible a collection of lecture notes (1), (2) for an introductory level course in data structures for a public free uni of my country. 
+
+I ">
+    <meta name="og:url" content="http://tex.stackexchange.com/questions/148778/how-to-draw-vertical-arrays-with-diagonal-arrows-to-represent-memory-in-tikz">
+    <link rel="canonical" href="http://tex.stackexchange.com/questions/148778/how-to-draw-vertical-arrays-with-diagonal-arrows-to-represent-memory-in-tikz">
+
+    
+    
+    <script src="How%20to%20Draw%20Vertical%20Arrays%20with%20Diagonal%20Arrows%20to%20Represent%20Memory%20in%20TikZ%3F%20-%20TeX%20-%20LaTeX%20Stack%20Exchange_archivos/quant.js" async=""></script><script src="How%20to%20Draw%20Vertical%20Arrays%20with%20Diagonal%20Arrows%20to%20Represent%20Memory%20in%20TikZ%3F%20-%20TeX%20-%20LaTeX%20Stack%20Exchange_archivos/beacon.js" async=""></script><script src="How%20to%20Draw%20Vertical%20Arrays%20with%20Diagonal%20Arrows%20to%20Represent%20Memory%20in%20TikZ%3F%20-%20TeX%20-%20LaTeX%20Stack%20Exchange_archivos/analytics.js" async=""></script><script src="How%20to%20Draw%20Vertical%20Arrays%20with%20Diagonal%20Arrows%20to%20Represent%20Memory%20in%20TikZ%3F%20-%20TeX%20-%20LaTeX%20Stack%20Exchange_archivos/adzerk2_2_17_76.js" async=""></script><script src="How%20to%20Draw%20Vertical%20Arrays%20with%20Diagonal%20Arrows%20to%20Represent%20Memory%20in%20TikZ%3F%20-%20TeX%20-%20LaTeX%20Stack%20Exchange_archivos/jquery.js"></script>
+    <script src="How%20to%20Draw%20Vertical%20Arrays%20with%20Diagonal%20Arrows%20to%20Represent%20Memory%20in%20TikZ%3F%20-%20TeX%20-%20LaTeX%20Stack%20Exchange_archivos/stub.js"></script>
+    <link rel="stylesheet" type="text/css" href="How%20to%20Draw%20Vertical%20Arrays%20with%20Diagonal%20Arrows%20to%20Represent%20Memory%20in%20TikZ%3F%20-%20TeX%20-%20LaTeX%20Stack%20Exchange_archivos/all.css">
+    
+    <link rel="alternate" type="application/atom+xml" title="Feed for question 'How to Draw Vertical Arrays with Diagonal Arrows to Represent Memory in TikZ?'" href="http://tex.stackexchange.com/feeds/question/148778">
+    <script>
+        
+        StackExchange.ready(function () {
+
+            StackExchange.using("postValidation", function () {
+                StackExchange.postValidation.initOnBlurAndSubmit($('#post-form'), 2, 'answer');
+            });
+
+            
+            StackExchange.question.init({showAnswerHelp:true,totalCommentCount:0,shownCommentCount:0,highlightColor:'#F4A83D',backgroundColor:'#FFF',questionId:148778});
+
+            styleCode();
+
+                StackExchange.realtime.subscribeToQuestion('85', '148778');
+            
+                    });
+    </script>
+
+
+    <script>
+        StackExchange.ready(function () {
+            StackExchange.realtime.init('wss://qa.sockets.stackexchange.com,ws://qa.sockets.stackexchange.com');
+            StackExchange.realtime.subscribeToInboxNotifications();
+                    StackExchange.realtime.subscribeToReputationNotifications('85');
+                StackExchange.realtime.subscribeToTopBarNotifications('85');
+        });
+    </script>
+    <script>
+        StackExchange.init({"locale":"en","stackAuthUrl":"https://stackauth.com","serverTime":1409725059,"networkMetaHostname":"meta.stackexchange.com","styleCode":true,"enableUserHovercards":true,"site":{"name":"TeX - LaTeX Stack Exchange","description":"Q&A for users of TeX, LaTeX, ConTeXt, and related typesetting systems","isNoticesTabEnabled":true,"recaptchaPublicKey":"6LdsB7sSAAAAAAzjgEF_Hd8vXv-C42sa_KyofaGR","recaptchaAudioLang":"en","enableNewTagCreationWarning":false,"enableSocialMediaInSharePopup":true,"useGoogleOAuth2":true},"user":{"fkey":"d50bbc0dec81b6e92de6b0445666d1f5","isAnonymous":true}});
+        StackExchange.using.setCacheBreakers({"js/prettify-full.en.js":"f15f31506151","js/moderator.en.js":"3bf88d4bfb80","js/full-anon.en.js":"5e12ee6d57da","js/full.en.js":"12f1208008c4","js/wmd.en.js":"b2432ce646f6","js/third-party/jquery.autocomplete.min.js":"e5f01e97f7c3","js/third-party/jquery.autocomplete.min.en.js":"","js/mobile.en.js":"1b05e243a7ff","js/help.en.js":"56d0a3a560ae","js/tageditor.en.js":"1269fefb7796","js/tageditornew.en.js":"028373c088a2","js/inline-tag-editing.en.js":"21223186b436","js/revisions.en.js":"989c474e85a9","js/review.en.js":"27d253fef075","js/tagsuggestions.en.js":"b278f9a0b23b","js/post-validation.en.js":"ed0675ed4b73","js/explore-qlist.en.js":"24424eb238e8","js/events.en.js":"bb29d0b254c5","js/keyboard-shortcuts.en.js":"fa91427c737f","js/external-editor.en.js":"bec608fb04b6"});
+        StackExchange.using("gps", function() {
+             StackExchange.gps.init(true);
+        });
+    </script>
+    
+        <script>
+            StackExchange.ready(function () {
+                $('#nav-tour').click(function () {
+                    StackExchange.using("gps", function() {
+                        StackExchange.gps.track("aboutpage.click", { aboutclick_location: "headermain" }, true);
+                    });
+                });
+            });
+        </script>
+<script src="How%20to%20Draw%20Vertical%20Arrays%20with%20Diagonal%20Arrows%20to%20Represent%20Memory%20in%20TikZ%3F%20-%20TeX%20-%20LaTeX%20Stack%20Exchange_archivos/full-anon.js" async=""></script><script src="How%20to%20Draw%20Vertical%20Arrays%20with%20Diagonal%20Arrows%20to%20Represent%20Memory%20in%20TikZ%3F%20-%20TeX%20-%20LaTeX%20Stack%20Exchange_archivos/post-validation.js" async=""></script><script src="How%20to%20Draw%20Vertical%20Arrays%20with%20Diagonal%20Arrows%20to%20Represent%20Memory%20in%20TikZ%3F%20-%20TeX%20-%20LaTeX%20Stack%20Exchange_archivos/prettify-full.js" async=""></script></head>
+<body class="question-page new-topbar" itemscope="" itemtype="http://schema.org/QAPage">
+    <noscript><div id="noscript-padding"></div></noscript>
+    <div id="notify-container"></div>
+    <div id="overlay-header"></div>
+    <div id="custom-header"></div>
+<div class="topbar">
+    <div class="topbar-wrapper">
+        
+        <div class="js-topbar-dialog-corral">
+
+<div class="topbar-dialog siteSwitcher-dialog dno">
+    <div class="header">
+        <h3><a href="http://tex.stackexchange.com/">current community</a></h3>
+    </div>
+    <div class="modal-content current-site-container">
+        <ul class="current-site">
+                <li>
+                        <div class="related-links">
+            <a href="http://chat.stackexchange.com/" class="js-gps-track" data-gps-track="site_switcher.click({ item_type:6 })">chat</a>
+                    <a href="http://tex.blogoverflow.com/" class="js-gps-track" data-gps-track="site_switcher.click({ item_type:7 })">blog</a>
+            </div>
+
+
+
+
+    <a href="http://tex.stackexchange.com/" class="current-site-link site-link js-gps-track" data-id="85" data-gps-track="
+        site_switcher.click({ item_type:3 })">
+        <div class="site-icon favicon favicon-tex" title="TeX - LaTeX"></div>
+        TeX - LaTeX
+    </a>
+
+                </li>
+                <li class="related-site">
+                        <div class="L-shaped-icon-container">
+        <span class="L-shaped-icon"></span>
+    </div>
+
+                    
+
+
+
+    <a href="http://meta.tex.stackexchange.com/" class="site-link js-gps-track" data-id="87" data-gps-track="
+            site.switch({ target_site:87, item_type:3 }),
+        site_switcher.click({ item_type:4 })">
+        <div class="site-icon favicon favicon-texmeta" title="TeX - LaTeX Meta"></div>
+        TeX - LaTeX Meta
+    </a>
+
+                </li>
+                    </ul>
+    </div>
+    
+    <div class="header" id="your-communities-header">
+        <h3>
+your communities        </h3>
+            
+    </div>
+    <div class="modal-content" id="your-communities-section">
+            
+            <div class="call-to-login">
+                        <a href="https://tex.stackexchange.com/users/signup?returnurl=http%3a%2f%2ftex.stackexchange.com%2fquestions%2f148778%2fhow-to-draw-vertical-arrays-with-diagonal-arrows-to-represent-memory-in-tikz" class="js-gps-track" data-gps-track="site_switcher.click({ item_type:10 })">Sign up</a>
+                    or
+                    <a href="https://tex.stackexchange.com/users/login?returnurl=http%3a%2f%2ftex.stackexchange.com%2fquestions%2f148778%2fhow-to-draw-vertical-arrays-with-diagonal-arrows-to-represent-memory-in-tikz" class="js-gps-track" data-gps-track="site_switcher.click({ item_type:11 })">log in</a>
+
+                    to customize your list.
+            </div>
+    </div>
+    
+    <div class="header">
+        <h3><a href="http://stackexchange.com/sites">more stack exchange communities</a></h3>
+    </div>
+    <div class="modal-content">
+            <div class="child-content"></div>
+    </div>
+</div>
+        </div>
+
+        <div class="network-items">
+            
+            <a href="http://stackexchange.com/" class="topbar-icon icon-site-switcher yes-hover js-site-switcher-button js-gps-track" data-gps-track="site_switcher.show" title="A list of all 131 Stack Exchange sites">
+                <span class="hidden-text">Stack Exchange</span>
+            </a>
+            
+        </div>
+
+        <div class="topbar-links">
+            
+                <div class="links-container">
+                    <span class="topbar-menu-links">
+                            <a href="https://tex.stackexchange.com/users/signup?returnurl=http%3a%2f%2ftex.stackexchange.com%2fquestions%2f148778%2fhow-to-draw-vertical-arrays-with-diagonal-arrows-to-represent-memory-in-tikz" class="login-link">sign up</a>
+                            <a href="https://tex.stackexchange.com/users/login?returnurl=http%3a%2f%2ftex.stackexchange.com%2fquestions%2f148778%2fhow-to-draw-vertical-arrays-with-diagonal-arrows-to-represent-memory-in-tikz" class="login-link">log in</a>
+                            <a href="http://tex.stackexchange.com/tour">tour</a>
+
+                            <a href="#" class="icon-help js-help-button" title="Help Center and other resources">
+        help
+        <span class="triangle"></span>
+    </a>
+    <div class="topbar-dialog help-dialog js-help-dialog dno">
+        <div class="modal-content">
+            <ul>
+                                    <li>
+                        <a href="http://tex.stackexchange.com/tour" class="js-gps-track" data-gps-track="help_popup.click({ item_type:1 })">
+                            Tour
+                            <span class="item-summary">
+                                Start here for a quick overview of the site
+                            </span>
+                        </a>
+                    </li>
+                <li>
+                    <a href="http://tex.stackexchange.com/help" class="js-gps-track" data-gps-track="help_popup.click({ item_type:4 })">
+                        Help Center
+                        <span class="item-summary">
+                            Detailed answers to any questions you might have
+                        </span>
+                    </a>
+                </li>
+                    <li>
+                        <a href="http://meta.tex.stackexchange.com/" class="js-gps-track" data-gps-track="help_popup.click({ item_type:2 })">
+                            Meta
+                            <span class="item-summary">
+                                Discuss the workings and policies of this site
+                            </span>
+                        </a>
+                    </li>
+            </ul>
+        </div>
+    </div>
+
+                    </span>
+                </div>
+
+			<div class="search-container">
+                <form id="search" action="/search" method="get" autocomplete="off">
+                    <input name="q" placeholder="search" tabindex="1" autocomplete="off" maxlength="240" type="text">
+                </form>
+			</div>
+            	
+        </div>      
+    </div> 
+</div>
+<script>
+    StackExchange.ready(function () { StackExchange.topbar.init(); });
+</script>
+    <div class="container">
+        <div id="header" class="headeranon">
+            <br class="cbt">
+            <div id="hlogo">
+                <a href="http://tex.stackexchange.com/">
+                    TeX - LaTeX
+                </a>
+            </div>
+            <div id="hmenus">
+                <div class="nav mainnavs mainnavsanon">
+                    <ul>
+                        <li class="youarehere"><a id="nav-questions" href="http://tex.stackexchange.com/questions">Questions</a></li>
+                        <li><a id="nav-tags" href="http://tex.stackexchange.com/tags">Tags</a></li>
+                        <li><a id="nav-users" href="http://tex.stackexchange.com/users">Users</a></li>
+                        <li><a id="nav-badges" href="http://tex.stackexchange.com/help/badges">Badges</a></li>
+                        <li><a id="nav-unanswered" href="http://tex.stackexchange.com/unanswered">Unanswered</a></li>
+                    </ul>
+                </div>
+                <div class="nav askquestion">
+                    <ul>
+                        <li>
+                            <a id="nav-askquestion" href="http://tex.stackexchange.com/questions/ask">Ask Question</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+
+
+
+        <div id="content">
+            
+
+<div itemscope="" itemtype="http://schema.org/Question">
+	<link itemprop="image" href="http://cdn.sstatic.net/tex/img/apple-touch-icon.png">
+			<!--googleoff: all-->
+
+<div id="herobox-mini">
+    <div id="hero-content">
+        <span id="controls">
+            <a href="http://tex.stackexchange.com/tour" id="tell-me-more" class="button">Take the 2-minute tour</a>
+            <span id="close"><a title="click to dismiss">×</a></span>
+        </span>
+        <div id="blurb">
+            TeX - LaTeX Stack Exchange is a question and answer site for
+ users of TeX, LaTeX, ConTeXt, and related typesetting systems. It's 
+100% free, no registration required.
+        </div>        
+    </div>
+    <script>
+        $('#tell-me-more').click(function () {
+            var clickSource = $("body").attr("class") + '-mini';
+            if ($("body").hasClass("questions-page")) {
+                clickSource = 'questionpagemini';
+            } else if ($("body").hasClass("question-page")) {
+                clickSource = 'questionpagemini';
+            } else if ($("body").hasClass("home-page")) {
+                clickSource = 'homepagemini';
+            }
+
+            StackExchange.using("gps", function () {
+                StackExchange.gps.track("aboutpage.click", { aboutclick_location: clickSource } , true);
+            });
+        });
+        $('#herobox-mini #close').click(function () {
+            StackExchange.using("gps", function () {
+                StackExchange.gps.track("hero.action", { hero_action_type: "close" }, true);
+            });
+            $.cookie("hero", "none", { path: "/", expires: 365 });
+            var $hero = $("#herobox-mini");
+            $hero.slideUp('fast', function () { $hero.remove(); });
+            return false;
+        });
+    </script>
+</div>
+			<!--googleon: all-->
+			<div id="question-header">
+			<h1 itemprop="name"><a href="http://tex.stackexchange.com/questions/148778/how-to-draw-vertical-arrays-with-diagonal-arrows-to-represent-memory-in-tikz" class="question-hyperlink">How to Draw Vertical Arrays with Diagonal Arrows to Represent Memory in TikZ?</a></h1>
+		</div>
+			<div id="mainbar">
+
+			
+
+<div class="question" data-questionid="148778" id="question">
+
+        <table>
+        <tbody><tr>
+            <td class="votecell">
+                
+
+<div class="vote">
+    <input name="_id_" value="148778" type="hidden">
+    <a class="vote-up-off" title="This question shows research effort; it is useful and clear">up vote</a>
+    <span itemprop="upvoteCount" class="vote-count-post ">3</span>
+    <a class="vote-down-off" title="This question does not show any research effort; it is unclear or not useful">down vote</a>
+    
+    <a class="star-off" href="#" title="This is a favorite question (click again to undo)">favorite</a>
+    <div class="favoritecount"><b>3</b></div>   
+
+</div>
+
+            </td>
+            
+<td class="postcell">
+<div>
+    <div class="post-text" itemprop="text">
+
+        <p>I am trying to find a way to use TikZ to create as much as possible a collection of lecture notes <a href="https://www.dropbox.com/s/dgkhqi5fsvnkzue/aula02.pdf" rel="nofollow">(1)</a>, <a href="https://www.dropbox.com/s/zwxzk8yslin5pb7/aula05.pdf" rel="nofollow">(2)</a> for an introductory level course in data structures for a public free uni of my country. </p>
+
+<p>I have been successful so far in finding <a href="http://www.texample.net/tikz/examples/merge-sort-recursion-tree/" rel="nofollow">trees</a>, <a href="http://tex.stackexchange.com/questions/93942/typesetting-classical-data-structures-in-tikz">arrays</a> and <a href="http://tex.stackexchange.com/questions/18363/diagrams-package-that-allows-to-draw-computer-buffers-memory-diagrams">so on</a>,
+ but I was not able to find an starter point for representing memory and
+ elements inside of them (wanted) with some arrows to point out concepts
+ (optional) with diagonal arrows and code alignment (wanted). </p>
+
+<p>I found that in other questions TeX community was receptive for such requests, I hope this one wouldn't be a problem. </p>
+
+<p>The image below is from a book named <a href="http://rads.stackoverflow.com/amzn/click/B00DRIT82S" rel="nofollow">Structures Gently Through C</a> who has the visualization I am trying to achieve with TikZ. </p>
+
+<p><img src="How%20to%20Draw%20Vertical%20Arrays%20with%20Diagonal%20Arrows%20to%20Represent%20Memory%20in%20TikZ%3F%20-%20TeX%20-%20LaTeX%20Stack%20Exchange_archivos/X052K.png" alt="enter image description here"></p>
+
+<p><img src="How%20to%20Draw%20Vertical%20Arrays%20with%20Diagonal%20Arrows%20to%20Represent%20Memory%20in%20TikZ%3F%20-%20TeX%20-%20LaTeX%20Stack%20Exchange_archivos/dexz1.png" alt="enter image description here"></p>
+
+    </div>
+    <div class="post-taglist">
+        <a href="http://tex.stackexchange.com/questions/tagged/tikz-pgf" class="post-tag js-gps-track" title="show questions tagged 'tikz-pgf'" rel="tag">tikz-pgf</a> 
+    </div>
+    <table class="fw">
+    <tbody><tr>
+    <td class="vt">
+<div class="post-menu"><a href="http://tex.stackexchange.com/q/148778" title="short permalink to this question" class="short-link" id="link-post-148778">share</a><span class="lsep">|</span><a href="http://tex.stackexchange.com/posts/148778/edit" class="suggest-edit-post" title="">improve this question</a></div>        
+    </td>
+    <td class="post-signature owner">
+        <div class="user-info ">
+    <div class="user-action-time">
+        asked <span title="2013-12-06 23:26:11Z" class="relativetime">Dec 6 '13 at 23:26</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="http://tex.stackexchange.com/users/29220/oeufcoque-penteano"><div class="gravatar-wrapper-32"><img src="How%20to%20Draw%20Vertical%20Arrays%20with%20Diagonal%20Arrows%20to%20Represent%20Memory%20in%20TikZ%3F%20-%20TeX%20-%20LaTeX%20Stack%20Exchange_archivos/a0b3941a38eba0de503cdbae48f6bdfd.jpeg" alt=""></div></a>
+    </div>
+    <div class="user-details">
+        <a href="http://tex.stackexchange.com/users/29220/oeufcoque-penteano">Oeufcoque Penteano</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">189</span><span title="7 bronze badges"><span class="badge3"></span><span class="badgecount">7</span></span>
+    </div>
+</div>
+    </td>
+    </tr>
+    </tbody></table>
+</div>
+</td>
+        </tr>
+                
+<tr>
+    <td class="votecell"></td>
+    <td>
+	    <div id="comments-148778" class="comments  dno">
+		    <table>
+                <tbody data-remaining-comments-count="0" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true">
+
+                        <tr><td></td><td></td></tr>
+                </tbody>
+		    </table>
+	    </div>
+            <div id="comments-link-148778" data-rep="50" data-anon="true">
+
+                <a class="js-add-link comments-link disabled-link " title="Use comments to ask for more information or suggest improvements. Avoid answering questions in comments.">add a comment</a><span class="js-link-separator dno">&nbsp;|&nbsp;</span><a class="js-show-link comments-link dno" title="expand to show all comments on this post, or add one of your own" href="#" onclick=""></a>
+            </div>
+    </td>
+</tr>        </tbody></table>
+</div>
+
+			<div id="answers">
+
+				<a name="tab-top"></a>
+				<div id="answers-header">
+					<div class="subheader answers-subheader">
+						<h2>
+								1 Answer
+                                <span style="display:none;" itemprop="answerCount">1</span>
+						</h2>
+						<div>
+							<div id="tabs">
+        <a href="http://tex.stackexchange.com/questions/148778/how-to-draw-vertical-arrays-with-diagonal-arrows-to-represent-memory-in-tikz?answertab=active#tab-top" title="Answers with the latest activity first">active</a>
+        <a href="http://tex.stackexchange.com/questions/148778/how-to-draw-vertical-arrays-with-diagonal-arrows-to-represent-memory-in-tikz?answertab=oldest#tab-top" title="Answers in the order they were provided">oldest</a>
+        <a class="youarehere" href="http://tex.stackexchange.com/questions/148778/how-to-draw-vertical-arrays-with-diagonal-arrows-to-represent-memory-in-tikz?answertab=votes#tab-top" title="Answers with the highest score first">votes</a>
+</div>
+						</div>
+					</div>    
+				</div>    
+
+
+
+
+  
+<a name="148800"></a>
+<div id="answer-148800" class="answer accepted-answer" data-answerid="148800" itemscope="" itemtype="http://schema.org/Answer" itemprop="acceptedAnswer">
+    <table>
+        <tbody><tr>
+            <td class="votecell">
+                
+
+<div class="vote">
+    <input name="_id_" value="148800" type="hidden">
+    <a class="vote-up-off" title="This answer is useful">up vote</a>
+    <span itemprop="upvoteCount" class="vote-count-post ">4</span>
+    <a class="vote-down-off" title="This answer is not useful">down vote</a>
+    
+
+
+        <span class="vote-accepted-on load-accepted-answer-date" title="loading when this answer was accepted...">accepted</span>
+</div>
+
+            </td>
+            
+
+
+<td class="answercell">
+    <div class="post-text" itemprop="text">
+<p>Here's a sample which combines most of the features that you desire:</p>
+
+<pre style="" class="lang-tex prettyprint prettyprinted"><code><span class="kwd">\documentclass</span><span class="pun">{</span><span class="pln">article</span><span class="pun">}</span><span class="pln">
+</span><span class="com">%% Packages and libraries needed for this MWE</span><span class="pln">
+</span><span class="kwd">\usepackage</span><span class="pun">{</span><span class="pln">tikz</span><span class="pun">}</span><span class="pln">
+</span><span class="kwd">\usetikzlibrary</span><span class="pun">{</span><span class="pln">calc</span><span class="pun">}</span><span class="pln">
+</span><span class="kwd">\usetikzlibrary</span><span class="pun">{</span><span class="pln">arrows.meta</span><span class="pun">}</span><span class="pln">
+</span><span class="com">%% Two commands for representing content.</span><span class="pln">
+</span><span class="kwd">\newcommand\aeDiagonalNumber</span><span class="pun">{</span><span class="pln">100</span><span class="pun">}</span><span class="pln">
+</span><span class="kwd">\newcommand\memorySixtyFive</span><span class="pun">{</span><span class="com">%%' </span><span class="pln">
+  </span><span class="kwd">\begin</span><span class="pun">{</span><span class="pln">minipage</span><span class="pun">}{</span><span class="lit">2.75cm</span><span class="pun">}</span><span class="pln">
+    </span><span class="kwd">\centering</span><span class="pln">
+    char `a' in memory</span><span class="kwd">\par</span><span class="pln">       
+    </span><span class="pun">(</span><span class="pln">65 </span><span class="pun">=</span><span class="pln"> ascii code</span><span class="pun">)</span><span class="pln">
+  </span><span class="kwd">\end</span><span class="pun">{</span><span class="pln">minipage</span><span class="pun">}}</span><span class="pln">
+
+</span><span class="kwd">\begin</span><span class="pun">{</span><span class="pln">document</span><span class="pun">}</span><span class="pln">
+
+</span><span class="kwd">\begin</span><span class="pun">{</span><span class="pln">tikzpicture</span><span class="pun">}[</span><span class="pln">x</span><span class="pun">=</span><span class="lit">1.25in</span><span class="pln">,y</span><span class="pun">=</span><span class="lit">0.65cm</span><span class="pun">]</span><span class="pln">
+  </span><span class="com">%% Building the boxes representing memory locations</span><span class="pln">
+  </span><span class="kwd">\foreach</span><span class="pln"> </span><span class="kwd">\x</span><span class="pln"> in </span><span class="pun">{</span><span class="pln">0,1,...,20</span><span class="pun">}</span><span class="pln">
+  </span><span class="pun">{</span><span class="pln">
+    </span><span class="kwd">\node</span><span class="pun">[</span><span class="pln">inner sep</span><span class="pun">=</span><span class="lit">1pt</span><span class="pun">]</span><span class="pln"> </span><span class="pun">(</span><span class="pln">BL</span><span class="kwd">\x</span><span class="pun">)</span><span class="pln"> at </span><span class="pun">(</span><span class="pln">0,-</span><span class="kwd">\x</span><span class="pun">)</span><span class="pln">   </span><span class="pun">{}</span><span class="pln">;
+    </span><span class="kwd">\node</span><span class="pun">[</span><span class="pln">inner sep</span><span class="pun">=</span><span class="lit">1pt</span><span class="pun">]</span><span class="pln"> </span><span class="pun">(</span><span class="pln">UR</span><span class="kwd">\x</span><span class="pun">)</span><span class="pln"> at </span><span class="pun">(</span><span class="pln">1,-</span><span class="kwd">\x</span><span class="pln">+1</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{}</span><span class="pln">;
+    </span><span class="kwd">\node</span><span class="pln"> </span><span class="pun">(</span><span class="pln">MM</span><span class="kwd">\x</span><span class="pun">)</span><span class="pln"> at </span><span class="pun">(</span><span class="typ">$</span><span class="pun">(</span><span class="pln">BL</span><span class="kwd">\x</span><span class="pun">)</span><span class="pln">!0.5!</span><span class="pun">(</span><span class="pln">UR</span><span class="kwd">\x</span><span class="pun">)</span><span class="typ">$</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{}</span><span class="pln">;
+    </span><span class="kwd">\draw</span><span class="pln"> </span><span class="pun">(</span><span class="pln">BL</span><span class="kwd">\x</span><span class="pun">)</span><span class="pln"> rectangle </span><span class="pun">(</span><span class="pln">UR</span><span class="kwd">\x</span><span class="pun">)</span><span class="pln">;
+    </span><span class="kwd">\edef\memoryNumber</span><span class="pun">{</span><span class="kwd">\number\numexpr</span><span class="pln">276314+</span><span class="kwd">\x\relax</span><span class="pun">}</span><span class="pln">
+    </span><span class="kwd">\node</span><span class="pun">[</span><span class="pln">anchor</span><span class="pun">=</span><span class="pln">south east</span><span class="pun">]</span><span class="pln"> at </span><span class="pun">(</span><span class="pln">BL</span><span class="kwd">\x</span><span class="pln">.north west</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="kwd">\memoryNumber</span><span class="pun">}</span><span class="pln">;
+  </span><span class="pun">}</span><span class="pln">
+
+  </span><span class="com">%% Label columns:</span><span class="pln">
+  </span><span class="kwd">\node</span><span class="pln"> </span><span class="pun">(</span><span class="pln">MEMLOC</span><span class="pun">)</span><span class="pln"> at </span><span class="pun">(</span><span class="typ">$</span><span class="pun">(</span><span class="pln">MM0</span><span class="pun">)</span><span class="pln">+</span><span class="pun">(</span><span class="pln">0,</span><span class="lit">2cm</span><span class="pun">)</span><span class="typ">$</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"> </span><span class="kwd">\parbox</span><span class="pun">{</span><span class="lit">2cm</span><span class="pun">}{</span><span class="kwd">\centering</span><span class="pln"> Memory Location</span><span class="pun">}</span><span class="pln"> </span><span class="pun">}</span><span class="pln">;
+  </span><span class="kwd">\node</span><span class="pln"> </span><span class="pun">(</span><span class="pln">ADDRESS</span><span class="pun">)</span><span class="pln"> at </span><span class="pun">(</span><span class="typ">$</span><span class="pun">(</span><span class="pln">MEMLOC</span><span class="pun">)</span><span class="pln">-</span><span class="pun">(</span><span class="pln">0.75,0</span><span class="pun">)</span><span class="typ">$</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="kwd">\parbox</span><span class="pun">{</span><span class="lit">2cm</span><span class="pun">}{</span><span class="kwd">\centering</span><span class="pln"> Address</span><span class="pun">}</span><span class="pln"> </span><span class="pun">}</span><span class="pln">;
+  </span><span class="kwd">\draw</span><span class="pln"> </span><span class="pun">[</span><span class="pln">-</span><span class="pun">{</span><span class="pln">Stealth</span><span class="pun">[</span><span class="pln">scale</span><span class="pun">=</span><span class="pln">1.5</span><span class="pun">]}]</span><span class="pln"> </span><span class="pun">(</span><span class="pln">MEMLOC</span><span class="pun">)</span><span class="pln"> -- </span><span class="pun">(</span><span class="pln">MM0|-UR0</span><span class="pun">)</span><span class="pln">;
+  </span><span class="kwd">\draw</span><span class="pln"> </span><span class="pun">[</span><span class="pln">-</span><span class="pun">{</span><span class="pln">Stealth</span><span class="pun">[</span><span class="pln">scale</span><span class="pun">=</span><span class="pln">1.5</span><span class="pun">]}]</span><span class="pln"> </span><span class="pun">(</span><span class="pln">ADDRESS</span><span class="pun">)</span><span class="pln"> -- </span><span class="pun">(</span><span class="typ">$</span><span class="pun">(</span><span class="pln">MM0|-UR0</span><span class="pun">)</span><span class="pln">-</span><span class="pun">(</span><span class="pln">0.75,0</span><span class="pun">)</span><span class="typ">$</span><span class="pun">)</span><span class="pln">;
+
+  </span><span class="com">%% Drawing arrows spanning memory locations</span><span class="pln">
+  </span><span class="kwd">\foreach</span><span class="pln"> </span><span class="kwd">\x</span><span class="pln">/</span><span class="kwd">\y</span><span class="pln"> in </span><span class="pun">{</span><span class="pln">3/0,
+                     7/4,
+                    11/8</span><span class="pun">}</span><span class="pln">
+  </span><span class="pun">{</span><span class="pln">
+    </span><span class="kwd">\node</span><span class="pln"> </span><span class="pun">(</span><span class="pln">M</span><span class="kwd">\x</span><span class="pln">-</span><span class="kwd">\y</span><span class="pun">)</span><span class="pln"> at </span><span class="pun">(</span><span class="typ">$</span><span class="pun">(</span><span class="pln">BL</span><span class="kwd">\x</span><span class="pun">)</span><span class="pln">!0.5!</span><span class="pun">(</span><span class="pln">UR</span><span class="kwd">\y</span><span class="pun">)</span><span class="typ">$</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="kwd">\aeDiagonalNumber</span><span class="pun">}</span><span class="pln">;
+    </span><span class="kwd">\xdef\aeDiagonalNumber</span><span class="pun">{</span><span class="kwd">\number\numexpr\aeDiagonalNumber</span><span class="pln">+100</span><span class="kwd">\relax</span><span class="pun">}</span><span class="pln">
+    </span><span class="kwd">\draw</span><span class="pun">[</span><span class="pln">-</span><span class="pun">{</span><span class="pln">Stealth</span><span class="pun">[</span><span class="pln">scale</span><span class="pun">=</span><span class="pln">1.5</span><span class="pun">]}]</span><span class="pln">  </span><span class="pun">(</span><span class="pln">M</span><span class="kwd">\x</span><span class="pln">-</span><span class="kwd">\y</span><span class="pun">)</span><span class="pln"> -- </span><span class="pun">(</span><span class="pln">BL</span><span class="kwd">\x</span><span class="pun">)</span><span class="pln"> ; 
+    </span><span class="kwd">\draw</span><span class="pun">[</span><span class="pln">-</span><span class="pun">{</span><span class="pln">Stealth</span><span class="pun">[</span><span class="pln">scale</span><span class="pun">=</span><span class="pln">1.5</span><span class="pun">]}]</span><span class="pln">  </span><span class="pun">(</span><span class="pln">M</span><span class="kwd">\x</span><span class="pln">-</span><span class="kwd">\y</span><span class="pun">)</span><span class="pln"> -- </span><span class="pun">(</span><span class="pln">UR</span><span class="kwd">\y</span><span class="pun">)</span><span class="pln"> ;
+  </span><span class="pun">}</span><span class="pln">
+
+  </span><span class="com">%% Adding content to memory location "18"</span><span class="pln">
+  </span><span class="kwd">\node</span><span class="pln"> at </span><span class="pun">(</span><span class="pln">MM18</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">65</span><span class="pun">}</span><span class="pln">;
+  </span><span class="kwd">\node</span><span class="pln"> </span><span class="pun">(</span><span class="pln">RHS18</span><span class="pun">)</span><span class="pln"> at </span><span class="pun">(</span><span class="pln">MM18-|UR18</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{}</span><span class="pln">;
+  </span><span class="com">%% Adding a side note to memory location "18"</span><span class="pln">
+  </span><span class="kwd">\node</span><span class="pun">[</span><span class="pln">draw,anchor</span><span class="pun">=</span><span class="pln">west</span><span class="pun">]</span><span class="pln"> </span><span class="pun">(</span><span class="pln">BOX18</span><span class="pun">)</span><span class="pln"> at </span><span class="pun">(</span><span class="typ">$</span><span class="pun">(</span><span class="pln">RHS18</span><span class="pun">)</span><span class="pln">+</span><span class="pun">(</span><span class="lit">1cm</span><span class="pln">,0</span><span class="pun">)</span><span class="typ">$</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="kwd">\memorySixtyFive</span><span class="pun">}</span><span class="pln">;
+  </span><span class="kwd">\draw</span><span class="pln"> </span><span class="pun">[</span><span class="pln">-</span><span class="pun">{</span><span class="pln">Stealth</span><span class="pun">[</span><span class="pln">scale</span><span class="pun">=</span><span class="pln">1.5</span><span class="pun">]}]</span><span class="pln"> </span><span class="pun">(</span><span class="pln">RHS18.center</span><span class="pun">)</span><span class="pln"> -- </span><span class="pun">(</span><span class="pln">BOX18</span><span class="pun">)</span><span class="pln">;
+
+
+  </span><span class="com">%%</span><span class="pln">
+  </span><span class="kwd">\node</span><span class="pln"> </span><span class="pun">(</span><span class="pln">1byte</span><span class="pun">)</span><span class="pln"> at </span><span class="pun">(</span><span class="typ">$</span><span class="pun">(</span><span class="pln">UR10</span><span class="pun">)</span><span class="pln">+</span><span class="pun">(</span><span class="pln">0.5,0</span><span class="pun">)</span><span class="typ">$</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"> </span><span class="kwd">\parbox</span><span class="pun">{</span><span class="lit">1.5cm</span><span class="pun">}{</span><span class="kwd">\centering</span><span class="pln"> One location </span><span class="pun">=</span><span class="pln"> 1 byte</span><span class="pun">}}</span><span class="pln">;
+  </span><span class="kwd">\draw</span><span class="pln"> </span><span class="pun">[</span><span class="pln">-</span><span class="pun">{</span><span class="pln">Stealth</span><span class="pun">[</span><span class="pln">scale</span><span class="pun">=</span><span class="pln">1.5</span><span class="pun">]}]</span><span class="pln"> </span><span class="pun">(</span><span class="pln">1byte</span><span class="pun">)</span><span class="pln"> -- </span><span class="pun">(</span><span class="typ">$</span><span class="pun">(</span><span class="pln">1byte|-UR5</span><span class="pun">)</span><span class="pln">-</span><span class="pun">(</span><span class="pln">0,0.5</span><span class="pun">)</span><span class="typ">$</span><span class="pun">)</span><span class="pln"> -- </span><span class="pun">(</span><span class="typ">$</span><span class="pun">(</span><span class="pln">UR5</span><span class="pun">)</span><span class="pln">-</span><span class="pun">(</span><span class="pln">0,0.5</span><span class="pun">)</span><span class="typ">$</span><span class="pun">)</span><span class="pln">;
+
+</span><span class="kwd">\end</span><span class="pun">{</span><span class="pln">tikzpicture</span><span class="pun">}</span><span class="pln">
+
+</span><span class="kwd">\end</span><span class="pun">{</span><span class="pln">document</span><span class="pun">}</span></code></pre>
+
+<p><img src="How%20to%20Draw%20Vertical%20Arrays%20with%20Diagonal%20Arrows%20to%20Represent%20Memory%20in%20TikZ%3F%20-%20TeX%20-%20LaTeX%20Stack%20Exchange_archivos/Po2Kd.png" alt="enter image description here"></p>
+
+<p>Hopefully this illustrates enough of the techniques you can use to design the presentation in the manner you want.</p>
+    </div>
+    <table class="fw">
+    <tbody><tr>
+    <td class="vt">
+<div class="post-menu"><a href="http://tex.stackexchange.com/a/148800" title="short permalink to this answer" class="short-link" id="link-post-148800">share</a><span class="lsep">|</span><a href="http://tex.stackexchange.com/posts/148800/edit" class="suggest-edit-post" title="">improve this answer</a></div>                    </td>
+    <td class="post-signature" align="right">
+<div class="user-info ">
+    <div class="user-action-time">
+        <a href="http://tex.stackexchange.com/posts/148800/revisions" title="show all edits to this post">edited <span title="2013-12-07 02:49:10Z" class="relativetime">Dec 7 '13 at 2:49</span></a>
+    </div>
+    <div class="user-gravatar32">
+        
+    </div>
+    <div class="user-details">
+        <br>
+        
+    </div>
+</div>    </td>
+            
+
+
+    <td class="post-signature" align="right">   
+       
+
+    <div class="user-info ">
+    <div class="user-action-time">
+        answered <span title="2013-12-07 02:42:53Z" class="relativetime">Dec 7 '13 at 2:42</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="http://tex.stackexchange.com/users/22413/a-ellett"><div class="gravatar-wrapper-32"><img src="How%20to%20Draw%20Vertical%20Arrays%20with%20Diagonal%20Arrows%20to%20Represent%20Memory%20in%20TikZ%3F%20-%20TeX%20-%20LaTeX%20Stack%20Exchange_archivos/jUjw5.jpg" alt=""></div></a>
+    </div>
+    <div class="user-details">
+        <a href="http://tex.stackexchange.com/users/22413/a-ellett">A.Ellett</a><br>
+        <span class="reputation-score" title="reputation score 21056" dir="ltr">21.1k</span><span title="2 gold badges"><span class="badge1"></span><span class="badgecount">2</span></span><span title="22 silver badges"><span class="badge2"></span><span class="badgecount">22</span></span><span title="75 bronze badges"><span class="badge3"></span><span class="badgecount">75</span></span>
+    </div>
+</div>
+    </td>
+    </tr>
+    </tbody></table>
+</td>
+        </tr>
+        
+<tr>
+    <td class="votecell"></td>
+    <td>
+	    <div id="comments-148800" class="comments ">
+		    <table>
+                <tbody data-remaining-comments-count="0" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true">
+
+
+
+    <tr id="comment-338059" class="comment ">
+        <td>
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                &nbsp;&nbsp;
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">Thank you so much A. Ellett. Now I can finish the class in time for tomorrow! :-)</span>
+                –&nbsp;
+                    <a href="http://tex.stackexchange.com/users/29220/oeufcoque-penteano" title="189 reputation" class="comment-user owner">Oeufcoque Penteano</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="#comment338059_148800"><span title="2013-12-07 02:46:36Z" class="relativetime-clean">Dec 7 '13 at 2:46</span></a></span>
+                                                                            </div>
+                    </td>
+    </tr>
+    <tr id="comment-340237" class="comment ">
+        <td>
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                &nbsp;&nbsp;
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">A.Ellett would you happen to 
+know why arrows.meta can't be located? Is that a new package or 
+something like this? I actually used it without the arrow symbols. No 
+matter how much I google, all I could find was that it was supposed to 
+change the arrow head size. But apparently no one else seems to know 
+about it :( " I can't find file `tikzlibraryarrows.meta.code.tex'."</span>
+                –&nbsp;
+                    <a href="http://tex.stackexchange.com/users/29220/oeufcoque-penteano" title="189 reputation" class="comment-user owner">Oeufcoque Penteano</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="#comment340237_148800"><span title="2013-12-12 06:23:03Z" class="relativetime-clean">Dec 12 '13 at 6:23</span></a></span>
+                    <span class="edited-yes" title="this comment was edited 2 times"></span>
+                                                                            </div>
+                    </td>
+    </tr>
+    <tr id="comment-340539" class="comment ">
+        <td class="comment-actions">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                <span title="number of 'useful comment' votes received" class="cool">1</span>
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">You'll need the latest CVS version of TikZ to get the arrow libraries.  Sorry I forgot to mention that.</span>
+                –&nbsp;
+                    <a href="http://tex.stackexchange.com/users/22413/a-ellett" title="21056 reputation" class="comment-user">A.Ellett</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="#comment340539_148800"><span title="2013-12-12 18:13:14Z" class="relativetime-clean">Dec 12 '13 at 18:13</span></a></span>
+                    <span class="edited-yes" title="this comment was edited 1 time"></span>
+                                                                            </div>
+                    </td>
+    </tr>
+    <tr id="comment-340734" class="comment ">
+        <td>
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                &nbsp;&nbsp;
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">Thank you! :) I managed to get it to work around with triangles and the sorts. I will look into this later!</span>
+                –&nbsp;
+                    <a href="http://tex.stackexchange.com/users/29220/oeufcoque-penteano" title="189 reputation" class="comment-user owner">Oeufcoque Penteano</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="#comment340734_148800"><span title="2013-12-13 01:38:45Z" class="relativetime-clean">Dec 13 '13 at 1:38</span></a></span>
+                                                                            </div>
+                    </td>
+    </tr>
+                </tbody>
+		    </table>
+	    </div>
+            <div id="comments-link-148800" data-rep="50" data-anon="true">
+
+                <a class="js-add-link comments-link disabled-link " title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”.">add a comment</a><span class="js-link-separator dno">&nbsp;|&nbsp;</span><a class="js-show-link comments-link dno" title="expand to show all comments on this post, or add one of your own" href="#" onclick=""></a>
+            </div>
+    </td>
+</tr>    </tbody></table>
+</div>
+									<a name="new-answer"></a>
+						<form id="post-form" action="/questions/148778/answer/submit" method="post" class="post-form">
+						    <input id="post-id" value="148778" type="hidden">
+                            <input id="qualityBanWarningShown" name="qualityBanWarningShown" value="false" type="hidden">
+							<h2 class="space">Your Answer</h2>
+
+
+
+        
+
+<script>
+    StackExchange.ready(function() {
+        initTagRenderer("".split(" "), "".split(" "));
+         
+        prepareEditor({
+            heartbeatType: 'answer',
+            bindNavPrevention: true,
+            postfix: "",
+            onDemand: true,
+            discardSelector: ".discard-answer"
+            ,immediatelyShowMarkdownHelp:true
+        });
+        
+
+    });  
+</script>
+
+
+<div id="post-editor" class="post-editor">
+
+    <div style="position: relative;">     
+        <div class="wmd-container">
+            <div id="wmd-button-bar" class="wmd-button-bar"><ul id="wmd-button-row" class="wmd-button-row"><li style="left: 0px;" class="wmd-button" id="wmd-bold-button"><span style="background-position: 0px -20px;"></span></li><li style="left: 25px;" class="wmd-button" id="wmd-italic-button"><span style="background-position: -20px -20px;"></span></li><li style="left: 50px;" class="wmd-spacer" id="wmd-spacer1"><span style="background-position: -40px -20px;"></span></li><li style="left: 75px;" class="wmd-button" id="wmd-link-button"><span style="background-position: -40px -20px;"></span></li><li style="left: 100px;" class="wmd-button" id="wmd-quote-button"><span style="background-position: -60px -20px;"></span></li><li style="left: 125px;" class="wmd-button" id="wmd-code-button"><span style="background-position: -80px -20px;"></span></li><li style="left: 150px;" class="wmd-button" id="wmd-image-button"><span style="background-position: -100px -20px;"></span></li><li style="left: 175px;" class="wmd-spacer" id="wmd-spacer2"><span style="background-position: -120px -20px;"></span></li><li style="left: 200px;" class="wmd-button" id="wmd-olist-button"><span style="background-position: -120px -20px;"></span></li><li style="left: 225px;" class="wmd-button" id="wmd-ulist-button"><span style="background-position: -140px -20px;"></span></li><li style="left: 250px;" class="wmd-button" id="wmd-heading-button"><span style="background-position: -160px -20px;"></span></li><li style="left: 275px;" class="wmd-button" id="wmd-hr-button"><span style="background-position: -180px -20px;"></span></li><li style="left: 300px;" class="wmd-spacer" id="wmd-spacer3"><span style="background-position: -200px -20px;"></span></li><li style="left: 325px;" class="wmd-button" id="wmd-undo-button"><span style="background-position: -200px -20px;"></span></li><li style="left: 350px;" class="wmd-button" id="wmd-redo-button"><span style="background-position: -220px -20px;"></span></li></ul></div>
+            <textarea id="wmd-input" class="wmd-input" name="post-text" cols="92" rows="15" tabindex="101" data-min-length=""></textarea>
+        </div>
+    </div>
+
+    <div class="fl" style="margin-top: 8px; height:24px;">&nbsp;</div>
+    <div id="draft-saved" class="draft-saved community-option fl" style="margin-top: 8px; height:24px; display:none;">draft saved</div>
+
+    <div id="draft-discarded" class="draft-discarded community-option fl" style="margin-top: 8px; height:24px; display:none;">draft discarded</div>
+
+
+
+    <div id="wmd-preview" class="wmd-preview"></div>
+    <div></div>
+    <div class="edit-block">
+        <input id="fkey" name="fkey" value="d50bbc0dec81b6e92de6b0445666d1f5" type="hidden">
+        <input id="author" name="author" type="text">
+    </div>
+</div>
+							<div style="position: relative;">
+								
+            <div class="form-item new-post-login">
+        
+                <div class="new-login-form">
+                    <div class="new-login-left">
+                        <h3>Sign up or <a id="login-link" href="http://tex.stackexchange.com/users/login?returnurl=%2fquestions%2f148778%2fhow-to-draw-vertical-arrays-with-diagonal-arrows-to-represent-memory-in-tikz%23new-answer">log in</a></h3>
+                        <script>
+                            StackExchange.ready(function () {
+                                StackExchange.helpers.onClickDraftSave('#login-link');
+                            });
+                        </script>
+                        <div class="preferred-login google-login">
+                            <p><span class="icon"></span><span>Sign up using Google</span></p>
+                        </div>
+                        <div class="preferred-login facebook-login">
+                            <p><span class="icon"></span><span>Sign up using Facebook</span></p>
+                        </div>
+                        <div class="preferred-login stackexchange-login">
+                            <p><span class="icon"></span><span>Sign up using Stack Exchange</span></p>
+                        </div>
+                    </div>
+                    <input name="manual-openid" class="manual-openid" type="hidden">
+                    <input name="use-facebook" class="use-facebook" value="false" type="hidden">
+                    <input name="use-google-oauth2" class="use-google-oauth2" value="false" type="hidden">
+                    <input class="submit-openid" value="Submit" style="display:none" type="button">
+                    <div class="new-login-right">
+                                <h3>Post as a guest</h3>
+    <div class="form-item">
+        <table>
+        <tbody><tr>
+                    <script>
+                StackExchange.ready(function () {
+                    StackExchange.helpers.bindHelpOverlayEvents($('.vm input'));
+                });
+            </script>
+            <td class="vm">
+                <div>
+                    <label for="display-name">Name</label>
+                    <input id="display-name" name="display-name" size="30" maxlength="30" tabindex="105" type="text">
+                </div>
+                <div>
+                    <label for="m-address">Email</label>
+                    <input id="m-address" name="m-address" size="30" maxlength="100" tabindex="106" type="text">
+                    <span class="edit-field-overlay">required, but not shown</span>
+                </div>
+            </td>
+        </tr>
+        </tbody></table>
+    </div>
+
+                    </div>
+                </div>
+            </div>
+            <script>
+                StackExchange.ready(
+                    function () {
+                        StackExchange.openid.initPostLogin('.new-post-login', '%2fquestions%2f148778%2fhow-to-draw-vertical-arrays-with-diagonal-arrows-to-represent-memory-in-tikz%23new-answer');
+                    }
+                );
+            </script>
+            <noscript>
+                        <h3>Post as a guest</h3>
+    <div class="form-item">
+        <table>
+        <tr>
+                    <script>
+                StackExchange.ready(function () {
+                    StackExchange.helpers.bindHelpOverlayEvents($('.vm input'));
+                });
+            </script>
+            <td class="vm">
+                <div>
+                    <label for="display-name">Name</label>
+                    <input id="display-name" name="display-name" type="text" size="30" maxlength="30" value="" tabindex="105">
+                </div>
+                <div>
+                    <label for="m-address">Email</label>
+                    <input id="m-address" name="m-address" type="text" size="30" maxlength="100" value="" tabindex="106">
+                    <span class="edit-field-overlay">required, but not shown</span>
+                </div>
+            </td>
+        </tr>
+        </table>
+    </div>
+
+            </noscript>
+							</div>
+           
+															<div class="form-submit cbt">
+									<input id="submit-button" value="Post Your Answer" tabindex="110" type="submit">
+									<a href="#" class="discard-answer dno">discard</a>
+
+<p class="privacy-policy-agreement">
+By posting your answer, you agree to the <a href="http://stackexchange.com/legal/privacy-policy" target="_blank">privacy policy</a> and <a href="http://stackexchange.com/legal/terms-of-service" target="_blank">terms of service</a>.</p>
+<input name="legalLinksShown" value="1" type="hidden">								</div>
+						</form>
+
+
+
+						<h2 class="bottom-notice" data-loc="1">
+Not the answer you're looking for?							Browse other questions tagged <a href="http://tex.stackexchange.com/questions/tagged/tikz-pgf" class="post-tag" title="show questions tagged 'tikz-pgf'" rel="tag">tikz-pgf</a>  or <a href="http://tex.stackexchange.com/questions/ask">ask your own question</a>.						</h2>
+			</div>
+		</div>
+				<div id="sidebar" class="show-votes">
+						    <div class="module question-stats">
+			        <table id="qinfo">
+			            <tbody><tr>
+			                <td>
+			                    <p class="label-key">asked</p>
+			                </td>
+			                <td style="padding-left: 10px">
+			                    <p class="label-key" title="2013-12-06 23:26:11Z"><b>9 months ago</b></p>
+			                </td>
+			            </tr>
+			            <tr>
+			                <td>
+			                    <p class="label-key">viewed</p>
+			                </td>
+
+			                <td style="padding-left: 10px">
+			                    <p class="label-key">
+			                        <b>318 times</b>
+			                    </p>
+			                </td>
+			            </tr>
+			                <tr>
+			                    <td>
+			                        <p class="label-key">active</p>
+			                    </td>
+			                    <td style="padding-left: 10px">
+			                        <p class="label-key"><b><a href="http://tex.stackexchange.com/questions/148778/how-to-draw-vertical-arrays-with-diagonal-arrows-to-represent-memory-in-tikz?lastactivity" class="lastactivity-link" title="2013-12-07 02:49:10Z">9 months ago</a></b></p>
+			                    </td>
+			                </tr>
+			        </tbody></table>
+			    </div>
+			<div class="module community-bulletin" data-tracker="cb=1">
+    <div class="related">
+                <div class="bulletin-title">
+                    Upcoming Events
+                </div>
+                <hr>
+    <div class="spacer">
+        
+    <div class="bulletin-item-type"><a href="http://chat.stackexchange.com/rooms/41/tex-latex-and-friends?cb=1" class="question-hyperlink"><div class="favicon favicon-tex" title="TeX - LaTeX Stack Exchange"></div></a></div>
+    <div class="bulletin-item-content">
+        <a href="http://chat.stackexchange.com/rooms/41/tex-latex-and-friends?cb=1" class="question-hyperlink">Answer the Unanswered</a>
+        <div><span title="2014-09-06 21:00:00Z" class="relativetime">in 4 days</span></div>
+    </div>
+    <br class="cbt">
+</div>
+    </div>
+</div>			
+			<style type="text/css">
+    .ads { margin-left: 60px; }
+    .ad-container { width: 220px; height: 250px; margin-right: 20px; margin-bottom: 20px; }
+    .ad-container .ad { height: 250px; }
+    .ad-container .footer-container { overflow: hidden; height: 30px; position: relative; top: -30px; }
+    .ad-container .footer-container .footer { font-family: Arial,Helvetic,Sans-Serif; font-size: 12px; text-align: center; padding-top: 9px; background-color: #000; color: #EFF; opacity: 0.9; filter: alpha(opacity=90); top: 30px; height: 30px; position: relative; }
+    .ad-container a:hover { text-decoration: underline; }
+    #adzerk2 { height: 250px; }
+</style>
+<script>
+    StackExchange.ready(function () {
+        $(".ad-container").hover(
+            function () {
+                $(".ad-container .footer-container .footer").stop(true, true).animate({ top: "0px" }, "fast");
+            },
+            function () {
+                $(".ad-container .footer-container .footer").animate({ top: "30px" }, "fast");
+            });
+    });
+</script>
+    <script>
+        var z = document.createElement("script"); z.async = true; z.src = '//engine.adzerk.net/z/12057/adzerk2_2_17_76?keywords=x-host-tex.stackexchange.com'; var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(z, s);
+    </script>
+    <div class="everyonelovesstackoverflow" id="adzerk2"><div id="beta-ad-container" style="height: 250px; width: 220px;">
+<style type="text/css">
+#beta-ad { width: 220px; height: 250px; text-align: center; color: #326ab3; border-top: 1px solid #b4cfea; overflow: hidden; font-family: Helvetica, Arial, sans-serif !important; }
+#beta-ad a, #beta-ad a:visited, #beta-ad a:active { text-decoration: none; color: #326ab3; }
+#beta-ad { background: url(//cdn.sstatic.net/stackexchange/Img/beta-ad-bg.jpg) no-repeat bottom center; }
+#beta-ad-inner { height: 190px; padding: 0px 10px 20px 10px; width: 200px; overflow: hidden; }
+#beta-ad-top a { height: 22px; padding: 7px 0; font-size: 15px; line-height: 22px; display: block; color: #FFF !important; font-family: Helvetica, Arial, sans-serif !important; }
+#beta-ad-mid { height: 178px; display:table-cell; vertical-align: middle; }
+#beta-ad-mid #beta-ad-que, #beta-ad-mid #beta-ad-que:visited, #beta-ad-mid #beta-ad-que:active { font-size: 19px; line-height: 25px; font-weight: bold; color: #3a6da6; text-shadow: 0 1px 0 #fff; }
+#beta-ad-own { float: right; margin-top: 5px; font-size: 15px; line-height: 15px; }
+#beta-ad-own a { height: 20px; }
+#beta-ad-bot { height: 25px; font-size: 12px; overflow: hidden; margin-top: 6px; }
+#beta-ad-ans { margin-right: 8px; color: #29294b !important; display: inline-block; line-height: 24px; }
+.beta-ad-tag { color: #566E76!important; font-size: 11px; display: inline-block; background-color: #F7FDFF; text-decoration: none; white-space: nowrap; overflow: visible; margin: 2px 2px 6px 0; padding: 0.1em 0.6em; line-height: 1.4; border: 1px solid #C0D4DB; -moz-border-radius: 15px; -webkit-border-radius: 15px; border-radius: 15px; }
+</style>
+
+<div id="beta-ad">
+    <div id="beta-ad-top"><a href="http://engine.adzerk.net/r?e=eyJhdiI6NDE0LCJhdCI6MTcsImNtIjoxMTYxLCJjaCI6MTE5OCwiY3IiOjI2NjMsImRpIjoiNzZmZmVmNGZiZGI5NDEyYmFhZTM3ODAyY2YwZDIzNzMiLCJkbSI6MSwiZmMiOjQ2NTEsImZsIjozMzM1LCJpcCI6IjE5MC4yMTEuOTUuNjgiLCJrdyI6IngtaG9zdC10ZXguc3RhY2tleGNoYW5nZS5jb20iLCJudyI6MjIsInBjIjowLCJwciI6MTc1NiwicnQiOjEsInN0IjoxMjA1NywidWsiOiJ1ZTEtZjc5MjMyZmM4NjJiNDQzYTgyMDhjZWUzNDg5NzgyNGMiLCJ6biI6NzYsInRzIjoxNDA5NzI1MDYwNDg3LCJ1ciI6bnVsbH0&amp;s=RgKq8gS6b14IlfMOo1Fueyvkpwo&amp;url=http%3A%2F%2Fparenting.stackexchange.com%2F">parenting.stackexchange.com</a></div>
+    <div id="beta-ad-inner">
+        <div id="beta-ad-mid">
+            <a id="beta-ad-que" href="http://engine.adzerk.net/r?e=eyJhdiI6NDE0LCJhdCI6MTcsImNtIjoxMTYxLCJjaCI6MTE5OCwiY3IiOjI2NjMsImRpIjoiNzZmZmVmNGZiZGI5NDEyYmFhZTM3ODAyY2YwZDIzNzMiLCJkbSI6MSwiZmMiOjQ2NTEsImZsIjozMzM1LCJpcCI6IjE5MC4yMTEuOTUuNjgiLCJrdyI6IngtaG9zdC10ZXguc3RhY2tleGNoYW5nZS5jb20iLCJudyI6MjIsInBjIjowLCJwciI6MTc1NiwicnQiOjEsInN0IjoxMjA1NywidWsiOiJ1ZTEtZjc5MjMyZmM4NjJiNDQzYTgyMDhjZWUzNDg5NzgyNGMiLCJ6biI6NzYsInRzIjoxNDA5NzI1MDYwNDg3LCJ1ciI6bnVsbH0&amp;s=RgKq8gS6b14IlfMOo1Fueyvkpwo&amp;url=http%3A%2F%2Fparenting.stackexchange.com%2Fquestions%2F14691%2Fdaughter-is-11-and-really-upset-that-she-may-be-lesbian">Daughter is 11 and really upset that she may be lesbian</a><br>
+            <div id="beta-ad-own">– <a href="http://engine.adzerk.net/r?e=eyJhdiI6NDE0LCJhdCI6MTcsImNtIjoxMTYxLCJjaCI6MTE5OCwiY3IiOjI2NjMsImRpIjoiNzZmZmVmNGZiZGI5NDEyYmFhZTM3ODAyY2YwZDIzNzMiLCJkbSI6MSwiZmMiOjQ2NTEsImZsIjozMzM1LCJpcCI6IjE5MC4yMTEuOTUuNjgiLCJrdyI6IngtaG9zdC10ZXguc3RhY2tleGNoYW5nZS5jb20iLCJudyI6MjIsInBjIjowLCJwciI6MTc1NiwicnQiOjEsInN0IjoxMjA1NywidWsiOiJ1ZTEtZjc5MjMyZmM4NjJiNDQzYTgyMDhjZWUzNDg5NzgyNGMiLCJ6biI6NzYsInRzIjoxNDA5NzI1MDYwNDg3LCJ1ciI6bnVsbH0&amp;s=RgKq8gS6b14IlfMOo1Fueyvkpwo&amp;url=http%3A%2F%2Fparenting.stackexchange.com%2Fusers%2F9648%2Fuser9648">user9648</a></div>
+        </div>
+        <div id="beta-ad-bot"><a id="beta-ad-ans" href="http://engine.adzerk.net/r?e=eyJhdiI6NDE0LCJhdCI6MTcsImNtIjoxMTYxLCJjaCI6MTE5OCwiY3IiOjI2NjMsImRpIjoiNzZmZmVmNGZiZGI5NDEyYmFhZTM3ODAyY2YwZDIzNzMiLCJkbSI6MSwiZmMiOjQ2NTEsImZsIjozMzM1LCJpcCI6IjE5MC4yMTEuOTUuNjgiLCJrdyI6IngtaG9zdC10ZXguc3RhY2tleGNoYW5nZS5jb20iLCJudyI6MjIsInBjIjowLCJwciI6MTc1NiwicnQiOjEsInN0IjoxMjA1NywidWsiOiJ1ZTEtZjc5MjMyZmM4NjJiNDQzYTgyMDhjZWUzNDg5NzgyNGMiLCJ6biI6NzYsInRzIjoxNDA5NzI1MDYwNDg3LCJ1ciI6bnVsbH0&amp;s=RgKq8gS6b14IlfMOo1Fueyvkpwo&amp;url=http%3A%2F%2Fparenting.stackexchange.com%2Fquestions%2F14691%2Fdaughter-is-11-and-really-upset-that-she-may-be-lesbian%23tab-top">10 answers</a> <a class="beta-ad-tag" href="http://engine.adzerk.net/r?e=eyJhdiI6NDE0LCJhdCI6MTcsImNtIjoxMTYxLCJjaCI6MTE5OCwiY3IiOjI2NjMsImRpIjoiNzZmZmVmNGZiZGI5NDEyYmFhZTM3ODAyY2YwZDIzNzMiLCJkbSI6MSwiZmMiOjQ2NTEsImZsIjozMzM1LCJpcCI6IjE5MC4yMTEuOTUuNjgiLCJrdyI6IngtaG9zdC10ZXguc3RhY2tleGNoYW5nZS5jb20iLCJudyI6MjIsInBjIjowLCJwciI6MTc1NiwicnQiOjEsInN0IjoxMjA1NywidWsiOiJ1ZTEtZjc5MjMyZmM4NjJiNDQzYTgyMDhjZWUzNDg5NzgyNGMiLCJ6biI6NzYsInRzIjoxNDA5NzI1MDYwNDg3LCJ1ciI6bnVsbH0&amp;s=RgKq8gS6b14IlfMOo1Fueyvkpwo&amp;url=http%3A%2F%2Fparenting.stackexchange.com%2Fquestions%2Ftagged%2Fanxiety">anxiety</a>  <a class="beta-ad-tag" href="http://engine.adzerk.net/r?e=eyJhdiI6NDE0LCJhdCI6MTcsImNtIjoxMTYxLCJjaCI6MTE5OCwiY3IiOjI2NjMsImRpIjoiNzZmZmVmNGZiZGI5NDEyYmFhZTM3ODAyY2YwZDIzNzMiLCJkbSI6MSwiZmMiOjQ2NTEsImZsIjozMzM1LCJpcCI6IjE5MC4yMTEuOTUuNjgiLCJrdyI6IngtaG9zdC10ZXguc3RhY2tleGNoYW5nZS5jb20iLCJudyI6MjIsInBjIjowLCJwciI6MTc1NiwicnQiOjEsInN0IjoxMjA1NywidWsiOiJ1ZTEtZjc5MjMyZmM4NjJiNDQzYTgyMDhjZWUzNDg5NzgyNGMiLCJ6biI6NzYsInRzIjoxNDA5NzI1MDYwNDg3LCJ1ciI6bnVsbH0&amp;s=RgKq8gS6b14IlfMOo1Fueyvkpwo&amp;url=http%3A%2F%2Fparenting.stackexchange.com%2Fquestions%2Ftagged%2Fhomosexuality">homosexuality</a> </div>
+    </div>
+</div>
+
+
+</div><script type="text/javascript">window._betaAdUrl = "http://engine.adzerk.net/r?e=eyJhdiI6NDE0LCJhdCI6MTcsImNtIjoxMTYxLCJjaCI6MTE5OCwiY3IiOjI2NjMsImRpIjoiNzZmZmVmNGZiZGI5NDEyYmFhZTM3ODAyY2YwZDIzNzMiLCJkbSI6MSwiZmMiOjQ2NTEsImZsIjozMzM1LCJpcCI6IjE5MC4yMTEuOTUuNjgiLCJrdyI6IngtaG9zdC10ZXguc3RhY2tleGNoYW5nZS5jb20iLCJudyI6MjIsInBjIjowLCJwciI6MTc1NiwicnQiOjEsInN0IjoxMjA1NywidWsiOiJ1ZTEtZjc5MjMyZmM4NjJiNDQzYTgyMDhjZWUzNDg5NzgyNGMiLCJ6biI6NzYsInRzIjoxNDA5NzI1MDYwNDg3LCJ1ciI6bnVsbH0&s=RgKq8gS6b14IlfMOo1Fueyvkpwo";</script><script src="How%20to%20Draw%20Vertical%20Arrays%20with%20Diagonal%20Arrows%20to%20Represent%20Memory%20in%20TikZ%3F%20-%20TeX%20-%20LaTeX%20Stack%20Exchange_archivos/js" type="text/javascript"></script><img src="How%20to%20Draw%20Vertical%20Arrays%20with%20Diagonal%20Arrows%20to%20Represent%20Memory%20in%20TikZ%3F%20-%20TeX%20-%20LaTeX%20Stack%20Exchange_archivos/i.gif" style="position:absolute;" border="0" height="0px" width="0px"></div>
+			  
+    
+            <div class="module sidebar-linked">
+	<h4 id="h-linked">Linked</h4>
+	<div class="linked" data-tracker="lq=1">
+<div class="spacer">
+	<a href="http://tex.stackexchange.com/q/18363?lq=1" title="Vote score (upvotes - downvotes)">
+		<div class="answer-votes answered-accepted default">7</div>
+	</a>
+	<a href="http://tex.stackexchange.com/questions/18363/diagrams-package-that-allows-to-draw-computer-buffers-memory-diagrams?lq=1" class="question-hyperlink">Diagrams package that allows to draw computer buffers (memory diagrams)</a>
+</div><div class="spacer">
+	<a href="http://tex.stackexchange.com/q/93942?lq=1" title="Vote score (upvotes - downvotes)">
+		<div class="answer-votes answered-accepted default">6</div>
+	</a>
+	<a href="http://tex.stackexchange.com/questions/93942/typesetting-classical-data-structures-in-tikz?lq=1" class="question-hyperlink">Typesetting classical data structures in tikz</a>
+</div>			</div>
+</div>
+
+				<div class="module sidebar-related">
+					<h4 id="h-related">Related</h4>
+                    <div class="related js-gps-related-questions" data-tracker="rq=1">
+                        <div class="spacer js-gps-track">
+<a href="http://tex.stackexchange.com/q/38169?rq=1" title="Vote score (upvotes - downvotes)">
+    <div class="answer-votes answered-accepted default">7
+    </div>
+</a><a href="http://tex.stackexchange.com/questions/38169/drawing-multiple-diagonal-arrows-in-a-table?rq=1" class="question-hyperlink">Drawing Multiple Diagonal Arrows in a Table</a>
+</div>
+<div class="spacer js-gps-track">
+<a href="http://tex.stackexchange.com/q/57296?rq=1" title="Vote score (upvotes - downvotes)">
+    <div class="answer-votes answered-accepted default">6
+    </div>
+</a><a href="http://tex.stackexchange.com/questions/57296/how-to-draw-a-series-of-paths-in-a-tikz-chronology-diagram?rq=1" class="question-hyperlink">How to draw a series of paths in a TikZ chronology diagram?</a>
+</div>
+<div class="spacer js-gps-track">
+<a href="http://tex.stackexchange.com/q/57571?rq=1" title="Vote score (upvotes - downvotes)">
+    <div class="answer-votes answered-accepted default">10
+    </div>
+</a><a href="http://tex.stackexchange.com/questions/57571/how-to-draw-curved-arrows-in-tikz?rq=1" class="question-hyperlink">How to draw curved arrows in tikz?</a>
+</div>
+<div class="spacer js-gps-track">
+<a href="http://tex.stackexchange.com/q/73733?rq=1" title="Vote score (upvotes - downvotes)">
+    <div class="answer-votes default">3
+    </div>
+</a><a href="http://tex.stackexchange.com/questions/73733/help-to-draw-an-arrow-in-tikz?rq=1" class="question-hyperlink">Help to draw an arrow in TikZ</a>
+</div>
+<div class="spacer js-gps-track">
+<a href="http://tex.stackexchange.com/q/108472?rq=1" title="Vote score (upvotes - downvotes)">
+    <div class="answer-votes default">21
+    </div>
+</a><a href="http://tex.stackexchange.com/questions/108472/how-to-draw-a-diagonally-split-grid-with-tikz?rq=1" class="question-hyperlink">How to draw a diagonally-split grid with TikZ?</a>
+</div>
+<div class="spacer js-gps-track">
+<a href="http://tex.stackexchange.com/q/113322?rq=1" title="Vote score (upvotes - downvotes)">
+    <div class="answer-votes answered-accepted default">3
+    </div>
+</a><a href="http://tex.stackexchange.com/questions/113322/how-do-i-draw-a-graph-in-tikz-where-the-vertices-are-only-represented-by-the-lab?rq=1" class="question-hyperlink">How do I draw a graph in tikz where the vertices are only represented by the label names?</a>
+</div>
+<div class="spacer js-gps-track">
+<a href="http://tex.stackexchange.com/q/151220?rq=1" title="Vote score (upvotes - downvotes)">
+    <div class="answer-votes default">5
+    </div>
+</a><a href="http://tex.stackexchange.com/questions/151220/how-to-use-tikz-to-draw-array-of-decorative-boxes?rq=1" class="question-hyperlink">How to use tikz to draw array of decorative boxes</a>
+</div>
+<div class="spacer js-gps-track">
+<a href="http://tex.stackexchange.com/q/151451?rq=1" title="Vote score (upvotes - downvotes)">
+    <div class="answer-votes answered-accepted default">3
+    </div>
+</a><a href="http://tex.stackexchange.com/questions/151451/how-to-draw-avl-rectangle-represention-in-tikz?rq=1" class="question-hyperlink">How to draw AVL rectangle represention in TikZ?</a>
+</div>
+<div class="spacer js-gps-track">
+<a href="http://tex.stackexchange.com/q/179979?rq=1" title="Vote score (upvotes - downvotes)">
+    <div class="answer-votes default">3
+    </div>
+</a><a href="http://tex.stackexchange.com/questions/179979/arrows-with-edges-in-tikz?rq=1" class="question-hyperlink">arrows with edges in tikz</a>
+</div>
+<div class="spacer js-gps-track">
+<a href="http://tex.stackexchange.com/q/184792?rq=1" title="Vote score (upvotes - downvotes)">
+    <div class="answer-votes answered-accepted default">4
+    </div>
+</a><a href="http://tex.stackexchange.com/questions/184792/tikz-drawing-shift-arrow?rq=1" class="question-hyperlink">Tikz - Drawing Shift Arrow</a>
+</div>
+
+                    </div>
+				</div>
+            
+<div id="hot-network-questions" class="module">
+    <h4>
+        <a href="http://stackexchange.com/questions?tab=hot" class="js-gps-track" data-gps-track="posts_hot_network.click({ item_type:1, location:11 })">
+            Hot Network Questions
+        </a>
+    </h4>
+    <ul>
+            <li>
+                <div class="favicon favicon-serverfault" title="Server Fault"></div><a href="http://serverfault.com/questions/625641/how-can-i-run-arbitrarily-complex-command-using-sudo-over-ssh" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:2 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    How can I run arbitrarily complex command using sudo over ssh?
+                </a>
+
+            </li>
+            <li>
+                <div class="favicon favicon-skeptics" title="Skeptics Stack Exchange"></div><a href="http://skeptics.stackexchange.com/questions/23072/do-mosquitoes-urinate-on-you-when-they-bite-you" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:212 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Do mosquitoes urinate on you when they bite you?
+                </a>
+
+            </li>
+            <li>
+                <div class="favicon favicon-academia" title="Academia Stack Exchange"></div><a href="http://academia.stackexchange.com/questions/27940/how-do-i-cite-a-mathematical-definition-replicated-verbatim" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:415 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    How do I cite a mathematical definition replicated verbatim?
+                </a>
+
+            </li>
+            <li>
+                <div class="favicon favicon-superuser" title="Super User"></div><a href="http://superuser.com/questions/805340/does-every-os-need-ram" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:3 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Does every OS need RAM?
+                </a>
+
+            </li>
+            <li>
+                <div class="favicon favicon-mathematica" title="Mathematica Stack Exchange"></div><a href="http://mathematica.stackexchange.com/questions/58736/eliminate-3-variable-from-4-equations" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:387 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Eliminate 3 Variable from 4 Equations
+                </a>
+
+            </li>
+            <li style="display: list-item;" class="dno js-hidden">
+                <div class="favicon favicon-english" title="English Language &amp; Usage Stack Exchange"></div><a href="http://english.stackexchange.com/questions/194456/single-word-for-more-than-once" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:97 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Single word for "more than once"
+                </a>
+
+            </li>
+            <li style="display: list-item;" class="dno js-hidden">
+                <div class="favicon favicon-gaming" title="Arqade"></div><a href="http://gaming.stackexchange.com/questions/182925/is-there-a-downside-to-throwing-greater-rift-time-trials" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:41 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Is there a downside to throwing Greater Rift time trials?
+                </a>
+
+            </li>
+            <li style="display: list-item;" class="dno js-hidden">
+                <div class="favicon favicon-cooking" title="Seasoned Advice"></div><a href="http://cooking.stackexchange.com/questions/46799/how-to-prevent-the-chicken-breasts-from-drying-out" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:49 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    How to prevent the chicken breasts from drying out
+                </a>
+
+            </li>
+            <li style="display: list-item;" class="dno js-hidden">
+                <div class="favicon favicon-security" title="Information Security Stack Exchange"></div><a href="http://security.stackexchange.com/questions/66550/unix-execute-permission-can-be-easily-bypassed-is-it-superfluous-or-whats-the" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:162 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Unix execute permission can be easily bypassed. Is it superfluous, or what's the intention behind it?
+                </a>
+
+            </li>
+            <li style="display: list-item;" class="dno js-hidden">
+                <div class="favicon favicon-tex" title="TeX - LaTeX Stack Exchange"></div><a href="http://tex.stackexchange.com/questions/199026/how-can-i-draw-circled-integers-with-the-same-size-by-tikz" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:85 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    How can I draw circled integers with the same size by TikZ?
+                </a>
+
+            </li>
+            <li style="display: list-item;" class="dno js-hidden">
+                <div class="favicon favicon-music" title="Musical Practice &amp; Performance Stack Exchange"></div><a href="http://music.stackexchange.com/questions/23265/what-do-we-call-music-which-is-not-played-on-the-beat" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:240 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    What do we call music which is not played on the beat?
+                </a>
+
+            </li>
+            <li style="display: list-item;" class="dno js-hidden">
+                <div class="favicon favicon-math" title="Mathematics Stack Exchange"></div><a href="http://math.stackexchange.com/questions/917302/evaluating-a-polynomial-of-degree-4-given-some-values-of-the-polynomial" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:69 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Evaluating a polynomial of degree 4, given some values of the polynomial
+                </a>
+
+            </li>
+            <li style="display: list-item;" class="dno js-hidden">
+                <div class="favicon favicon-outdoors" title="The Great Outdoors Stack Exchange"></div><a href="http://outdoors.stackexchange.com/questions/6609/backpacking-propane-canister-too-tall-and-unstable" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:395 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Backpacking propane canister too tall and unstable
+                </a>
+
+            </li>
+            <li style="display: list-item;" class="dno js-hidden">
+                <div class="favicon favicon-programmers" title="Programmers Stack Exchange"></div><a href="http://programmers.stackexchange.com/questions/255067/beginning-a-sentence-with-a-function-name" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:131 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Beginning a sentence with a function name?
+                </a>
+
+            </li>
+            <li style="display: list-item;" class="dno js-hidden">
+                <div class="favicon favicon-mathematica" title="Mathematica Stack Exchange"></div><a href="http://mathematica.stackexchange.com/questions/58657/how-to-blend-two-photos-in-mathematica" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:387 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    How to blend two photos in Mathematica?
+                </a>
+
+            </li>
+            <li style="display: list-item;" class="dno js-hidden">
+                <div class="favicon favicon-cooking" title="Seasoned Advice"></div><a href="http://cooking.stackexchange.com/questions/46803/is-a-steak-ok-to-eat-if-it-fell-down-but-i-cooked-it-afterwards" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:49 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Is a steak OK to eat if it fell down, but I cooked it afterwards?
+                </a>
+
+            </li>
+            <li style="display: list-item;" class="dno js-hidden">
+                <div class="favicon favicon-aviation" title="Aviation Stack Exchange"></div><a href="http://aviation.stackexchange.com/questions/8429/does-the-apu-consume-a-lot-of-fuel-compared-to-a-jet-engine" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:528 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Does the APU consume a lot of fuel compared to a jet engine?
+                </a>
+
+            </li>
+            <li style="display: list-item;" class="dno js-hidden">
+                <div class="favicon favicon-music" title="Musical Practice &amp; Performance Stack Exchange"></div><a href="http://music.stackexchange.com/questions/23271/what-is-the-difference-between-monitors-and-loudspeakers-in-technical-terms" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:240 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    What is the difference between monitors and (loud)speakers in technical terms?
+                </a>
+
+            </li>
+            <li style="display: list-item;" class="dno js-hidden">
+                <div class="favicon favicon-english" title="English Language &amp; Usage Stack Exchange"></div><a href="http://english.stackexchange.com/questions/194534/what-is-the-antonym-of-virtual-machine" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:97 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    What is the antonym of 'virtual machine'?
+                </a>
+
+            </li>
+            <li style="display: list-item;" class="dno js-hidden">
+                <div class="favicon favicon-rpg" title="Role-playing Games Stack Exchange"></div><a href="http://rpg.stackexchange.com/questions/47165/looking-for-a-free-easy-to-learn-dd-like-game-that-can-be-run-with-limited-mat" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:122 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Looking for a free, easy-to-learn D&amp;D-like game that can be run with limited materials
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-linguistics" title="Linguistics Stack Exchange"></div><a href="http://linguistics.stackexchange.com/questions/8893/what-languages-use-numbers-to-name-the-week-days-and-months" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:312 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    What languages use numbers to name the week days and months?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-stackoverflow" title="Stack Overflow"></div><a href="http://stackoverflow.com/questions/25618934/lambda-over-lambda-in-c14" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:1 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Lambda-Over-Lambda in C++14
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-math" title="Mathematics Stack Exchange"></div><a href="http://math.stackexchange.com/questions/916894/why-is-an-image-called-an-image" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:69 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Why is an image called an "image"?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-rpg" title="Role-playing Games Stack Exchange"></div><a href="http://rpg.stackexchange.com/questions/47136/are-there-any-penalties-for-wearing-armor-all-the-time" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:122 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Are there any penalties for wearing armor all the time?
+                </a>
+
+            </li>
+    </ul>
+
+        <a href="#" class="show-more js-show-more js-gps-track" data-gps-track="posts_hot_network.click({ item_type:3, location:11 })">
+            more hot questions
+        </a>
+</div>
+		</div>
+	
+<div id="feed-link">
+    <div id="feed-link-text">
+        <a href="http://tex.stackexchange.com/feeds/question/148778" title="feed of this question and its answers">
+            <span class="feed-icon"></span>question feed
+        </a>
+    </div>
+</div>	<script>
+StackExchange.ready(function(){$.get('/posts/148778/ivc/2256');});
+</script>
+<noscript>
+    <div><img src="/posts/148778/ivc/2256" class="dno" alt="" width="0" height="0"></div>
+</noscript><div style="display:none" id="prettify-lang">lang-tex</div></div>
+
+
+
+        </div>
+    </div>
+    <div id="footer" class="categories">
+        <div class="footerwrap">
+            <div id="footer-menu">
+                <div class="top-footer-links">
+                        <a href="http://tex.stackexchange.com/tour">tour</a>
+                    <a href="http://tex.stackexchange.com/help">help</a>
+                        <a href="http://tex.stackexchange.com/help/badges">badges</a>
+                    <a href="http://tex.blogoverflow.com/?blb=1">blog</a>
+                        <a href="http://chat.stackexchange.com/">chat</a>
+                    <a href="http://data.stackexchange.com/">data</a>
+                    <a href="http://stackexchange.com/legal">legal</a>
+                    <a href="http://stackexchange.com/legal/privacy-policy">privacy policy</a>
+                    <a href="http://stackexchange.com/work-here">work here</a>
+                    <a href="http://stackexchange.com/mediakit">advertising info</a>
+
+                    <a onclick='StackExchange.switchMobile("on")'>mobile</a>
+                    <b><a href="http://tex.stackexchange.com/contact">contact us</a></b>
+                        <b><a href="http://meta.tex.stackexchange.com/">feedback</a></b>
+                    
+                </div>
+                <div id="footer-sites">
+                    <table>
+    <tbody><tr>
+            <th colspan="3">
+                Technology
+            </th>
+            <th>
+                Life / Arts
+            </th>
+            <th>
+                Culture / Recreation
+            </th>
+            <th>
+                Science
+            </th>
+            <th>
+                Other
+            </th>
+    </tr>
+    <tr>
+            <td>
+                <ol>
+                        <li><a href="http://stackoverflow.com/" title="professional and enthusiast programmers">Stack Overflow</a></li>
+                        <li><a href="http://serverfault.com/" title="professional system and network administrators">Server Fault</a></li>
+                        <li><a href="http://superuser.com/" title="computer enthusiasts and power users">Super User</a></li>
+                        <li><a href="http://webapps.stackexchange.com/" title="power users of web applications">Web Applications</a></li>
+                        <li><a href="http://askubuntu.com/" title="Ubuntu users and developers">Ask Ubuntu</a></li>
+                        <li><a href="http://webmasters.stackexchange.com/" title="pro webmasters">Webmasters</a></li>
+                        <li><a href="http://gamedev.stackexchange.com/" title="professional and independent game developers">Game Development</a></li>
+                        <li><a href="http://tex.stackexchange.com/" title="users of TeX, LaTeX, ConTeXt, and related typesetting systems">TeX - LaTeX</a></li>
+                            </ol></td><td><ol>
+                        <li><a href="http://programmers.stackexchange.com/" title="professional programmers interested in conceptual questions about software development">Programmers</a></li>
+                        <li><a href="http://unix.stackexchange.com/" title="users of Linux, FreeBSD and other Un*x-like operating systems.">Unix &amp; Linux</a></li>
+                        <li><a href="http://apple.stackexchange.com/" title="power users of Apple hardware and software">Ask Different (Apple)</a></li>
+                        <li><a href="http://wordpress.stackexchange.com/" title="WordPress developers and administrators">WordPress Development</a></li>
+                        <li><a href="http://gis.stackexchange.com/" title="cartographers, geographers and GIS professionals">Geographic Information Systems</a></li>
+                        <li><a href="http://electronics.stackexchange.com/" title="electronics and electrical engineering professionals, students, and enthusiasts">Electrical Engineering</a></li>
+                        <li><a href="http://android.stackexchange.com/" title="enthusiasts and power users of the Android operating system">Android Enthusiasts</a></li>
+                        <li><a href="http://security.stackexchange.com/" title="Information security professionals">Information Security</a></li>
+                            </ol></td><td><ol>
+                        <li><a href="http://dba.stackexchange.com/" title="database professionals who wish to improve their database skills and learn from others in the community">Database Administrators</a></li>
+                        <li><a href="http://drupal.stackexchange.com/" title="Drupal developers and administrators">Drupal Answers</a></li>
+                        <li><a href="http://sharepoint.stackexchange.com/" title="SharePoint enthusiasts">SharePoint</a></li>
+                        <li><a href="http://ux.stackexchange.com/" title="user experience researchers and experts">User Experience</a></li>
+                        <li><a href="http://mathematica.stackexchange.com/" title="users of Mathematica">Mathematica</a></li>
+                    
+                        <li>
+                            <a href="http://stackexchange.com/sites#technology" class="more">
+                                more (14)
+                            </a>
+                        </li>
+                </ol>
+            </td>
+            <td>
+                <ol>
+                        <li><a href="http://photo.stackexchange.com/" title="professional, enthusiast and amateur photographers">Photography</a></li>
+                        <li><a href="http://scifi.stackexchange.com/" title="science fiction and fantasy enthusiasts">Science Fiction &amp; Fantasy</a></li>
+                        <li><a href="http://graphicdesign.stackexchange.com/" title="Graphic Design professionals, students, and enthusiasts">Graphic Design</a></li>
+                        <li><a href="http://cooking.stackexchange.com/" title="professional and amateur chefs">Seasoned Advice (cooking)</a></li>
+                        <li><a href="http://diy.stackexchange.com/" title="contractors and serious DIYers">Home Improvement</a></li>
+                        <li><a href="http://money.stackexchange.com/" title="people who want to be financially literate">Personal Finance &amp; Money</a></li>
+                        <li><a href="http://academia.stackexchange.com/" title="academics and those enrolled in higher education">Academia</a></li>
+                    
+                        <li>
+                            <a href="http://stackexchange.com/sites#lifearts" class="more">
+                                more (10)
+                            </a>
+                        </li>
+                </ol>
+            </td>
+            <td>
+                <ol>
+                        <li><a href="http://english.stackexchange.com/" title="linguists, etymologists, and serious English language enthusiasts">English Language &amp; Usage</a></li>
+                        <li><a href="http://skeptics.stackexchange.com/" title="scientific skepticism">Skeptics</a></li>
+                        <li><a href="http://judaism.stackexchange.com/" title="those who base their lives on Jewish law and tradition and anyone interested in learning more">Mi Yodeya (Judaism)</a></li>
+                        <li><a href="http://travel.stackexchange.com/" title="road warriors and seasoned travelers">Travel</a></li>
+                        <li><a href="http://christianity.stackexchange.com/" title="committed Christians, experts in Christianity and those interested in learning more">Christianity</a></li>
+                        <li><a href="http://gaming.stackexchange.com/" title="passionate videogamers on all platforms">Arqade (gaming)</a></li>
+                        <li><a href="http://bicycles.stackexchange.com/" title="people who build and repair bicycles, people who train cycling, or commute on bicycles">Bicycles</a></li>
+                        <li><a href="http://rpg.stackexchange.com/" title="gamemasters and players of tabletop, paper-and-pencil role-playing games">Role-playing Games</a></li>
+                    
+                        <li>
+                            <a href="http://stackexchange.com/sites#culturerecreation" class="more">
+                                more (21)
+                            </a>
+                        </li>
+                </ol>
+            </td>
+            <td>
+                <ol>
+                        <li><a href="http://math.stackexchange.com/" title="people studying math at any level and professionals in related fields">Mathematics</a></li>
+                        <li><a href="http://stats.stackexchange.com/" title="people interested in statistics, machine learning, data analysis, data mining, and data visualization">Cross Validated (stats)</a></li>
+                        <li><a href="http://cstheory.stackexchange.com/" title="theoretical computer scientists and researchers in related fields">Theoretical Computer Science</a></li>
+                        <li><a href="http://physics.stackexchange.com/" title="active researchers, academics and students of physics">Physics</a></li>
+                        <li><a href="http://mathoverflow.net/" title="professional mathematicians">MathOverflow</a></li>
+                    
+                        <li>
+                            <a href="http://stackexchange.com/sites#science" class="more">
+                                more (7)
+                            </a>
+                        </li>
+                </ol>
+            </td>
+            <td>
+                <ol>
+                        <li><a href="http://stackapps.com/" title="apps, scripts, and development with the Stack Exchange API">Stack Apps</a></li>
+                        <li><a href="http://meta.stackexchange.com/" title="meta-discussion of the Stack Exchange family of Q&amp;A websites">Meta Stack Exchange</a></li>
+                        <li><a href="http://area51.stackexchange.com/" title="proposing new sites in the Stack Exchange network">Area 51</a></li>
+                        <li><a href="http://careers.stackoverflow.com/">Stack Overflow Careers</a></li>
+                    
+                </ol>
+            </td>
+    </tr>
+</tbody></table>
+                </div>
+            </div>
+
+            <div id="copyright">
+                site design / logo © 2014 stack exchange inc; user contributions licensed under <a href="http://creativecommons.org/licenses/by-sa/3.0/" rel="license">cc by-sa 3.0</a> 
+                with <a href="http://blog.stackoverflow.com/2009/06/attribution-required/" rel="license">attribution required</a>
+            </div>
+            <div id="svnrev">
+                rev 2014.9.2.1810
+            </div>
+            
+        </div>
+    </div>
+    <noscript>
+        <div id="noscript-warning">TeX - LaTeX Stack Exchange works best with JavaScript enabled<img src="http://pixel.quantserve.com/pixel/p-c1rF4kxgLUzNc.gif" alt="" class="dno"></div>
+    </noscript>
+
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () { (i[r].q = i[r].q || []).push(arguments) }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m);
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+        ga('create', 'UA-5620270-24', '.stackexchange.com');
+        
+        
+        ga('set', 'dimension2', '|tikz-pgf|');         
+        ga('send', 'pageview');
+        var _qevents = _qevents || [],
+            _comscore = _comscore || [];
+        (function () {
+            var ssl='https:'==document.location.protocol,
+                s=document.getElementsByTagName('script')[0],
+                qc=document.createElement('script');
+            qc.async=true;
+            qc.src=(ssl?'https://secure':'http://edge')+'.quantserve.com/quant.js';
+            s.parentNode.insertBefore(qc, s);
+            var sc=document.createElement('script');
+            sc.async=true;
+            sc.src=(ssl?'https://sb':'http://b') + '.scorecardresearch.com/beacon.js';
+            s.parentNode.insertBefore(sc, s);
+        })();
+        _comscore.push({ c1: "2", c2: "17440561" });
+        _qevents.push({ qacct: "p-c1rF4kxgLUzNc" });
+    </script>        
+    
+    
+</body></html>

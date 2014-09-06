@@ -1,0 +1,67 @@
+\hypertarget{punteros__funciones_8cpp}{\section{punteros\-\_\-funciones.\-cpp \-File \-Reference}
+\label{punteros__funciones_8cpp}\index{punteros\-\_\-funciones.\-cpp@{punteros\-\_\-funciones.\-cpp}}
+}
+{\ttfamily \#include $<$iostream$>$}\*
+\subsection*{\-Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{punteros__funciones_8cpp_a70ed59adcb4159ac551058053e649640}{\-S\-I\-Z\-E}~25
+\end{DoxyCompactItemize}
+\subsection*{\-Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{punteros__funciones_8cpp_a77b2fdedae2f93cd1a7abfeba25ab11a}{square} (int mi\-\_\-numero)
+\item 
+int \hyperlink{punteros__funciones_8cpp_ad955fc6702586ce45261969a1be8a5ae}{cube} (int mi\-\_\-numero)
+\item 
+int \hyperlink{punteros__funciones_8cpp_a1d3e0308276ded5a604a3217fac3bc85}{power} (int mi\-\_\-numero, int($\ast$calc\-\_\-power)(int))
+\item 
+int \hyperlink{punteros__funciones_8cpp_a840291bc02cba5474a4cb46a9b9566fe}{main} (void)
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Define \-Documentation}
+\hypertarget{punteros__funciones_8cpp_a70ed59adcb4159ac551058053e649640}{\index{punteros\-\_\-funciones.\-cpp@{punteros\-\_\-funciones.\-cpp}!\-S\-I\-Z\-E@{\-S\-I\-Z\-E}}
+\index{\-S\-I\-Z\-E@{\-S\-I\-Z\-E}!punteros_funciones.cpp@{punteros\-\_\-funciones.\-cpp}}
+\subsubsection[{\-S\-I\-Z\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-S\-I\-Z\-E}~25}}\label{punteros__funciones_8cpp_a70ed59adcb4159ac551058053e649640}
+
+
+\subsection{\-Function \-Documentation}
+\hypertarget{punteros__funciones_8cpp_ad955fc6702586ce45261969a1be8a5ae}{\index{punteros\-\_\-funciones.\-cpp@{punteros\-\_\-funciones.\-cpp}!cube@{cube}}
+\index{cube@{cube}!punteros_funciones.cpp@{punteros\-\_\-funciones.\-cpp}}
+\subsubsection[{cube}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf cube} (
+\begin{DoxyParamCaption}
+\item[{int}]{mi\-\_\-numero}
+\end{DoxyParamCaption}
+)}}\label{punteros__funciones_8cpp_ad955fc6702586ce45261969a1be8a5ae}
+\-Funcion \hyperlink{punteros__funciones_8cpp_ad955fc6702586ce45261969a1be8a5ae}{cube(int mi\-\_\-numero)}
+
+\-Esta funcion recibe un entero y retorna el cubo de dicho entero.\hypertarget{punteros__funciones_8cpp_a840291bc02cba5474a4cb46a9b9566fe}{\index{punteros\-\_\-funciones.\-cpp@{punteros\-\_\-funciones.\-cpp}!main@{main}}
+\index{main@{main}!punteros_funciones.cpp@{punteros\-\_\-funciones.\-cpp}}
+\subsubsection[{main}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf main} (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{punteros__funciones_8cpp_a840291bc02cba5474a4cb46a9b9566fe}
+\-Funcion \hyperlink{punteros__funciones3_8cpp_a840291bc02cba5474a4cb46a9b9566fe}{main(void)}
+
+\-El main de este programa comienza por mostrar en pantalla lo que esta sucendiento para que el usuario tenga una idea de lo que esta procesandose. \-Ademas, realiza el llamado a la funcion power, la cual posee dos argumentos, como se vio anteriormente, uno es el entero que se desea manipular y el otro es la funcion que se desea realizar.\hypertarget{punteros__funciones_8cpp_a1d3e0308276ded5a604a3217fac3bc85}{\index{punteros\-\_\-funciones.\-cpp@{punteros\-\_\-funciones.\-cpp}!power@{power}}
+\index{power@{power}!punteros_funciones.cpp@{punteros\-\_\-funciones.\-cpp}}
+\subsubsection[{power}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf power} (
+\begin{DoxyParamCaption}
+\item[{int}]{mi\-\_\-numero, }
+\item[{int($\ast$)(int)}]{calc\-\_\-power}
+\end{DoxyParamCaption}
+)}}\label{punteros__funciones_8cpp_a1d3e0308276ded5a604a3217fac3bc85}
+\-Funcion power(int mi\-\_\-numero, int($\ast$calc\-\_\-power) (int))
+
+esta funcion es muy importante ya que se encarga basicamente de realizar el llamado a las otras funciones, por lo tanto se puede observar que recibe el entero que se va a manipular, pero ademas posee otro argumento que es un puntero, el cual es el el puntero a la funcion, que por el momento no se sabe cual es, se define en el main.\hypertarget{punteros__funciones_8cpp_a77b2fdedae2f93cd1a7abfeba25ab11a}{\index{punteros\-\_\-funciones.\-cpp@{punteros\-\_\-funciones.\-cpp}!square@{square}}
+\index{square@{square}!punteros_funciones.cpp@{punteros\-\_\-funciones.\-cpp}}
+\subsubsection[{square}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf square} (
+\begin{DoxyParamCaption}
+\item[{int}]{mi\-\_\-numero}
+\end{DoxyParamCaption}
+)}}\label{punteros__funciones_8cpp_a77b2fdedae2f93cd1a7abfeba25ab11a}
+\-Funcion \hyperlink{punteros__funciones_8cpp_a77b2fdedae2f93cd1a7abfeba25ab11a}{square(int mi\-\_\-numero)}
+
+esta funcion recibe un entero y retorna el cuadrado de dicho entero.
