@@ -1,0 +1,34 @@
+#Se definen los objetos , estos son los archivos que necesitan
+#para crear el ejecutable .
+
+OBJS1 = strcopy2.cpp
+
+#Se define e l compilador
+
+CC = g++
+
+#Bandera de depuracion
+
+DEBUG = -g
+
+#Banderas de compilacion
+
+CFLAGS = -c
+#CFLAGS = -Wall -c $(DEBUG) -pedantic
+
+#Banderas para el Linker
+
+LFLAGS = -Wall $(DEBUG) -pedantic
+	
+#Archivo Ejecutable que se va a crear
+
+TARGET1 = strcopy2
+
+#Reglas a ejecutar cuando se ejecute make
+$(TARGET1) : $(OBJS1)
+	$(CC) -o $(TARGET1) $(OBJS1)
+
+clean :
+	rm -r *.o
+
+
