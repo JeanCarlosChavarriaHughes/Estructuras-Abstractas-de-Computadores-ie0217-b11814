@@ -8,14 +8,6 @@ OBJS4 = punteros_funciones3.cpp
 OBJS5 = punt_punt.cpp
 OBJS6 = punteros_arreglos.cpp
 
-
-EXE1 = punteros.o
-EXE2 = punteros_funciones.o
-EXE3 = punteros_funciones2.o
-EXE4 = punteros_funciones3.o
-EXE5 = punt_punt.o
-EXE6 = punteros_arreglos.o
-
 #Se define e l compilador
 
 CC = g++
@@ -43,35 +35,24 @@ TARGET5 = punt_punt.o
 TARGET6 = punteros_arreglos.o
 
 #Reglas a ejecutar cuando se ejecute make
-$(TARGET1) : $(OBJS1)
+all:
+
 	$(CC) -o $(TARGET1) $(OBJS1)
-EXE1 : $(OBJS1)
-	$(CC) $(CFLAGS) $(OBJS1)
 
-$(TARGET2) : $(OBJS2)
+
 	$(CC) -o $(TARGET2) $(OBJS2)
-EXE2 : $(OBJS2)
-	$(CC) $(CFLAGS) $(OBJS2)
 
-$(TARGET3) : $(OBJS3)
+
 	$(CC) -o $(TARGET3) $(OBJS3)
-EXE3 : $(OBJS3)
-	$(CC) $(CFLAGS) $(OBJS3)
 
-$(TARGET4) : $(OBJS4)
+
 	$(CC) -o $(TARGET4) $(OBJS4)
-EXE4 : $(OBJS4)
-	$(CC) $(CFLAGS) $(OBJS4)
 
-$(TARGET5) : $(OBJS5)
+
 	$(CC) -o $(TARGET5) $(OBJS5)
-EXE5 : $(OBJS5)
-	$(CC) $(CFLAGS) $(OBJS5)
 
-$(TARGET6) : $(OBJS6)
+
 	$(CC) -o $(TARGET6) $(OBJS6)
-EXE6 : $(OBJS6)
-	$(CC) $(CFLAGS) $(OBJS6)
 
 clean :
 	rm -r *.o

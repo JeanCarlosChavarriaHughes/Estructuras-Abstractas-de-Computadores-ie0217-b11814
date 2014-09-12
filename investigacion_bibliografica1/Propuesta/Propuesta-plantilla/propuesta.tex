@@ -1,0 +1,159 @@
+\documentclass[letterpaper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[activeacute,spanish]{babel}
+\usepackage[vmargin=4cm,tmargin=3cm,hmargin=2cm,letterpaper]{geometry}%
+\usepackage{helvet}
+\usepackage{amsmath,amsfonts,amssymb}
+\usepackage{graphicx}
+\usepackage{color}
+\usepackage{xcolor}
+\usepackage{verbatim}
+\usepackage{tabls}
+\usepackage{lastpage}
+\usepackage{fancyhdr}
+\usepackage{url}
+\usepackage{listings}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{tikz}
+\usepackage{pgf}
+\usepackage{pgffor}
+\usepgfmodule{plot}
+\usepackage{wrapfig}
+\usetikzlibrary{arrows,decorations,snakes,backgrounds,fit,calc,through,scopes,positioning,automata,chains,er,fadings,calendar,matrix,mindmap,folding,patterns,petri,plothandlers,plotmarks,shadows,shapes,shapes.arrows,topaths,trees}
+
+\lstset{% general command to set parameter(s)
+%   basicstyle=\small,
+  % print whole listing small
+%   keywordstyle=\color{black}\bfseries\underbar,
+  % underlined bold black keywords
+%   identifierstyle=,
+  % nothing happens
+%   commentstyle=\color{white}, % white comments
+%   stringstyle=\ttfamily,
+  % typewriter type for strings
+  showstringspaces=false}
+  % no special string spaces
+
+\pagestyle{fancy}
+\color{black}
+\fancyhead{}
+\renewcommand{\headrule}{\hrule\vspace*{0.5mm}\rule{\linewidth}{0.8mm}}
+\renewcommand{\familydefault}{\sfdefault}
+
+\graphicspath{{./images/}}
+\lhead{\includegraphics[width=4cm]{pictures/ucr.png}}
+\rhead{\includegraphics[width=3cm]{pictures/eie.png}}
+\chead{UNIVERSIDAD DE COSTA RICA\\FACULTAD DE INGENIERÍA\\ESCUELA DE INGENIERÍA ELÉCTRICA\\\textbf{ESTRUCTURAS ABSTRACTAS DE DATOS Y\\ ALGORITMOS PARA INGENIERÍA}\\IE-0217\\II CICLO 2014\\PROPUESTA DE PROYECTO}
+
+\lfoot{}%
+\cfoot{}%
+%\cfoot{\thepage\ de \pageref{LastPage}}%
+\rfoot{}%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\uic}{blue} %user-input color
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\uim}{\_\_} %user-input marker
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\userinput}[1]{\textcolor{\uic}{\uim#1\uim}}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}\vspace*{2cm}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{center}
+\Huge
+\userinput{Formatos y estructuras de datos para gr\' aficos en tres dimensiones, con \' enfasis en algoritmos de comparaci\' on.}
+\vspace*{1cm}
+\end{center}
+
+\noindent
+\small\baselineskip=14pt
+\textbf{Estudiante:} \userinput{Jean Carlos Chavarría Hughes}\\
+\textbf{Carné:} \userinput{B11814}\\
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Resumen}
+En este proyecto se presentan y analizan diferentes tipos de estructuras de datos que se encuentran en la actualidad para el manejo de informaci\' on que representa objetos y figuras s\' olidas en tres dimesiones. Se busca presentar una discuci\' on de los formatos de archivos m\' as importantes, adem\' as, mostrar al lector los algoritmos m\' as importantes de manipulaci\' on de datos gr\' aficos y finalmente indagar sobre las cuatro representaciones de la malla poligonal, conocida en ingl\' es como \textit{polygonon mesh}.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Introducción}
+
+En Desde que surgieron los ordenares, las tecnolog\' ias de la informaci\' on han cambiadado de manera tal que se puede considerar con un hito en la historia del ser humano. Desde ese momento, los avances en el \' area de las inform\' atica han crecido a pasos agigantados y en la actualidad el procesamiento de im\' agenes por computaci\' on y el an\' alisis de estas se ha convertido en un \' area de car\' acter cient\' ifico con gran importancia para la invectigaci\' on e industria.\\
+Los gr\' aficos son una estructura de datos, que permiten visualizar e interpretar informaci\' on de maneras muy llamativas al ser humano y con esto obtener tanto gr\' aficos en una dimensi\' on, dos dimensiones y tres dimensiones, por el momento.\\
+Finalmente, este proyecto se presenta dentro de un marco en el cual la investigaci\' on dentro de la Escuela de Ingenier\' ia El\' ectrica ha crecido considerablemente, espec\' ificamente e, el \' ambito de inteligencia artifical y reconocimiento de patrones, concibiendo de esta manera la necesidad de nichos de investigaci\' on centrados en temas espec\' ificos, como el presente.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Objetivos}
+
+\subsection{Objetivo General}
+Presentar una base te\' orica comprensible sobre estructuras de datos relacionadas con objetos en tres dimensiones, adem\' as de las cuatro representaciones de mallas poligonales.\\
+
+\subsection{Objetivos Específicos}
+
+Los objetivos específicos son:\\
+
+\begin{enumerate}
+\item Comparar las caracter\' isticas de los formatos de gr\' aficos en tres dimensiones m\' as importantes que se manejan en la actualidad.
+\item Presentar un an\' alisis de las siguientes cuatro representaciones de mallas poligonales:
+	\begin{itemize}
+	\item Mallas v\' ertice-v\' ertice.
+	\item Mallas cara-v\' ertice.
+	\item Mallas de bordes-alado.
+	\item Mallas de graficaci\' on din\' amica.
+	\end{itemize}
+
+%\item Brindar una descripci\' on detallada de los siguientes algoritmos: 
+%	\begin{itemize}
+%	\item Cierre transitivo.
+%	\item Algoritmo de Warshall.
+%	\item Algoritmo de trayectoria m\' as corta.
+%	\item 
+%	\end{itemize}
+%
+
+\item Describir los tipos de visualizaci\' on de conjuntos de datos:
+	\begin{itemize}
+	\item Representaci\' on de campos escalares.
+	\item Representaci\' on de campos vectoriales.
+	\item Representaci\' on de campos tensores.
+	\end{itemize}
+
+\end{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Problema de la investigaci\' on}
+La ausencia importante sobre descripciones sencillas que permitan implementar algoritmos de comparaci\' on de gr\' aficos en tres dimensiones, mediante la obtenci\' on y manipulaci\' on de archivos de texto que contengan vectores de posici\' on de diferentes indicadores en tiempo real. 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Justificación}
+La presente investigaci\' on se motiva debido a la creciente importancia que ha tomado la manipulaci\' on digital de informaci\' on en la actualidad, donde lograr predecir comportamientos y comparar actividades de ciertos objetos o personas con una referencia establecida no se ha podido llevar a cabo tan objetivamente como se quisiera. Por ejemplo en actividades deportivas, donde la presencia de jueces conlleva inherentemente agregar puntos de falla a la actividad debido a que como cualquier ser humano o conjunto de seres humanos, la percepci\' on e interpretaci\' on de im\' agenes debe pasar por la mente, donde cada persona puede tener perspectivas distintas, sin que exista un lineamiento completamente grande para abarcar cualquier eventualidad que se pueda presentar.\\
+Existen muchas \' areas de la vida donde seria una ventaja lograr incorporar mecanismos de comparaci\' on de video, para determinar coincidencias, similitudes o divergencias entre cada uno de ellos, as\'i como generar bases estad\' isticas basadas no es datos num\' ericos, sino en la caracter\' istica de las acciones ejecutadas y digitalizadas.\\
+Es por esta raz\' on que con la presente investigaci\' on se busca iniciar dicho proceso mediante el an\' alisis de estructuras de datos y algoritmos para obtener una base te\' orica suficientemente comprensible y aplicar el conociemiento a problemas gen\' ericos, de distintas \' indoles.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Metodología}
+
+Se realizará la investigación bibliográfica del algoritmo seleccionado utilizando fuentes primarias, posteriormente se comparará con otros algoritmos utilizados para la misma función. Además, se buscará implementaciones del mismo para demostrar en clase ejemplos más comunes.\\
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\renewcommand{\bibname}{Referencias}
+\addcontentsline{toc}{section}{Referencias}
+
+\begin{thebibliography}{5}
+\bibitem {G. Scott Owen} G. Scott Owen (2005). \textit{HyperGraph} Obtenido de \url{https://www.siggraph.org/education/materials/HyperGraph/hypergraph.htm}  el 1 de setiembre de 2014.
+
+\bibitem {Langasam, Augenstein y Tenenbaum} Yedidyah Langasam, Moshe J. Augenstein y Aaron M. Tenenbaum (1997). \textit{Estructuras de datos con C y C++, Segunda Edicion}. Prentice Hall/Booklyn College, México D.F., México.
+
+\bibitem {Donald Hearn y M. Pauline Baker} Donald Hearn y M. Pauline Baker (1995). \textit{Gr\' aficas por computadora, Segunda Edicion}. Prentice Hall/Hispanoamericana, México D.F., México.
+
+\bibitem {Colin Smith} Colin Smith (2006). \textit{On Verrtex-Vertex systems and their use in geometric and biological modelling}. The University of Calgary/Departament of computer science, Calgary, Alberta.
+
+\bibitem {Md Shonel, Leow Meng Chew y Pang Ying Han} Md Shonel, Leow Meng Chew y Pang Ying Han (2014). \textit{Computer Graphics, TCS2111}. Recuperado de \url{http://fist2.mmu.edu.my/} el 1 de setiembre de 2014.
+
+\end{thebibliography} 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	
+\end{document}
+

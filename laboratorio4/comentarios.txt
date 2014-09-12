@@ -1,0 +1,16 @@
+1. Porqué mi_figura puede usarse para direccionar mi_circulo si son de tipos diferentes ?
+
+Se puede recordar que en C++ y en cualquier lenguaje de programacion en general, las clases son tipos. Tipos de datos definidos por el usuario y como tal pueden ser apuntandos por punteros. 
+Ahora, el puntero 'mi_figura' se puede usar para direccionar el objecto 'mi_circulo' aunque son tipos diferentes, pero debido a la herencia que recibo 'mi_circulo' proveniente de la clase madre, se puede entender como del mismo tipo o familia de datos.
+
+
+2. Edite el archivo figura.h e incluya la palabra virtual antes de la declaración de la función mover, recompile
+todo y ejecute de nuevo el programa, ¿qué pasó ahora?
+
+A la hora de compilar no aparecio ningun problema, y cuando se ejecuto el ejecutable 'principal' el resultado desplegado fue exactamente el mismo en consola.
+
+Sin embargo hay diferencias con el uso y el desuso de la directiva 'virtual'. 
+
+Sin 'virtual' se obtiene una conexion temprano, la cual se refiere a que la implementacion del metodo que se llama se realiza en tiempo de compilacion, basado en el tipo de puntero que se llama.
+
+Con 'virtual' se obtiene una conexion tardia, la cual se refiere a que la implementacion del metodo que se llama se realiza en tiempo de ejecucion, basado en el tipo de puntero que fue originalmente construido.
