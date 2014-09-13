@@ -14,3 +14,11 @@ Sin embargo hay diferencias con el uso y el desuso de la directiva 'virtual'.
 Sin 'virtual' se obtiene una conexion temprano, la cual se refiere a que la implementacion del metodo que se llama se realiza en tiempo de compilacion, basado en el tipo de puntero que se llama.
 
 Con 'virtual' se obtiene una conexion tardia, la cual se refiere a que la implementacion del metodo que se llama se realiza en tiempo de ejecucion, basado en el tipo de puntero que fue originalmente construido.
+
+
+
+
+Para la parte del laboratorio relacionada con la cola y la pila se requiri\' o mucho m\' as tiempo debido a que esta relacionado con el manejo de punteros y estructuras de datos que a\' un no se conocian.
+
+En t\' erminos generales, en el que se relaciona con la cola o \textbf{queue}, utiliza dos punteros, \textbf{first} y \textbf{last}, los cuales se manejan de manera que cuando se crean nuevos \textbf{nodos}, se manipula para que de nuevo el puntero last apunte al nuevo ultimo elemento y first al primero. 
+

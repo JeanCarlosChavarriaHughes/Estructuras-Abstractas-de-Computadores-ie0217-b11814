@@ -6,6 +6,6 @@ TARGET = reporte.pdf
 
 all:
 	$(CC) $(OBJS)
-#$(TARGET) $(OBJS)
+	evince reporte.pdf
 clean:
 	rm -r *.log *.aux *.pdf #*.gz

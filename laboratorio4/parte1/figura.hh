@@ -1,3 +1,12 @@
+//! Programa figura.hh
+/*!
+* Este programa contiene las librerias de la clase "MiFigura"
+* ademas, se puede observar en el código la presencia de un 
+* "ifndef" el cual se encarga de prevenir problemas que pueden 
+* aparecer cuando se ejecutan diferentes programas que quieren
+* crear múltiples veces la clase "CLASE_FIGURA"
+*/
+
 #include <string>
 #include <iostream>
 

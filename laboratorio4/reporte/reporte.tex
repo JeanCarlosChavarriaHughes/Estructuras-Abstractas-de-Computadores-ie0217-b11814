@@ -12,67 +12,50 @@
 \maketitle
 % t i t u l o d e l documento
 \begin{abstract}
-Laboratorio 2 de el curso IE 0217.
+Laboratorio 4 de el curso IE 0217.
 \end{abstract}
 \section{Introducci\' on}
-Este documento corresponde al reporte de segundo laboratorio del curso IE0217, en el cual se trabaj\' o con distintas librer\' ias de C++, tambien se practic\' o m\' as con \textbf{makefiles} y adem\' as se trabaj\' o con \textbf{doxygen}.
+Este documento corresponde al reporte de cuarto laboratorio del curso IE0217, en el cual se trabaj\' o con distintos tipos de estructuras de datos de de C++, espec\' ificamente \textbf{queue} y \textbf{stack}. 
+Adem\' as se trabaj\' o tambien creando clases y con las caracter\' isticas de \textbf{herencia}.
 
 \section{Comentarios Importantes}
 
-\subsection*{Librar\' ias}
+\subsection{Porqu\' e mi$\_$figura puede usarse para direccionar mi$\_$circulo si son de tipos diferentes}
 
-La primera parte del laboratorio se enfoc\' o en el uso de las librer\' ias y como compilarlas y ejecutarlas. Se trabaj\' o con el compilador \textbf{g++} y las banderas \textbf{-o} y \textbf{-c}. 
+Se puede recordar que en C++ y en cualquier lenguaje de programacion en general, las clases son tipos. Tipos de datos definidos por el usuario y como tal pueden ser apuntandos por punteros.  Ahora, el puntero \textbf{mi$\_$figura} se puede usar para direccionar el objecto \textbf{mi$\_$circulo} aunque son tipos diferentes, pero debido a la herencia que recibo \textbf{mi$\_$circulo} proveniente de la clase madre, se puede entender como del mismo tipo o familia de datos.
 
-\bigskip
+\subsection{Edite el archivo figura.h e incluya la palabra virtual antes de la declaraci\' on de la funci\' on mover, recompile todo y ejecute de nuevo el programa}
 
-\begin{enumerate}
-\item  Porqu\' e se llama el programa de esta manera y no simplemente digitando hola.
-\item  Qu\' e debe hacerse para poder correrlo escribiendo simplemente hola.
-\item  Porqu\' e el devolver un 0 es signo de ejecuci\' on correcta y un valor distinto indica una condici\' on de error.
+A la hora de compilar no apareci\' o ning\' un problema, y cuando se ejecut\' o el ejecutable \textbf{principal}  el resultado desplegado fue exactamente el mismo en consola.
 
-\end{enumerate}
+Sin embargo hay diferencias con el uso y el desuso de la directiva \textbf{virtual}.
 
-\subsection*{Soluci\' on}
+Sin el uso de \textbf{virtual} se obtiene una conexi\' on temprano, la cual se refiere a que la implementaci\' on del m\' etodo que se llama se realiza en tiempo de compilaci\' on, basado en el tipo de puntero que se llama.
 
-\begin{enumerate}
-\item Sucede porque el directorio actual no se encuentra en el \textbf{PATH}.
-\item Se deberia agregar al \textbf{PATH} del siistema, pero por seguridad no est\' a, a diferencia de \textit{Windows}. Una manera de hacerlo es con el comando: 
-\begin{verbatim}
-PATH=.:$PATH:.
-\end{verbatim}
-\item En esta pregunta, el devolver un cero funciona como s\' imbolo de una correcta ejecuci
-' on, meramente por convenci\' on, ya que en realidad el programa compila y se ejecuta de manera correcta, con sea lo que sea que tenga el \textit{return}. Se hizo una prueba donde se elimin\' o el \begin{verbatim}
-return 0
-\end{verbatim}
-y el programa funci\' o correctamente.
-\end{enumerate}
-
-\subsection*{Makefile}
-
-Se debe tener especial cuidado a la hora de copiar el texto de \textbf{makefile}, esto debido a que algunos caracteres se copian como si fueran otros y adem\' as que se incluyen espacios extras donde no deberian existir.
-
-\bigskip
-
-El probleam que me surgi\' o con el makefile fue que estaba ejecutandolo pero me presentaba errores, debido a que \textit{ el archivo o directorio <-r> no exist\' ia, tambi\' en con el <-o> y el -c}.
-
-Esto era debido a que al realizar copiar y pegar, el gui\' on se copiaba como un gui\' on largo, diferente al que se necesitaba y fue un error muy dif\' icil de observar.
+Con el uso de \textbf{virtual} se obtiene una conexi\' on tard\' ia, lo cual se refiere a que la implementaci\' on del m\' etodo que se llama se realiza en tiempo de ejecuci\' on, basado en el tipo de puntero que fue originalmente construido.
 
 
-\subsection*{Doxygen}
-Tal como se explica en la gu\' ia del laboratorio, \textbf{Doxygen} es una herramienta generadora de documentaci\' on que soporta m\' ultiples lenguajes de programaci \'on.\\
-\bigskip
-Algunos de los comandos m\' as importantes para mencionar son:
-\begin{verbatim}
-doxywizard ejemplo.cpp
-\end{verbatim}
-La l\' inea anterior se encarga de generar el documento fuente para la compilaci\' on del doxygen, para lo cual se permite utilizar la interfaz gr\' afica. Sin embargo tambien es posible configurar sin interfaz gr\' afica. Este documento generalmente se gestiona con una extensi\' on \textbf{.cnf}.\\
-\bigskip
-\begin{verbatim}
-doxygen doc.cnf
-\end{verbatim}
-En este caso, el fichero \textit{doc.cnf} fue el nombre que se le dio al archivo de configuraci\' on. Y solamente falta generar los manuales, para lo cual se ejecuta el comando anterior.\\
-\bigskip
-Todos estos pasos fueron automatizados mediante el uso del archivo \textbf{makefile}, como se puede observar en la carpeta \textit{parte3}.
+
+\subsection{Estructuras de datos}
+Para la parte del laboratorio relacionada con la cola y la pila se requiri\' o mucho m\' as tiempo debido a que esta relacionado con el manejo de punteros y estructuras de datos que a\' un no se conocian.
+
+En t\' erminos generales, en el que se relaciona con la cola o \textbf{queue}, utiliza dos punteros, \textbf{first} y \textbf{last}, los cuales se manejan de manera que cuando se crean nuevos \textbf{nodos}, se manipula para que de nuevo el puntero last apunte al nuevo ultimo elemento y first al primero. 
+
+Para que sea m\' as sencillo de visualizar se puede observar la Figura \ref{fig:principalqueue} y \ref{principalstack}.
+
+\begin{figure}[H]
+\caption{Principal Queue}
+\includegraphics[scale=0.6]{./imagenes/principalqueue.png}
+\label{fig:principalqueue}
+\end{figure}
+
+\begin{figure}[H]
+\caption{Principal Queue}
+\includegraphics[scale=0.6]{./imagenes/principalstack.png}
+\label{fig:principalstack}
+\end{figure}
+
+
 
 
 \end{document}

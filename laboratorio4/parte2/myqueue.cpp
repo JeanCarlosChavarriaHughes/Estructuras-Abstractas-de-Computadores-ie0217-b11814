@@ -16,22 +16,23 @@ MyQueue::~MyQueue(void){
 bool MyQueue::pushBack(int data){//encolar
 	mynode *aux_metiendo = new mynode;
 	aux_metiendo->data = data;
-	aux_metiendo->next = first;
-	first = aux_metiendo;
-	if(first==NULL){
-		last = aux_metiendo;
+	if(last==NULL){
+		first = aux_metiendo;
 	}
+	aux_metiendo->next = NULL;
+	if(last!=NULL){
+		last->next = aux_metiendo;
+	}
+	last = aux_metiendo;
+	cout<<"Se completo con " <<data<<" last: "<<last<<endl;
 	return true;
 }
 
 int MyQueue::popFront(void){//desencolar
 	mynode *aux_metiendo = new mynode;
-	aux_metiendo = last;
+	aux_metiendo = first;
 	int elemento = aux_metiendo->data;
 	first = aux_metiendo->next;
-	if(first == NULL){
-		last=NULL;
-	}
 	delete (aux_metiendo);
 	return elemento;
 }
