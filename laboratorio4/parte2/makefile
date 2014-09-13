@@ -1,7 +1,7 @@
 #Se definen los objetos , estos son los archivos que necesitan
 #para crear el ejecutable .
 
-OBJS = principal.cpp figura.o circulo.o cuadrado.o triangulo.o
+OBJS = principal.cpp myqueue.o
 
 #Se define e l compilador
 
@@ -31,17 +31,8 @@ TARGET = principal
 $(TARGET) : $(OBJS)
 	$(CC) $(EFLAGS) -o $(TARGET) $(OBJS)
 
-circulo.o : circulo.hh circulo.cpp
-	$(CC) $(CFLAGS) circulo.cpp
-
-cuadrado.o : cuadrado.hh cuadrado.cpp
-	$(CC) $(CFLAGS) cuadrado.cpp
-
-triangulo.o : triangulo.hh triangulo.cpp
-	$(CC) $(CFLAGS) triangulo.cpp
-
-figura.o : figura.hh figura.cpp
-	$(CC) $(CFLAGS) figura.cpp
+myqueue.o : myqueue.hh myqueue.cpp
+	$(CC) $(CFLAGS) myqueue.cpp
 
 clean :
 	rm -r *.o $(TARGET) *.gch 

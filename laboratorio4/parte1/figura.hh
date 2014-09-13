@@ -1,12 +1,15 @@
 #include <string>
 #include <iostream>
 
+#ifndef CLASE_FIGURA
+	#define CLASE_FIGURA
+
 using namespace std ;
 class MiFigura {
 protected :
 	string nombre ;
 public :
-	MiFigura(string miNombre ) ;
+	MiFigura(string miNombre) ;
 	virtual ~MiFigura(void) ;
 	bool dibujar(void) ;
 	virtual bool mover(void) ;
@@ -20,3 +23,4 @@ public :
 	return true ;
 	}
 };
+#endif
