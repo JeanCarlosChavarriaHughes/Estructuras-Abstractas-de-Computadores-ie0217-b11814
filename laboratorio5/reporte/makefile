@@ -8,4 +8,4 @@ all:
 	$(CC) $(OBJS)
 	evince reporte.pdf
 clean:
-	rm -r *.log *.aux *.pdf #*.gz
+	rm -r *.log *.aux *.pdf *.gz *.dvi

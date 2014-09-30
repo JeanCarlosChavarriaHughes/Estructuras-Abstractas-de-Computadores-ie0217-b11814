@@ -1,0 +1,24 @@
+ingenieria reversa.
+Imagex4d, genera flow chart a partir del codigo fuente.
+Tambien puede usar reversa
+
+Sobel vs Prewwit
+el prewwit permite calcular grandientes. pero los dos corren igual
+
+espacio de hough
+permite detectar figuras geometricas en objetos 
+
+algoritmo para detectar esquinas en imagenes.  con usan mediate segmentos
+
+desarrollo de aplicaciones caseras. Homebrew en plataformas restrictivas (3DS)
+busca un punto de falla del sistema para apoderarse de la maquinas y ejecutar el codigo propio.
+
+Prosesamientod e imagenes para el robot NAO
+
+librerias para programaciones roboticas. NAOs
+choregraphe
+webots
+sdks
+
+
+

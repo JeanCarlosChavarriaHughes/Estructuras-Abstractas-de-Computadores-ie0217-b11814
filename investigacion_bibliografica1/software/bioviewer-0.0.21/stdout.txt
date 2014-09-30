@@ -1,0 +1,18 @@
+bioviewer (c) 2002 Lucas Walter
+This software comes with ABSOLUTELY NO WARRANTY
+This is free software, and you are welcome to redistribute
+it under the conditions specified by the GPL
+
+http://bioviewer.sourceforge.net
+http://students.washington.edu/lucasw
+lucasw@u.washington.edu
+
+
+	1
+File "bvh/Take 006.bvh" found.
+framesNum = 216
+frametime = 0.033333
+18 bodyparts
+frameTimeMs 33
+updateTimeMs 40
+frames 216

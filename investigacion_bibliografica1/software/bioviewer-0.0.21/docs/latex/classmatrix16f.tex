@@ -1,0 +1,137 @@
+\section{matrix16f  Class Reference}
+\label{classmatrix16f}\index{matrix16f@{matrix16f}}
+Array of 16 floats in Open\-GL conformant style. 
+
+
+{\tt \#include $<$misc.hpp$>$}
+
+\subsection*{Public Methods}
+\begin{CompactItemize}
+\item 
+\index{LoadZero@{LoadZero}!matrix16f@{matrix16f}}\index{matrix16f@{matrix16f}!LoadZero@{Load\-Zero}}
+void {\bf Load\-Zero} (void)\label{classmatrix16f_a0}
+
+\item 
+\index{LoadIdentity@{LoadIdentity}!matrix16f@{matrix16f}}\index{matrix16f@{matrix16f}!LoadIdentity@{Load\-Identity}}
+void {\bf Load\-Identity} (void)\label{classmatrix16f_a1}
+
+\item 
+\index{print@{print}!matrix16f@{matrix16f}}\index{matrix16f@{matrix16f}!print@{print}}
+void {\bf print} ()\label{classmatrix16f_a2}
+
+\item 
+\index{Translate@{Translate}!matrix16f@{matrix16f}}\index{matrix16f@{matrix16f}!Translate@{Translate}}
+void {\bf Translate} (float x, float y, float z)\label{classmatrix16f_a3}
+
+\item 
+\index{Scale@{Scale}!matrix16f@{matrix16f}}\index{matrix16f@{matrix16f}!Scale@{Scale}}
+void {\bf Scale} (float x, float y, float z)\label{classmatrix16f_a4}
+
+\item 
+\index{RotateX@{RotateX}!matrix16f@{matrix16f}}\index{matrix16f@{matrix16f}!RotateX@{Rotate\-X}}
+void {\bf Rotate\-X} (int deg)\label{classmatrix16f_a5}
+
+\item 
+\index{RotateY@{RotateY}!matrix16f@{matrix16f}}\index{matrix16f@{matrix16f}!RotateY@{Rotate\-Y}}
+void {\bf Rotate\-Y} (int deg)\label{classmatrix16f_a6}
+
+\item 
+\index{RotateZ@{RotateZ}!matrix16f@{matrix16f}}\index{matrix16f@{matrix16f}!RotateZ@{Rotate\-Z}}
+void {\bf Rotate\-Z} (int deg)\label{classmatrix16f_a7}
+
+\item 
+\index{RotateX@{RotateX}!matrix16f@{matrix16f}}\index{matrix16f@{matrix16f}!RotateX@{Rotate\-X}}
+void {\bf Rotate\-X} (float rad)\label{classmatrix16f_a8}
+
+\item 
+\index{RotateY@{RotateY}!matrix16f@{matrix16f}}\index{matrix16f@{matrix16f}!RotateY@{Rotate\-Y}}
+void {\bf Rotate\-Y} (float rad)\label{classmatrix16f_a9}
+
+\item 
+\index{RotateZ@{RotateZ}!matrix16f@{matrix16f}}\index{matrix16f@{matrix16f}!RotateZ@{Rotate\-Z}}
+void {\bf Rotate\-Z} (float rad)\label{classmatrix16f_a10}
+
+\item 
+\index{RotateXYZ@{RotateXYZ}!matrix16f@{matrix16f}}\index{matrix16f@{matrix16f}!RotateXYZ@{Rotate\-XYZ}}
+void {\bf Rotate\-XYZ} (float x, float y, float z)\label{classmatrix16f_a11}
+
+\item 
+\index{Rotate@{Rotate}!matrix16f@{matrix16f}}\index{matrix16f@{matrix16f}!Rotate@{Rotate}}
+void {\bf Rotate} (matrix16f m1)\label{classmatrix16f_a12}
+
+\item 
+\index{Set@{Set}!matrix16f@{matrix16f}}\index{matrix16f@{matrix16f}!Set@{Set}}
+void {\bf Set} ({\bf vector3f} right, {\bf vector3f} up, {\bf vector3f} out)\label{classmatrix16f_a13}
+
+\item 
+\index{operator=@{operator=}!matrix16f@{matrix16f}}\index{matrix16f@{matrix16f}!operator=@{operator=}}
+matrix16f \& {\bf operator=} (const matrix16f \&m1)\label{classmatrix16f_a14}
+
+\item 
+\index{Transform@{Transform}!matrix16f@{matrix16f}}\index{matrix16f@{matrix16f}!Transform@{Transform}}
+{\bf vector3f} {\bf Transform} ({\bf vector3f} point)\label{classmatrix16f_a15}
+
+\item 
+\index{FlipOrientation@{FlipOrientation}!matrix16f@{matrix16f}}\index{matrix16f@{matrix16f}!FlipOrientation@{Flip\-Orientation}}
+matrix16f {\bf Flip\-Orientation} (void)\label{classmatrix16f_a16}
+
+\item 
+\index{Normalize@{Normalize}!matrix16f@{matrix16f}}\index{matrix16f@{matrix16f}!Normalize@{Normalize}}
+void {\bf Normalize} (void)\label{classmatrix16f_a17}
+
+\item 
+\index{matrix16f@{matrix16f}!matrix16f@{matrix16f}}\index{matrix16f@{matrix16f}!matrix16f@{matrix16f}}
+{\bf matrix16f} ()\label{classmatrix16f_a18}
+
+\end{CompactItemize}
+\subsection*{Public Attributes}
+\begin{CompactItemize}
+\item 
+\index{matrix@{matrix}!matrix16f@{matrix16f}}\index{matrix16f@{matrix16f}!matrix@{matrix}}
+float {\bf matrix} [16]\label{classmatrix16f_m0}
+
+\end{CompactItemize}
+\subsection*{Friends}
+\begin{CompactItemize}
+\item 
+\index{operator+@{operator+}!matrix16f@{matrix16f}}\index{matrix16f@{matrix16f}!operator+@{operator+}}
+matrix16f {\bf operator+} (const matrix16f \&m1, const matrix16f \&m2)\label{classmatrix16f_l0}
+
+\item 
+\index{operator+@{operator+}!matrix16f@{matrix16f}}\index{matrix16f@{matrix16f}!operator+@{operator+}}
+matrix16f {\bf operator+} (const matrix16f \&m1, const {\bf vector3f} \&v2)\label{classmatrix16f_l1}
+
+\begin{CompactList}\small\item\em add vector to 12 13 14 portion of matrix.\item\end{CompactList}\item 
+\index{operator-@{operator-}!matrix16f@{matrix16f}}\index{matrix16f@{matrix16f}!operator-@{operator-}}
+matrix16f {\bf operator-} (const matrix16f \&m1, const matrix16f \&m2)\label{classmatrix16f_l2}
+
+\item 
+\index{operator *@{operator $\ast$}!matrix16f@{matrix16f}}\index{matrix16f@{matrix16f}!operator *@{operator $\ast$}}
+matrix16f {\bf operator $\ast$} (const matrix16f \&m1, const float scalar)\label{classmatrix16f_l3}
+
+\item 
+\index{operator *@{operator $\ast$}!matrix16f@{matrix16f}}\index{matrix16f@{matrix16f}!operator *@{operator $\ast$}}
+matrix16f {\bf operator $\ast$} (const matrix16f \&m1, const matrix16f \&m2)\label{classmatrix16f_l4}
+
+\item 
+\index{operator/@{operator/}!matrix16f@{matrix16f}}\index{matrix16f@{matrix16f}!operator/@{operator/}}
+matrix16f {\bf operator/} (const matrix16f \&m1, const float scalar)\label{classmatrix16f_l5}
+
+\item 
+\index{operator==@{operator==}!matrix16f@{matrix16f}}\index{matrix16f@{matrix16f}!operator==@{operator==}}
+bool {\bf operator==} (const matrix16f \&m1, const matrix16f \&m2)\label{classmatrix16f_l6}
+
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+Array of 16 floats in Open\-GL conformant style.
+
+Plenty of useful overloaded operators, including those for interacting with the {\bf matrix9f} {\rm (p.\,\pageref{classmatrix9f})} and {\bf vector3f} {\rm (p.\,\pageref{classvector3f})} classes. 
+
+
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+{\bf misc.hpp}\item 
+misc.cpp\end{CompactItemize}

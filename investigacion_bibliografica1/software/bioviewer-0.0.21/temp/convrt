@@ -1,0 +1,28 @@
+#!/bin/bash
+
+#if [ -n "$1" ]
+#then
+#echo "$1 files"
+a=2
+inc=1
+#for ((a = 2; a <= "$1"; a++)) 
+until [ ! -e screenshot$a.bmp ]
+do 
+	convert screenshot$a.bmp -resize 352x240 screenshot$a.jpg; 
+	a=`expr $a + 1`;
+	echo "$a";
+done
+if (($a>2))
+then
+rename shot shot00 *shot?.jpg 
+rename shot shot0 *shot??.jpg
+#rm -f screenshot*.bmp
+cp *shot002.jpg screenshot001.jpg
+cp *shot002.jpg screenshot000.jpg
+jpeg2yuv -f 25 -I p -j screenshot%03d.jpg > result.yuv
+else
+echo "no screenshot*bmp files"
+fi
+#mpg2enc result.yuv -o result.mpg
+#rm -f result.yuv
+#fi

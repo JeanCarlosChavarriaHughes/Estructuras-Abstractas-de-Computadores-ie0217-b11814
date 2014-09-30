@@ -1,0 +1,66 @@
+# Project: bioviewer
+# Makefile created by Dev-C++ 4.9.7.0
+
+CPP  = g++.exe
+CC   = gcc.exe
+WINDRES = windres.exe
+RES  = bioviewer_private.res
+OBJ  = ../lib/body.o ../lib/bvh.o ../lib/camera.o ../lib/light.o ../lib/main.o ../lib/misc.o ../lib/movable.o ../lib/objloader.o ../lib/pointMass.o ../lib/material.o ../lib/para.o ../lib/rigid.o ../lib/triangle.o $(RES)
+LIBS =  -L"C:/Programming/Dev-Cpp/lib" -lmingw32 -lSDLmain -lSDL  -lopengl32 -lglu32
+INCS =  -I"C:/Programming/Dev-Cpp/include"  -I"C:/Programming/Dev-Cpp/include/c++"  -I"C:/Programming/Dev-Cpp/include"  -I"C:/Programming/Dev-Cpp/include/c++/mingw32" 
+BIN  = ../bioviewer.exe
+CXXFLAGS = $(INCS) 
+CFLAGS = $(INCS) 
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before ../bioviewer.exe all-after
+
+
+clean: clean-custom
+	rm -f $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(OBJ) -o "..\bioviewer.exe" $(LIBS) $(CXXFLAGS)
+
+../lib/body.o: ../src/body.cpp
+	$(CPP) -c ../src/body.cpp -o ../lib/body.o $(CXXFLAGS)
+
+../lib/bvh.o: ../src/bvh.cpp
+	$(CPP) -c ../src/bvh.cpp -o ../lib/bvh.o $(CXXFLAGS)
+
+../lib/camera.o: ../src/camera.cpp
+	$(CPP) -c ../src/camera.cpp -o ../lib/camera.o $(CXXFLAGS)
+
+../lib/light.o: ../src/light.cpp
+	$(CPP) -c ../src/light.cpp -o ../lib/light.o $(CXXFLAGS)
+
+../lib/main.o: ../src/main.cpp
+	$(CPP) -c ../src/main.cpp -o ../lib/main.o $(CXXFLAGS)
+
+../lib/misc.o: ../src/misc.cpp
+	$(CPP) -c ../src/misc.cpp -o ../lib/misc.o $(CXXFLAGS)
+
+../lib/movable.o: ../src/movable.cpp
+	$(CPP) -c ../src/movable.cpp -o ../lib/movable.o $(CXXFLAGS)
+
+../lib/objloader.o: ../src/objloader.cpp
+	$(CPP) -c ../src/objloader.cpp -o ../lib/objloader.o $(CXXFLAGS)
+
+../lib/pointMass.o: ../src/pointMass.cpp
+	$(CPP) -c ../src/pointMass.cpp -o ../lib/pointMass.o $(CXXFLAGS)
+
+../lib/material.o: ../src/material.cpp
+	$(CPP) -c ../src/material.cpp -o ../lib/material.o $(CXXFLAGS)
+
+../lib/para.o: ../src/para.cpp
+	$(CPP) -c ../src/para.cpp -o ../lib/para.o $(CXXFLAGS)
+
+../lib/rigid.o: ../src/rigid.cpp
+	$(CPP) -c ../src/rigid.cpp -o ../lib/rigid.o $(CXXFLAGS)
+
+../lib/triangle.o: ../src/triangle.cpp
+	$(CPP) -c ../src/triangle.cpp -o ../lib/triangle.o $(CXXFLAGS)
+
+bioviewer_private.res: bioviewer_private.rc 
+	$(WINDRES) -i bioviewer_private.rc -I rc -o bioviewer_private.res -O coff 

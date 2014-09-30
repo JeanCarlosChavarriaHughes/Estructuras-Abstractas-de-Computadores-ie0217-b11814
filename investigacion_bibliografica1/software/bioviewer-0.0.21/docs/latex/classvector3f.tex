@@ -1,0 +1,131 @@
+\section{vector3f  Class Reference}
+\label{classvector3f}\index{vector3f@{vector3f}}
+Three floats in a array, lots of overloaded operators. 
+
+
+{\tt \#include $<$misc.hpp$>$}
+
+\subsection*{Public Methods}
+\begin{CompactItemize}
+\item 
+\index{vector3f@{vector3f}!vector3f@{vector3f}}\index{vector3f@{vector3f}!vector3f@{vector3f}}
+{\bf vector3f} ()\label{classvector3f_a0}
+
+\item 
+\index{vector3f@{vector3f}!vector3f@{vector3f}}\index{vector3f@{vector3f}!vector3f@{vector3f}}
+{\bf vector3f} (float x, float y, float z)\label{classvector3f_a1}
+
+\item 
+\index{~vector3f@{$\sim$vector3f}!vector3f@{vector3f}}\index{vector3f@{vector3f}!~vector3f@{$\sim$vector3f}}
+{\bf $\sim$vector3f} ()\label{classvector3f_a2}
+
+\item 
+\index{LoadZero@{LoadZero}!vector3f@{vector3f}}\index{vector3f@{vector3f}!LoadZero@{Load\-Zero}}
+void {\bf Load\-Zero} (void)\label{classvector3f_a3}
+
+\item 
+\index{Length@{Length}!vector3f@{vector3f}}\index{vector3f@{vector3f}!Length@{Length}}
+float {\bf Length} (void)\label{classvector3f_a4}
+
+\item 
+\index{LengthSquared@{LengthSquared}!vector3f@{vector3f}}\index{vector3f@{vector3f}!LengthSquared@{Length\-Squared}}
+float {\bf Length\-Squared} (void)\label{classvector3f_a5}
+
+\item 
+\index{operator=@{operator=}!vector3f@{vector3f}}\index{vector3f@{vector3f}!operator=@{operator=}}
+vector3f \& {\bf operator=} (const vector3f \&v1)\label{classvector3f_a6}
+
+\item 
+\index{Abs@{Abs}!vector3f@{vector3f}}\index{vector3f@{vector3f}!Abs@{Abs}}
+vector3f {\bf Abs} (void)\label{classvector3f_a7}
+
+\item 
+\index{Set@{Set}!vector3f@{vector3f}}\index{vector3f@{vector3f}!Set@{Set}}
+void {\bf Set} (float x, float y, float z)\label{classvector3f_a8}
+
+\end{CompactItemize}
+\subsection*{Public Attributes}
+\begin{CompactItemize}
+\item 
+\index{vertex@{vertex}!vector3f@{vector3f}}\index{vector3f@{vector3f}!vertex@{vertex}}
+float {\bf vertex} [3]\label{classvector3f_m0}
+
+\end{CompactItemize}
+\subsection*{Friends}
+\begin{CompactItemize}
+\item 
+\index{operator==@{operator==}!vector3f@{vector3f}}\index{vector3f@{vector3f}!operator==@{operator==}}
+bool {\bf operator==} (const vector3f \&v1, const vector3f \&v2)\label{classvector3f_l0}
+
+\item 
+\index{operator<=@{operator$<$=}!vector3f@{vector3f}}\index{vector3f@{vector3f}!operator<=@{operator$<$=}}
+bool {\bf operator$<$=} (const vector3f \&v1, const vector3f \&v2)\label{classvector3f_l1}
+
+\item 
+\index{operator>=@{operator$>$=}!vector3f@{vector3f}}\index{vector3f@{vector3f}!operator>=@{operator$>$=}}
+bool {\bf operator$>$=} (const vector3f \&v1, const vector3f \&v2)\label{classvector3f_l2}
+
+\item 
+\index{operator<@{operator$<$}!vector3f@{vector3f}}\index{vector3f@{vector3f}!operator<@{operator$<$}}
+bool {\bf operator$<$} (const vector3f \&v1, const vector3f \&v2)\label{classvector3f_l3}
+
+\item 
+\index{operator>@{operator$>$}!vector3f@{vector3f}}\index{vector3f@{vector3f}!operator>@{operator$>$}}
+bool {\bf operator$>$} (const vector3f \&v1, const vector3f \&v2)\label{classvector3f_l4}
+
+\item 
+\index{operator+@{operator+}!vector3f@{vector3f}}\index{vector3f@{vector3f}!operator+@{operator+}}
+vector3f {\bf operator+} (const vector3f \&v1, const vector3f \&v2)\label{classvector3f_l5}
+
+\item 
+\index{operator+@{operator+}!vector3f@{vector3f}}\index{vector3f@{vector3f}!operator+@{operator+}}
+vector3f {\bf operator+} (const vector3f \&v1, const float scalar)\label{classvector3f_l6}
+
+\item 
+\index{operator-@{operator-}!vector3f@{vector3f}}\index{vector3f@{vector3f}!operator-@{operator-}}
+vector3f {\bf operator-} (const vector3f \&v1, const vector3f \&v2)\label{classvector3f_l7}
+
+\item 
+\index{operator-@{operator-}!vector3f@{vector3f}}\index{vector3f@{vector3f}!operator-@{operator-}}
+vector3f {\bf operator-} (const vector3f \&v1, const float scalar)\label{classvector3f_l8}
+
+\item 
+\index{operator *@{operator $\ast$}!vector3f@{vector3f}}\index{vector3f@{vector3f}!operator *@{operator $\ast$}}
+vector3f {\bf operator $\ast$} (const vector3f \&v1, const vector3f \&v2)\label{classvector3f_l9}
+
+\item 
+\index{operator *@{operator $\ast$}!vector3f@{vector3f}}\index{vector3f@{vector3f}!operator *@{operator $\ast$}}
+vector3f {\bf operator $\ast$} (const vector3f \&v1, const float scalar)\label{classvector3f_l10}
+
+\item 
+\index{operator/@{operator/}!vector3f@{vector3f}}\index{vector3f@{vector3f}!operator/@{operator/}}
+vector3f {\bf operator/} (const vector3f \&v1, const vector3f \&v2)\label{classvector3f_l11}
+
+\item 
+\index{operator/@{operator/}!vector3f@{vector3f}}\index{vector3f@{vector3f}!operator/@{operator/}}
+vector3f {\bf operator/} (const vector3f \&v1, const float scalar)\label{classvector3f_l12}
+
+\item 
+\index{dot@{dot}!vector3f@{vector3f}}\index{vector3f@{vector3f}!dot@{dot}}
+float {\bf dot} (const vector3f \&v1, const vector3f \&v2)\label{classvector3f_l13}
+
+\item 
+\index{Cross@{Cross}!vector3f@{vector3f}}\index{vector3f@{vector3f}!Cross@{Cross}}
+vector3f {\bf Cross} (const vector3f \&v1, const vector3f \&v2)\label{classvector3f_l14}
+
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+Three floats in a array, lots of overloaded operators.
+
+The basis of every 3D app, I'm sure there are some good standard implementation (like on boost.org?) but it's a good exercise for  the initiate to do it themselves so they understand it inside and out (and then promptly forget about it once it works).
+
+I might switch to a standard library, but it's nice to simply add my own additional functions and operators right here. 
+
+
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+{\bf misc.hpp}\item 
+misc.cpp\end{CompactItemize}

@@ -1,0 +1,87 @@
+\section{point\-Mass  Class Reference}
+\label{classpointMass}\index{pointMass@{point\-Mass}}
+Generally attached to any number of springs. 
+
+
+{\tt \#include $<$point\-Mass.hpp$>$}
+
+\subsection*{Public Methods}
+\begin{CompactItemize}
+\item 
+\index{pointMass@{pointMass}!pointMass@{point\-Mass}}\index{pointMass@{pointMass}!pointMass@{point\-Mass}}
+{\bf point\-Mass} ()\label{classpointMass_a0}
+
+\item 
+\index{pointMass@{pointMass}!pointMass@{point\-Mass}}\index{pointMass@{pointMass}!pointMass@{point\-Mass}}
+{\bf point\-Mass} (float DRAG)\label{classpointMass_a1}
+
+\item 
+\index{~pointMass@{$\sim$pointMass}!pointMass@{point\-Mass}}\index{pointMass@{pointMass}!~pointMass@{$\sim$point\-Mass}}
+{\bf $\sim$point\-Mass} ()\label{classpointMass_a2}
+
+\item 
+\index{update@{update}!pointMass@{point\-Mass}}\index{pointMass@{pointMass}!update@{update}}
+void {\bf update} (void)\label{classpointMass_a3}
+
+\begin{CompactList}\small\item\em Update location based on forces and current velocity.\item\end{CompactList}\item 
+\index{collisionTest@{collisionTest}!pointMass@{point\-Mass}}\index{pointMass@{pointMass}!collisionTest@{collision\-Test}}
+void {\bf collision\-Test} (void)\label{classpointMass_a4}
+
+\end{CompactItemize}
+\subsection*{Static Public Methods}
+\begin{CompactItemize}
+\item 
+\index{planeTest@{planeTest}!pointMass@{point\-Mass}}\index{pointMass@{pointMass}!planeTest@{plane\-Test}}
+float {\bf plane\-Test} ({\bf vector3f} \&{\bf location}, {\bf vector3f} \&{\bf new\-Location}, {\bf vector3f} \&triangle\-Vertex, {\bf vector3f} \&surface\-Norm)\label{classpointMass_d0}
+
+\begin{CompactList}\small\item\em See if a line intersects a plane determine by a normal and a point.\item\end{CompactList}\item 
+\index{triangleTest@{triangleTest}!pointMass@{point\-Mass}}\index{pointMass@{pointMass}!triangleTest@{triangle\-Test}}
+float {\bf triangle\-Test} ({\bf vector3f} \&intersection, {\bf vector3f} \&tri1, {\bf vector3f} \&tri2, {\bf vector3f} \&tri3)\label{classpointMass_d1}
+
+\begin{CompactList}\small\item\em See if a point on a plane lies within a triangle on that plane.\item\end{CompactList}\end{CompactItemize}
+\subsection*{Public Attributes}
+\begin{CompactItemize}
+\item 
+\index{mass@{mass}!pointMass@{point\-Mass}}\index{pointMass@{pointMass}!mass@{mass}}
+float {\bf mass}\label{classpointMass_m0}
+
+\item 
+\index{force@{force}!pointMass@{point\-Mass}}\index{pointMass@{pointMass}!force@{force}}
+{\bf vector3f} {\bf force}\label{classpointMass_m1}
+
+\begin{CompactList}\small\item\em Summed up force vectors.\item\end{CompactList}\item 
+\index{location@{location}!pointMass@{point\-Mass}}\index{pointMass@{pointMass}!location@{location}}
+{\bf vector3f} {\bf location}\label{classpointMass_m2}
+
+\begin{CompactList}\small\item\em The particle's current position.\item\end{CompactList}\item 
+\index{velocity@{velocity}!pointMass@{point\-Mass}}\index{pointMass@{pointMass}!velocity@{velocity}}
+{\bf vector3f} {\bf velocity}\label{classpointMass_m3}
+
+\begin{CompactList}\small\item\em The particle's current velocity.\item\end{CompactList}\item 
+\index{newLocation@{newLocation}!pointMass@{point\-Mass}}\index{pointMass@{pointMass}!newLocation@{new\-Location}}
+{\bf vector3f} {\bf new\-Location}\label{classpointMass_m4}
+
+\begin{CompactList}\small\item\em The particle's position in the next time step.\item\end{CompactList}\item 
+\index{springs@{springs}!pointMass@{point\-Mass}}\index{pointMass@{pointMass}!springs@{springs}}
+std::list$<$ void $\ast$ $>$ {\bf springs}\label{classpointMass_m5}
+
+\begin{CompactList}\small\item\em Void pointers (to avoid circular includes) to attached springs.\item\end{CompactList}\item 
+\index{DRAG@{DRAG}!pointMass@{point\-Mass}}\index{pointMass@{pointMass}!DRAG@{DRAG}}
+float {\bf DRAG}\label{classpointMass_m6}
+
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+Generally attached to any number of springs.
+
+The springs are updated first based on the masses location, and then the masses are updated with the locations set by the springs forces in the last time step. The forces on the spring then are used to compute the new\-Locations.
+
+It's possible the springs should take account of the new\-Locations rather than the current  (which will just be updated to the contents of new\-Location in the same timestep). This may fix some stability problems at the cost of less springlike behaviour (due to more  instantaneous spring action). 
+
+
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+{\bf point\-Mass.hpp}\item 
+point\-Mass.cpp\end{CompactItemize}

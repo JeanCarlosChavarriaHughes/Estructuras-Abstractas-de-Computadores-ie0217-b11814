@@ -1,0 +1,10 @@
+#!/bin/bash
+if [ -f $1 ]
+then
+mpg=$1
+echo "$1"
+mpeg2dec $1 -o YUV > video.yuv
+cat video.yuv | yuvscaler -O SVCD | mpeg2enc -f 4 -q 7 -I 1 -V 200 -o video.m2v
+else
+echo "Need file.mpg"
+fi

@@ -1,0 +1,70 @@
+\section{material  Class Reference}
+\label{classmaterial}\index{material@{material}}
+Holds all vertices and material info for {\bf objloader} {\rm (p.\,\pageref{classobjloader})} entities. 
+
+
+{\tt \#include $<$material.hpp$>$}
+
+\subsection*{Public Methods}
+\begin{CompactItemize}
+\item 
+\index{material@{material}!material@{material}}\index{material@{material}!material@{material}}
+{\bf material} ()\label{classmaterial_a0}
+
+\item 
+\index{~material@{$\sim$material}!material@{material}}\index{material@{material}!~material@{$\sim$material}}
+{\bf $\sim$material} ()\label{classmaterial_a1}
+
+\item 
+\index{operator=@{operator=}!material@{material}}\index{material@{material}!operator=@{operator=}}
+material \& {\bf operator=} (const material \&mat)\label{classmaterial_a2}
+
+\end{CompactItemize}
+\subsection*{Public Attributes}
+\begin{CompactItemize}
+\item 
+\index{name@{name}!material@{material}}\index{material@{material}!name@{name}}
+string {\bf name}\label{classmaterial_m0}
+
+\begin{CompactList}\small\item\em material name defined in the parsed .obj files.\item\end{CompactList}\item 
+\index{faces@{faces}!material@{material}}\index{material@{material}!faces@{faces}}
+vector$<$ triangle\-Ind $>$ {\bf faces}\label{classmaterial_m1}
+
+\item 
+\index{Se@{Se}!material@{material}}\index{material@{material}!Se@{Se}}
+GLfloat {\bf Se}\label{classmaterial_m2}
+
+\begin{CompactList}\small\item\em shininess exponent 0-128.\item\end{CompactList}\item 
+\index{Ka@{Ka}!material@{material}}\index{material@{material}!Ka@{Ka}}
+GLfloat {\bf Ka} [4]\label{classmaterial_m3}
+
+\begin{CompactList}\small\item\em Ambient.\item\end{CompactList}\item 
+\index{Kd@{Kd}!material@{material}}\index{material@{material}!Kd@{Kd}}
+GLfloat {\bf Kd} [4]\label{classmaterial_m4}
+
+\begin{CompactList}\small\item\em Diffuse.\item\end{CompactList}\item 
+\index{Ks@{Ks}!material@{material}}\index{material@{material}!Ks@{Ks}}
+GLfloat {\bf Ks} [4]\label{classmaterial_m5}
+
+\begin{CompactList}\small\item\em Specular.\item\end{CompactList}\item 
+\index{Ke@{Ke}!material@{material}}\index{material@{material}!Ke@{Ke}}
+GLfloat {\bf Ke} [4]\label{classmaterial_m6}
+
+\begin{CompactList}\small\item\em Emission.\item\end{CompactList}\item 
+\index{opacity@{opacity}!material@{material}}\index{material@{material}!opacity@{opacity}}
+GLfloat {\bf opacity}\label{classmaterial_m7}
+
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+Holds all vertices and material info for {\bf objloader} {\rm (p.\,\pageref{classobjloader})} entities.
+
+UVs and textures aren't supported, as I'm not really interested in them, being literally superficial in addition to me not having any easy-to-use UV mappers (lithunwrap is a pain). 
+
+
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+{\bf material.hpp}\item 
+material.cpp\end{CompactItemize}

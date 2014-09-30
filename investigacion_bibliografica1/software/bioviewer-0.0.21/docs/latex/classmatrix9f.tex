@@ -1,0 +1,113 @@
+\section{matrix9f  Class Reference}
+\label{classmatrix9f}\index{matrix9f@{matrix9f}}
+Smaller matrix for storing orientation but no location information. 
+
+
+{\tt \#include $<$misc.hpp$>$}
+
+\subsection*{Public Methods}
+\begin{CompactItemize}
+\item 
+\index{matrix9f@{matrix9f}!matrix9f@{matrix9f}}\index{matrix9f@{matrix9f}!matrix9f@{matrix9f}}
+{\bf matrix9f} ()\label{classmatrix9f_a0}
+
+\item 
+\index{LoadZero@{LoadZero}!matrix9f@{matrix9f}}\index{matrix9f@{matrix9f}!LoadZero@{Load\-Zero}}
+void {\bf Load\-Zero} (void)\label{classmatrix9f_a1}
+
+\item 
+\index{LoadIdentity@{LoadIdentity}!matrix9f@{matrix9f}}\index{matrix9f@{matrix9f}!LoadIdentity@{Load\-Identity}}
+void {\bf Load\-Identity} (void)\label{classmatrix9f_a2}
+
+\item 
+\index{RotateX@{RotateX}!matrix9f@{matrix9f}}\index{matrix9f@{matrix9f}!RotateX@{Rotate\-X}}
+void {\bf Rotate\-X} (int deg)\label{classmatrix9f_a3}
+
+\item 
+\index{RotateY@{RotateY}!matrix9f@{matrix9f}}\index{matrix9f@{matrix9f}!RotateY@{Rotate\-Y}}
+void {\bf Rotate\-Y} (int deg)\label{classmatrix9f_a4}
+
+\item 
+\index{RotateZ@{RotateZ}!matrix9f@{matrix9f}}\index{matrix9f@{matrix9f}!RotateZ@{Rotate\-Z}}
+void {\bf Rotate\-Z} (int deg)\label{classmatrix9f_a5}
+
+\item 
+\index{operator=@{operator=}!matrix9f@{matrix9f}}\index{matrix9f@{matrix9f}!operator=@{operator=}}
+matrix9f \& {\bf operator=} (const matrix9f \&m1)\label{classmatrix9f_a6}
+
+\item 
+\index{Transpose@{Transpose}!matrix9f@{matrix9f}}\index{matrix9f@{matrix9f}!Transpose@{Transpose}}
+matrix9f {\bf Transpose} (void)\label{classmatrix9f_a7}
+
+\item 
+\index{Inverse@{Inverse}!matrix9f@{matrix9f}}\index{matrix9f@{matrix9f}!Inverse@{Inverse}}
+matrix9f {\bf Inverse} (void)\label{classmatrix9f_a8}
+
+\end{CompactItemize}
+\subsection*{Public Attributes}
+\begin{CompactItemize}
+\item 
+\index{matrix@{matrix}!matrix9f@{matrix9f}}\index{matrix9f@{matrix9f}!matrix@{matrix}}
+float {\bf matrix} [9]\label{classmatrix9f_m0}
+
+\end{CompactItemize}
+\subsection*{Friends}
+\begin{CompactItemize}
+\item 
+\index{Star@{Star}!matrix9f@{matrix9f}}\index{matrix9f@{matrix9f}!Star@{Star}}
+matrix9f {\bf Star} ({\bf vector3f} a)\label{classmatrix9f_l0}
+
+\item 
+\index{operator+@{operator+}!matrix9f@{matrix9f}}\index{matrix9f@{matrix9f}!operator+@{operator+}}
+matrix9f {\bf operator+} (const matrix9f \&m1, const matrix9f \&m2)\label{classmatrix9f_l1}
+
+\item 
+\index{operator+@{operator+}!matrix9f@{matrix9f}}\index{matrix9f@{matrix9f}!operator+@{operator+}}
+{\bf matrix16f} {\bf operator+} (const {\bf matrix16f} \&m1, const matrix9f \&m2)\label{classmatrix9f_l2}
+
+\item 
+\index{operator-@{operator-}!matrix9f@{matrix9f}}\index{matrix9f@{matrix9f}!operator-@{operator-}}
+matrix9f {\bf operator-} (const matrix9f \&m1, const matrix9f \&m2)\label{classmatrix9f_l3}
+
+\item 
+\index{operator *@{operator $\ast$}!matrix9f@{matrix9f}}\index{matrix9f@{matrix9f}!operator *@{operator $\ast$}}
+matrix9f {\bf operator $\ast$} (const matrix9f \&m1, const float scalar)\label{classmatrix9f_l4}
+
+\item 
+\index{operator *@{operator $\ast$}!matrix9f@{matrix9f}}\index{matrix9f@{matrix9f}!operator *@{operator $\ast$}}
+matrix9f {\bf operator $\ast$} (const matrix9f \&m1, const matrix9f \&m2)\label{classmatrix9f_l5}
+
+\item 
+\index{operator *@{operator $\ast$}!matrix9f@{matrix9f}}\index{matrix9f@{matrix9f}!operator *@{operator $\ast$}}
+{\bf vector3f} {\bf operator $\ast$} (const matrix9f \&m1, const {\bf vector3f} \&v2)\label{classmatrix9f_l6}
+
+\item 
+\index{operator *@{operator $\ast$}!matrix9f@{matrix9f}}\index{matrix9f@{matrix9f}!operator *@{operator $\ast$}}
+matrix9f {\bf operator $\ast$} (const matrix9f \&m1, const {\bf matrix16f} \&m2)\label{classmatrix9f_l7}
+
+\item 
+\index{operator *@{operator $\ast$}!matrix9f@{matrix9f}}\index{matrix9f@{matrix9f}!operator *@{operator $\ast$}}
+matrix9f {\bf operator $\ast$} (const {\bf matrix16f} \&m1, const matrix9f \&m2)\label{classmatrix9f_l8}
+
+\item 
+\index{operator/@{operator/}!matrix9f@{matrix9f}}\index{matrix9f@{matrix9f}!operator/@{operator/}}
+matrix9f {\bf operator/} (const matrix9f \&m1, const float scalar)\label{classmatrix9f_l9}
+
+\item 
+\index{operator==@{operator==}!matrix9f@{matrix9f}}\index{matrix9f@{matrix9f}!operator==@{operator==}}
+bool {\bf operator==} (const matrix9f \&m1, const matrix9f \&m2)\label{classmatrix9f_l10}
+
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+Smaller matrix for storing orientation but no location information.
+
+The contents are puhttp://sdldoc.csn.ul.ie/sdlkey.phpblic for now. 
+
+
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+{\bf misc.hpp}\item 
+misc.cpp\end{CompactItemize}
