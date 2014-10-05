@@ -1,0 +1,109 @@
+\documentclass{article}
+% s e l e c c i o n a e l t i p o de documento
+\usepackage[spanish]{babel}
+%
+\usepackage[T1]{fontenc}
+\usepackage[latin1]{inputenc}
+\usepackage{graphicx}
+\begin{document}
+% i n i c i o d e l cuerpo d e l documento
+\title{Laboratorio 6: Manipulaci\' on de imagenes con punteros}
+\author{Jean Carlos Chavarr\' ia Hughes B11814}
+\maketitle
+% t i t u l o d e l documento
+\begin{abstract}
+Laboratorio 6 de el curso IE 0217.
+\end{abstract}
+\section{Introducci\' on}
+Este documento corresponde al reporte de sexto laboratorio del curso IE0217, en el cual se trabaj\' o con distintos funciones de la librer\' ia OpenCV, para la cual se implementaron varias funciones que trabajaran con imagenes, las modificaran, filtros y otras cosas.
+
+\begin{figure}[hbtp]
+\caption{OpenCV Library}
+\centering
+\includegraphics[scale=1]{imagenes/OpenCV_Logo_with_text.png}
+\end{figure}
+
+
+\section{ImagenRGB}
+\subsection{Imread()}
+La primer parte del laboratorio consisti\' o en utilizar la funci\' on \textbf{imread()} de la libreria, la cual se escarga de almacenar una imagen en un objeto tipo \textbf{Mat}. Los objetos tipo Mat son parte de una clase que se encuentra en la librer\' ia y la cual tiene caracter\' isticas muy interesantes para el manejo de la informaci\' on de una imagen. B\' asicamente cuenta con dos miembros importantes que definen las dimensiones del objeto, y un puntero llamado data, que se encarga de apuntar la posici\' on de memoria donde esta la informaci\' on de la imagen. 
+Se puede observar el fichero \textbf{imagenRGB.cpp} donde se encuentran los constructores dise\~ nados para llevar a cabo esta parte del laboratorio al igual que el destructor.
+
+\subsection{M\' etodo showImage()}
+Tal y como se solicita en el enunciado, para realizar esta funci\' on, se utiliz\' o la funci\' on de la libreria llamada \textbf{imshow()}, seguida de la funci\' on \textbf{waitKey(0)}. La parte de la funci\' on donde se asigna un puntero a imagen.data es precisamente donde se esta asignando el valor de la matriz de la imagen al arreglo correspondiente.
+\begin{verbatim}
+void ImageRGB::showImage(void){
+	Mat imagen(this->height, this->width,CV_8UC3);
+	imagen.data = this -> data;
+	imshow("Ventana1",imagen);
+	waitKey(0);
+	cout<<"showImage() executed"<<endl;
+	}
+\end{verbatim}
+
+\subsection{Pasar a escala de grises}
+Para realizar la modificaci\' on de la imagen a color a escala de grises, se tuvo que investigar un poco m\' as sobre el tipo de canales utilzados y la cantidad de bits por canal. Luego, se sigui\' on con el procesimiento en tanto que se utiliz\' o la conversi\' on \textbf{luma} para realizar la transformaci\' on. Finalmente el m\' etodo se encarga de guardar la imagen en el directorio como \textbf{imagen gray scale.png}.
+Fue necesario crear cuatro matrices, una para que almacenara cada canal y otra para que almacenara el resultado de la suma de la ecuaci\' on \textbf{luma}.
+
+\begin{verbatim}
+void ImageRGB::toGray(void){
+	Mat imagen(this->height, this -> width, CV_8UC3);
+	imagen.data = this -> data;
+	cout<<"passing to gray scale"<<endl;
+	
+	float* B= new float[(this->height)*(this->width)];//matriz de azul
+	float* G= new float[(this->height)*(this->width)];//matriz de verde
+	float* R= new float[(this->height)*(this->width)];//matriz de rojo
+	float* Y= new float[(this->height)*(this->width)];//matriz final
+
+	int altura = this->height;
+	int anchura = this->width;
+
+	for(int i = 0; i<(altura*anchura); i=i+3){
+		B[i]=(float)this->data[3*i];
+		G[i]=(float)this->data[3*i+1];
+		R[i]=(float)this->data[3*i+2];
+		Y[i]=0.299*R[i]+0.587*G[i]+0.114*B[i];
+	}
+
+	Mat imagenGray(altura, anchura,CV_32FC1);//Float,, C channel, 1 un canal
+	cout<<"passing to gray scale"<<endl;
+	//imshow("escala grises",imagenGray);
+	imwrite("imagen_gray_scale.png",imagenGray);
+	
+}
+\end{verbatim}
+
+\subsection{drawCircle()}.
+Finalmente para esta funci\' on, se implement\' o la funci\' on de la libreria \textbf{circle()}, la cual cabe destacar que recibe como par\' ametros, la posici\' on del centro del c\' irculo a dise\~ nar y el radio correspondiente.
+Finalemente la imagen se almancena en un nuevo fichero llamado \textbf{imagen con circulo.png}.
+
+\begin{verbatim}
+void ImageRGB::drawCircle(int x, int y, unsigned int radius){
+	Mat imagen(this -> height,this -> width,CV_8UC3);
+	imagen.data = this -> data;
+	if ( x<width && y<height && (width-y)>radius && (height-x)>radius)
+	{
+		circle(imagen,Point(x,y),radius,Scalar(255,0,0,0),-1);
+		cout<<"drawing a circle"<<endl;
+		imwrite("imagen_con_circulo.png",imagen);
+	}
+	else
+	{
+		cout<<"Out of bounding"<<endl;
+	}
+	}
+\end{verbatim}
+
+\section{ImagenGS}
+Adem\' as de los m\' etodos descritos en las secciones anteriores, se definen nuevos m\' etodos para este documento.
+
+\subsection{medianFilter()}
+
+\subsection{sobelOperator()}
+
+\subsection{threshold()}
+
+\subsection{variance}
+
+\end{document}
