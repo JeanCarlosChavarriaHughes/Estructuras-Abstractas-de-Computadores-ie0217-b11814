@@ -24,11 +24,11 @@ OPENCV = `pkg-config opencv --cflags --libs`
 LIBS = $(OPENCV)
  
 #Reglas para ejecutar cuando se ejecute make
-$(OUT1): $(OBJS1) $(HEADER1)
-	$(CC) $(COMPILE) $(OBJS1)
-
 $(TARGET):$(OBJS2) $(OUT1)
 	$(CC) $(CFLAGS) -o $(TARGET) $(OBJS2) $(OUT1) $(LIBS)
+
+$(OUT1): $(OBJS1) $(HEADER1)
+	$(CC) $(COMPILE) $(OBJS1)
 
 all: 
 	$(TARGET)

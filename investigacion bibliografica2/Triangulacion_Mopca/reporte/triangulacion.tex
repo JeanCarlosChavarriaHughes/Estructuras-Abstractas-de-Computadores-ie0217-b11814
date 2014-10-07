@@ -1,0 +1,140 @@
+\documentclass[11pt,letterpaper]{article}     % Tipo de documento y otras especificaciones
+\usepackage[utf8]{inputenc}                   % Para escribir tildes y eñes
+\usepackage[spanish]{babel}                   % Para que los títulos de figuras, tablas y otros estén en español
+\addto\captionsspanish{\renewcommand{\tablename}{Tabla}}					% Cambiar nombre a tablas
+\addto\captionsspanish{\renewcommand{\listtablename}{Índice de tablas}}		% Cambiar nombre a lista de tablas
+\usepackage{geometry}                         
+\geometry{left=30mm,right=30mm,top=25mm,bottom=28mm} % Tamaño del área de escritura de la página
+\usepackage{ucs}
+\usepackage{amsmath}      % Los paquetes ams son desarrollados por la American Mathematical Society
+\usepackage{amsfonts}     % y mejoran la escritura de fórmulas y símbolos matemáticos.
+\usepackage{amssymb}
+\usepackage{graphicx}     % Para insertar gráficas
+%\usepackage{graphics}     % Para insertar gráficas
+\usepackage[lofdepth,lotdepth]{subfig}	% Para colocar varias figuras
+\usepackage{unitsdef}	  % Para la presentación correcta de unidades
+\usepackage{pdfpages}   %incluir paginas de pdf externo, para los anexos
+\usepackage{appendix}   %para los anexos
+\renewcommand{\unitvaluesep}{\hspace*{4pt}}	% Redimensionamiento del espacio entre magnitud y unidad
+\usepackage[colorlinks=true,urlcolor=blue,linkcolor=black,citecolor=black]{hyperref}     % Para insertar hipervínculos y marcadores
+\usepackage{float}		% Para ubicar las tablas y figuras justo después del texto
+\usepackage{booktabs}	% Para hacer tablas más estilizadas
+
+\usepackage{tikz} %preamble
+\usepackage{pgfplots}
+\usetikzlibrary{decorations.pathmorphing}
+\usepackage{tikz-3dplot}
+\usepackage{listings}
+\lstset{language=C++}
+
+\usepackage{cleveref}
+\usepackage{hyperref}
+
+\batchmode
+%\usepackage{apacite}
+\bibliographystyle{plain} 
+\pagestyle{plain} 
+\pagenumbering{arabic}
+\usepackage{lastpage}
+\usepackage{fancyhdr}	% Para manejar los encabezados y pies de página
+\pagestyle{fancy}		% Contenido de los encabezados y pies de pagina
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%No modificar las líneas anteriores
+
+
+\lhead{Investigación bibliográfica II}
+\chead{}
+\rhead{IE-0217 - Estructuras abstractas.}	% Aquí va el numero de experimento, al igual que en el titulo
+\lfoot{Escuela de Ingeniería Eléctrica}
+\cfoot{\thepage\ de \pageref{LastPage}}
+\rfoot{Universidad de Costa Rica}
+
+\author{Autor: \\ \\Jean Carlos Chavarría Hughes, B11814\\ \\ \\ \\ \\Profesor:\\ \\Dr. rer. nat. Francisco Siles Canales \vspace*{2.0in}}
+\title{Universidad de Costa Rica\\{\small Escuela de Ingeniería eléctrica\\ IE-0217 - Estructuras abstractas de datos y algor\' itmos para ingeniería\\II ciclo 2014\\\vspace*{0.55in} Investigación bibliográfica II}\\ Triangulac\' on geom\' etrica, con enf\' asis en el MoCap.
+\vspace*{1.35in}}
+
+%% Settings of tikz figures
+\tikzset{isometricXYZ/.style={x={(-0.866cm,-0.5cm)}, y={(0.866cm,-0.5cm)}, z={(0cm,1cm)}}}
+%: isometric South West : Z , South East : X , North : Y
+\tikzset{isometricZXY/.style={x={(0.866cm,-0.5cm)}, y={(0cm,1cm)}, z={(-0.866cm,-0.5cm)}}}
+%: isometric South West : Y , South East : Z , North : X
+\tikzset{isometricYZX/.style={x={(0cm,1cm)}, y={(-0.866cm,-0.5cm)}, z={(0.866cm,-0.5cm)}}}
+
+
+\begin{document}
+
+\pdfbookmark[1]{Portada}{portada} 	% Marcador para el título
+
+\maketitle
+\newpage
+\tableofcontents
+\newpage
+\listoffigures
+\newpage
+
+\section{Resumen}
+En este proyecto se presentan una investigaci\' on bibliogr\' afica de la triangulaci\' on como t\' ecnica geom\' etrica para la determinaci\' on de posiciones de puntos, medidas de distancias o \' areas de figuras. As\' i como tambi\' en su implementaci\' on en las t\' ecnicas de MoCaps \' opticos con m\' as de una c\' amara, como por ejemplo el OptiTrack.
+
+\section{T\' itulo}
+El uso de la triangulaci\' on en el MoCap.
+
+\section{Problema Principal}
+El desconomiento interno de los m\' etodos internos que se implementan en dispositivos tecnol\' ogicos, como por ejemplo el OptiTrack generalmente no tiene consecuencias que lamentar. Sin embargo cuando se refiere a usos de investigaci\' on acad\' emica, resulta crucial conocer a fondo como se realizan todos los m\' etodos para lograr explotar al m\' aximo sus capacidades y obtener el m\' aximo desempe\~ no posible.
+
+\section{Justificación}
+Con esta investigaci\' on se busca resolver el problema que existe en la actualidad dentro de la Escuela de Ingenier\' ia El\' ectrica relacionado con el desconocimiento del funcionamiento interno de ciertos equipos tecnol\' ogicos, espec\' ificamente brindar una descripci\' on breve y precisa del c\' omo se implementa la triangulaci\' on en el OptiTrack que se encuentra dentro del Laboratorio de Investigaci\' on: PRISLAB.
+
+\section{Metodolog\' ia}
+La presente investigaci\' on es de car\' acter bibliogr\' afico que se centra en la recolecci\' on principal de informaci\' on en libros, art\' iculos y la p\' agina virtual principal del OptiTrack.
+
+\section{Objetivos}
+\subsection{Objetivo General}
+Presentar una base te\' orica comprensible sobre la t\' ecnica geom\' etrica de la triangulaci\' on espacial, con \' enfasis en su implementaci\' on dentro del MoCap.
+\subsection{Objetivos Espec\' ificos} 
+%Recuerde que se realiza un capitulo de investigacion por cada objetivo especifico. Sin perder de vista el objetivo general.
+\begin{enumerate}
+\item Pormenorizar de manera minuciosa la t\' ecnica  de triangulaci\' on trigonom\' etrica.
+
+\item Comprender el uso de la triangulaci\' on en el MoCap.
+\begin{itemize}
+\item Triangulaci\' on.
+\item Proyecci\' on inversa.
+\end{itemize}
+\end{enumerate}
+
+\section{Introducci\' on}
+
+El m\' etodo de la triangulaci\' on de ha utilizado desde la antiguidad para medir distancias y posiciones por los antiguos egipcios y debido a su gran capacidad, la t\' ecnica fue evolucionando a trav\' es de los a\~ nos hasta llegar a las t\' ecnicas modernas de redes de triangulaci\' on que se utilizan en la actualidad, como por ejemplo los sistemas de posicionamiento global, GPS.
+%Grandes investigadores del tema son: Snell, Tales, Pei Xiu, Liu Hui y Picard.
+En lo que concierne a la t\' ecnica del \textbf{Motion Capture}, lo que se hace en t\' erminos generales es implementar marcadores especiales como reflectores de luz que envien de regreso un rayo de luz hacia la c\' amara, y mediante el proceso de la triangulaci\' on con varias c\' amaras, la posici\' on de los marcadores se almacenan en puntos (X,Y,Z).
+
+
+\section{Desarrollo}
+%%Capitulo 1
+\subsection{Capitulo 1}
+
+%%Capitulo 2
+\subsection{Capitulo 2}
+%Porque se ocupan tres camaras en lugar de dos.
+%En general, la tecnica de triangulacion puede ser implementada con solo dos camaras, pero se piden tres para que si en un momento de que se deba determinar la interseccion entre dos lineas, otro marcados esta estorbando, entonces se use una 3rd camara para evitar el problema.
+
+
+\newpage
+\renewcommand{\bibname}{Referencias}
+\addcontentsline{toc}{section}{Referencias}
+
+\begin{thebibliography}{5}
+\bibitem {3D Motion Reconstruction} Mingyu Chen, Ghassan AlRegib, and Biing-Hwang Juang, (2011). \textit{Trajectory triangulation: 3D motion reconstruction with $l1$ optimization}. School of electrical and computer engineering, Georgia Institute of Technology.
+
+
+\bibitem {Vicon MX System} Motion Capture, Carleton Unersity, Ottawa, Ontario, Canada..  \textit{Vicon MX system} Recuperado de \url{http://mocap.csit.carleton.ca/index.php?Section=Overview&Item=MotionCapture&Page=Triangulation} el 7 de octubre de 2014.
+
+\bibitem {Optical Motion Standford} Optical Motion Capture Guide. \textit{A Guide to Optical Capture} Obtenido de \url{http://physbam.stanford.edu/cs448x/old/Optical_Motion_Capture_Guide.html}  el 7 de octubre de 2014.
+
+
+\bibitem {SpotLight} SpotLight on Multimedia. \textit{Spotlight} Obtenido de \url{http://www.spotlight-multimedia.com/tutorials/animation/74-motion-capture.html}  el 7 de octubre de 2014.
+
+
+
+\end{thebibliography} 
+\end{document}

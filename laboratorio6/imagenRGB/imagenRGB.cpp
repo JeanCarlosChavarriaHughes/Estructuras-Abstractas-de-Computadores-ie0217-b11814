@@ -42,6 +42,7 @@ void ImageRGB::toGray(void){
 	float* G= new float[(this->height)*(this->width)];//matriz de verde
 	float* R= new float[(this->height)*(this->width)];//matriz de rojo
 	float* Y= new float[(this->height)*(this->width)];//matriz final
+	float* U= new float[(this->height)*(this->width)];//matriz final
 
 	int altura = this->height;
 	int anchura = this->width;
@@ -53,12 +54,12 @@ void ImageRGB::toGray(void){
 		G[i]=(float)this->data[3*i+1];
 		R[i]=(float)this->data[3*i+2];
 		Y[i]=0.299*R[i]+0.587*G[i]+0.114*B[i];
-		//U[i]=(int)255*Y[i];
+		U[i]=(int)255*Y[i];
 		//conversion de int
 	}
 
 	//Mat imagenGray(altura, anchura,CV_8UC1, U);//Float,, C channel, 1 un canal
-	Mat imagenGray(altura, anchura,CV_32FC1, U);//Float,, C channel, 1 un canal
+	Mat imagenGray(altura, anchura,CV_32FC1,Y);//Float,, C channel, 1 un canal
 	cout<<"passing to gray scale"<<endl;
 	//imshow("escala grises",imagenGray);
 	imwrite("imagen_gray_scale.png",imagenGray);
@@ -68,7 +69,14 @@ void ImageRGB::drawCircle(int x, int y, unsigned int radius){
 	//
 	Mat imagen(this -> height,this -> width,CV_8UC3);
 	imagen.data = this -> data;
-	circle(imagen,Point(x,y),radius,Scalar(255,0,0,0),-1);
-	cout<<"drawing a circle"<<endl;
-	imwrite("imagen_con_circulo.png",imagen);
+	if ( x<width && y<height && (width-y)>radius && (height-x)>radius)
+	{
+		circle(imagen,Point(x,y),radius,Scalar(255,0,0,0),-1);
+		cout<<"drawing a circle"<<endl;
+		imwrite("imagen_con_circulo.png",imagen);
+	}
+	else
+	{
+		cout<<"Out of bounding"<<endl;
+	}
 	}

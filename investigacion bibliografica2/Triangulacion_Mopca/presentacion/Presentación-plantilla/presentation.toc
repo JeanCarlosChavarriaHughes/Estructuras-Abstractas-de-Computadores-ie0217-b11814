@@ -1,0 +1,6 @@
+\beamer@endinputifotherversion {3.24pt}
+\select@language {spanish}
+\beamer@sectionintoc {1}{Introducction}{2}{0}{1}
+\beamer@sectionintoc {2}{Visualizaci\' on Cienti\' fica}{5}{0}{2}
+\beamer@sectionintoc {3}{Formatos 3D}{8}{0}{3}
+\beamer@sectionintoc {4}{Representaci\' on en pol\' igonos}{14}{0}{4}

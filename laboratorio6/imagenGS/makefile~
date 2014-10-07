@@ -2,10 +2,10 @@
 #Jean Carlos Chavarria Hughes
 
 #Se definen los objetos y las fuentes
-OBJS1 = imagenRGB.cpp
-HEADER1 = imagenRGB.hh
-OBJS2 = principalRGB.cpp
-OUT1 = imagenRGB.o
+OBJS1 = imagenGS.cpp
+HEADER1 = imagenGS.hh
+OBJS2 = principalGS.cpp
+OUT1 = imagenGS.o
 
 #Se define el compilador
 CC = g++
@@ -17,7 +17,7 @@ CFLAGS = -g -Wall
 COMPILE = -c
 
 #Archivo Ejecutable que se va a crear
-TARGET = principalRGB
+TARGET = principalGS
  
 #Librerias de OpenCV para compilacion
 OPENCV = `pkg-config opencv --cflags --libs`
@@ -35,4 +35,4 @@ all:
 
 #Reglas para cuando se ejecute make clean
 clean: 
-	rm -fr *.o *.gch *.png $(TARGET)
+	rm -fr *.o *.gch $(TARGET)

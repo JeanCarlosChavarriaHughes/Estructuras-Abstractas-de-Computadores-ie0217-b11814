@@ -10,17 +10,15 @@ int main(void){
 	ImageGS A4(imagen1);
 	int kernel[] =  {1,0,-1,2,0,-2,1,0,-1};
 	//cout << imagen1.cols << "x " << imagen1.rows << endl;
-
-//Se comentan los .showImage porque no se solicita pero para mostrar la imagen solo es necesario descomentarlos. Recuerde que se pide crear una nueva imagen, la cual se crea en el mismo directorio.
-	A4.thershold();
-	A4.showImage();//muestra la imagen en pantalla
 	//A1.showImage();//muestra la imagen en pantalla
 	A1.medianFilter(10);//se ingresa el argumento que es la medida del filtro
-	A1.showImage();//muestra la imagen en pantalla	
+	//A1.showImage();//muestra la imagen en pantalla	
 	A2.sobelOperator(kernel);//aplica el operador sobel
-	A2.showImage();//muestra la imagen en pantalla
+	//A2.showImage();//muestra la imagen en pantalla
 	A3.variance(100,3);
-	A3.showImage();//muestra la imagen en pantalla
+	//A3.showImage();//muestra la imagen en pantalla
+	A4.thershold();
+	//A4.showImage();//muestra la imagen en pantalla
 	return 0;
 	//paraa mostrar alguja image se debe mostrar el imshow 
 	//correspodien.tiende.

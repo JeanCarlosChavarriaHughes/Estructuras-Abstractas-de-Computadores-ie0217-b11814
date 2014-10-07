@@ -24,7 +24,11 @@ class ImageGS{
 		//Muestra la imagen almacenada en data en una ventana
 		void medianFilter(int size);
 		//Filtra la imagen con ruido
-		void sobelOperator(int);
+		void sobelOperator(int *);
 		//Detecta bordes en la imagen
+		void thershold(void);
+		//segmenta la imagen a travez del valor umbral
+		void variance(int a, int k);
+		//calcula la varianza
 };
 #endif

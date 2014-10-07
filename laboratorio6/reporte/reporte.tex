@@ -5,6 +5,7 @@
 \usepackage[T1]{fontenc}
 \usepackage[latin1]{inputenc}
 \usepackage{graphicx}
+\usepackage{amsmath}
 \begin{document}
 % i n i c i o d e l cuerpo d e l documento
 \title{Laboratorio 6: Manipulaci\' on de imagenes con punteros}
@@ -16,6 +17,8 @@ Laboratorio 6 de el curso IE 0217.
 \end{abstract}
 \section{Introducci\' on}
 Este documento corresponde al reporte de sexto laboratorio del curso IE0217, en el cual se trabaj\' o con distintos funciones de la librer\' ia OpenCV, para la cual se implementaron varias funciones que trabajaran con imagenes, las modificaran, filtros y otras cosas.
+
+Cabe destacar que los archivos de c\' odigo fuente difieren un poco de la plantilla suministrada por el asistente, esto \' unicamente con el fin de simplificar y personalizar la clase, pero es completamente equivalente.
 
 \begin{figure}[hbtp]
 \caption{OpenCV Library}
@@ -96,14 +99,96 @@ void ImageRGB::drawCircle(int x, int y, unsigned int radius){
 \end{verbatim}
 
 \section{ImagenGS}
-Adem\' as de los m\' etodos descritos en las secciones anteriores, se definen nuevos m\' etodos para este documento.
+Adem\' as de los m\' etodos descritos en las secciones anteriores, se definen nuevos m\' etodos para esta clase.
 
 \subsection{medianFilter()}
+Este m\' etodo recibe un par\' ametro entero que es la medida n para el kernel del filtro, recordando que es una matriz cuadrada, pero debe ser impar y mayor que 1. 
+B\' asicamente el m\' etodo se encarga de remover el ruido de una imagen, lo cual genera una nueva imagen pero un poco difundida en el fichero: \textsc{imagen median filter.png}. Por ejemplo una imagen como la que aparece en la Figura \ref{fig:original}, puede ser vista como la que aparece en la Figura \ref{fig:medianFilter}.
+
+\begin{verbatim}
+void ImageGS::medianFilter(int size){
+	Mat imagen(this->height, this -> width, CV_8UC3);
+	imagen.data = this -> data;
+	cout<<"Aplicando el filtro medio"<<endl;
+	
+	int altura = this->height;
+	int anchura = this->width;
+	
+	for(int i = (3*(size+size*anchura)); i < (3*((anchura*altura)-(size+size*anchura))); i++){//Posiciones de la matriz Y que se deben recorrer
+		int sumatoriaTotal = 0;
+		for(int j = -size; j <= size; j++){//la variable j determina el ancho de kernel
+			for(int g = -size; g <= size; g++){//la variable i determina el alto del kernel
+				
+				sumatoriaTotal = sumatoriaTotal + (int)this->data[i + 3*j + 3*g*anchura];
+				
+			}	
+		}
+		
+		sumatoriaTotal = sumatoriaTotal/((2*size+1)*(2*size+1));//se pasa la parte entera
+		imagen.data[i] = sumatoriaTotal;		
+	}
+	
+	Mat imagenFilter(altura, anchura,CV_8UC3, imagen.data);//Float,, C channel, 1 un canal
+	imwrite("imagen_median_filter.png",imagen);
+	//imshow("Median Filter",imagen);
+	waitKey(1950);
+}
+\end{verbatim}
+
+
+\begin{figure}[hbtp]
+\caption{Imagen con el filtro medio aplicado.}
+\centering
+\includegraphics[scale=0.5]{imagenes/imagen1.png}
+\label{fig:original}
+\end{figure}
+
+\begin{figure}[hbtp]
+\caption{Imagen con el filtro medio aplicado.}
+\centering
+\includegraphics[scale=0.5]{imagenes/imagen_median_filter.png}
+\label{fig:medianFilter}
+\end{figure}
+
 
 \subsection{sobelOperator()}
+El operador sobel se encarga de crear una nueva image epro en la cual solo se esten presentes los bordes, o ejes de la imagen original. Por ejemplo se puede pensar en una imagen que tenga ecuaciones matem\' aticas, integrales, etc. Pero esta un poco borrosa, entonces despu\' es de aplicad este m\' etodo, solo van a aparecer las ecuaciones m\' as f\' acil de observar pues se tomaran los bordea de cada elemento. Funciona tanto para imagenes a color como imagenes en escala de grises y se basa en la comvoluci\' on de un par de matrices o kernels predefinidos como:
+
+\begin{align}
+Gx:
+ \left( \begin{array}{ccc}
+-1 & 0 & +1 \\
+-2 & 0 & +2 \\
+-1 & 0 & +1 \end{array} \right)
+\end{align}
+
+\begin{align}
+Gx:
+ \left( \begin{array}{ccc}
++1 & +2 & +1 \\
+0 & 0 & 0 \\
+-1 & -2 & -1 \end{array} \right)
+\end{align}
+
+
 
 \subsection{threshold()}
+El m\' etodo del umbral, o el \textbf{thresholding} b\' asicamente se encarga de generar imagenes binarias siguiendo m\' etodos basados en la forma de los histogramas de cada imagen (existen otros m\'
+ etodos pero se eligi\' o este por simplicidad).
+ 
+ Por ejemplo se puede observar la misma imagen de la Figura \ref{fig:original} con el filtro aplicado, que se obtiene la imagen de la Figura \ref{fig:umbral}.
+ 
+ \begin{figure}[hbtp]
+ \caption{Imagen con el m\' etodo threshold aplicado.}
+ \centering
+ \includegraphics[scale=0.5]{imagenes/imagen_otsu_threshold.png}
+ \label{fig:umbral}.
+ \end{figure}
+ 
 
 \subsection{variance}
+Finalmente el m\' etodo de varianza se encarga de procesar la imagen para encontrar la varianza probal\' istica dentro de un vecindario de tama\~ no k con la f\' ormula motrada en la ecuaci\' on (1) de la gu\' ia de laboratorio.
+
+Tal como describe Vijay Kumar y Priyanka Gupta en el art\' iculo \textbf{Importance of statical peasures in digital image processing}, la varianza es una medidad de que tan lejos un conjunto de valores se esparcen, en tanto que se puede entender como uno de los momentos de distribuci\' on de imagenes.
 
 \end{document}
