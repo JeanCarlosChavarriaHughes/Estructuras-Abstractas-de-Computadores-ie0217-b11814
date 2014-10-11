@@ -1,0 +1,37 @@
+\documentclass{article}
+% s e l e c c i o n a e l t i p o de documento
+\usepackage[spanish]{babel}
+%
+\usepackage[T1]{fontenc}
+\usepackage[latin1]{inputenc}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\begin{document}
+% i n i c i o d e l cuerpo d e l documento
+\title{Laboratorio 7: Templates}
+\author{Jean Carlos Chavarr\' ia Hughes B11814}
+\maketitle
+% t i t u l o d e l documento
+\begin{abstract}
+Laboratorio 7 de el curso IE 0217.
+\end{abstract}
+\section{Introducci\' on}
+Este documento corresponde al reporte del laboratorio 7 del curso IE0217, en el cual se trabaj\' o el concepto de las funciones y clases \textbf{templates}, asi como tambien el concepto del \textbf{typename}.
+
+Cabe destacar que los archivos de c\' odigo fuente son totalmente personalizados ya que no se brind\' o ninguna plantilla para el \textit{header} ni para el \textit{main}.
+
+\section{Clase Vector}
+Este reporte solmente se divide en una secci\' on debido a que la extensi\' on es considerablemente menor, no as\' i su dificultad.
+Se realizaron tres funciones: \textit{suma, resta y normal}, para las cuales se realiza lo que se estipula en la gu\' ia de laboratorio.
+
+En t\' erminos generales, se puede decir que el lenguage C++ cuenta con funciones template que son un tipo de platilla de funci\' on a la cual no se le debe indicar el tipo expl\' icito de variable que debe retornar, sino que se utiliza un identificador typename.
+Un poco sobre la estructura general:
+
+\begin{itemize}
+\item template $<$class identifier$>$ function$\_$declaration.
+\item template $<$typename identifier$>$ function$\_$declaration.
+\end{itemize}
+
+En los documentos fuente se puede encontrar el \textbf{vector.hh}, el cual es el header y donde se declaran las funciones, el \textbf{vector.cpp} que es donde se definen las funciones y el \textbf{principal vector.cpp} el cual contiene el main.
+
+\end{document}
