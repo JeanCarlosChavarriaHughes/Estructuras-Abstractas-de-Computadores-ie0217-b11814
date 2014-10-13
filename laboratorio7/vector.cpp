@@ -1,3 +1,4 @@
+//Author: Jean carlos Chavarria Hughes
 #include "vector.hh"
 
 
@@ -9,7 +10,7 @@ vector<T,N>::vector(const T contenido[]){
 	
 	//T ptr_data_original[] = new T[N];
 	
-	this->*data = new T[N];
+	this->data = new T[N];
 
 	for (int i = 0; i < N; ++i)
 	{
@@ -20,43 +21,44 @@ vector<T,N>::vector(const T contenido[]){
 template <typename T,int N>
 vector<T,N>::~vector(){
 	//este es el destructor
-	//N es la longitud del vector
-	//T es el contenido del vector
 	
-	//this->data = delete;
+	delete this->data;
+	//cout << "Se ejecutó el destructor" << endl;
 }
 
 template <typename T,int N>
-vector<T,N> vector<T,N>::suma(vector &V1, vector &V2){
+void vector<T,N>::suma(vector& V1, vector& V2){
 	//esta es la funcion que suma vectores
-	vector<T,N> Vsuma;
+	cout << "[ ";
 	for (int i = 0; i < N; ++i)
 	{
-		Vsuma.data[i]=V1.data[i]+V2.data[i];
+		this->data[i]=V1.data[i]+V2.data[i];
+		cout << this->data[i] << " ";
+		
 	}
-	return Vsuma;
+	cout << "]"<< endl;
 }
 
 template <typename T,int N>
-vector<T,N> vector<T,N>::resta(vector &V1, vector &V2){
-	//esta es la funcion que eresta vectores
+void vector<T,N>::resta(vector &V1, vector &V2){
 	//esta es la funcion que suma vectores
-	vector<T,N> Vresta;
+	cout << "[ ";
 	for (int i = 0; i < N; ++i)
 	{
-		Vresta.data[i]=V1.data[i]-V2.data[i];
+		this->data[i]=V1.data[i]-V2.data[i];
+		cout << this->data[i] << " ";
+		
 	}
-	return Vresta;
+	cout << "]"<< endl;
 }
 
 template <typename T,int N>
-double vector<T,N>::norma(vector &V1){
+double vector<T,N>::norma(){
 	//esta es la funcio que obtiene la norma de V1
-	//esta es la funcion que suma vectores
-	vector<T,N> Vnorma;
+	T Vnorma = 0;
 	for (int i = 0; i < N; ++i)
 	{
-		Vnorma=V1[i]+Vnorma;
+		Vnorma=(this->data[i])*(this->data[i])+Vnorma;
 	}
 	return sqrt(Vnorma);
 }
