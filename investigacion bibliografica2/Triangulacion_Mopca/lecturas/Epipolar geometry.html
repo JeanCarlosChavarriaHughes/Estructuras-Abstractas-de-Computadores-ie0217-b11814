@@ -1,0 +1,383 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<!--Converted with LaTeX2HTML 97.1 (release) (July 13th, 1997)
+ by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippman, Marek Rouchal, Martin Wilck and others -->
+<html><head>
+<title>Epipolar geometry</title>
+<meta name="description" content="Epipolar geometry">
+<meta name="keywords" content="lect10">
+<meta name="resource-type" content="document">
+<meta name="distribution" content="global">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<link rel="STYLESHEET" href="Epipolar%20geometry_archivos/lect10.css">
+<link rel="next" href="http://homepages.inf.ed.ac.uk/rbf/CVonline/LOCAL_COPIES/OWENS/LECT10/node4.html">
+<link rel="previous" href="http://homepages.inf.ed.ac.uk/rbf/CVonline/LOCAL_COPIES/OWENS/LECT10/node2.html">
+<link rel="up" href="http://homepages.inf.ed.ac.uk/rbf/CVonline/LOCAL_COPIES/OWENS/LECT10/lect10.html">
+<link rel="next" href="http://homepages.inf.ed.ac.uk/rbf/CVonline/LOCAL_COPIES/OWENS/LECT10/node4.html">
+</head>
+<body>
+<!--Navigation Panel-->
+<a name="tex2html45" href="http://homepages.inf.ed.ac.uk/rbf/CVonline/LOCAL_COPIES/OWENS/LECT10/node4.html">
+<img alt="next" src="Epipolar%20geometry_archivos/next_motif.gif" border="0" align="BOTTOM" height="24" width="37"></a> 
+<a name="tex2html43" href="http://homepages.inf.ed.ac.uk/rbf/CVonline/LOCAL_COPIES/OWENS/LECT10/lect10.html">
+<img alt="up" src="Epipolar%20geometry_archivos/up_motif.gif" border="0" align="BOTTOM" height="24" width="26"></a> 
+<a name="tex2html37" href="http://homepages.inf.ed.ac.uk/rbf/CVonline/LOCAL_COPIES/OWENS/LECT10/node2.html">
+<img alt="previous" src="Epipolar%20geometry_archivos/previous_motif.gif" border="0" align="BOTTOM" height="24" width="63"></a>   
+<br>
+<b> Next:</b> <a name="tex2html46" href="http://homepages.inf.ed.ac.uk/rbf/CVonline/LOCAL_COPIES/OWENS/LECT10/node4.html">Calculating the fundamental matrix</a>
+<b> Up:</b> <a name="tex2html44" href="http://homepages.inf.ed.ac.uk/rbf/CVonline/LOCAL_COPIES/OWENS/LECT10/lect10.html">Computer Vision IT412</a>
+<b> Previous:</b> <a name="tex2html38" href="http://homepages.inf.ed.ac.uk/rbf/CVonline/LOCAL_COPIES/OWENS/LECT10/node2.html">Self-calibration and the fundamental</a>
+<br>
+<br>
+<!--End of Navigation Panel-->
+<!--Table of Child-Links-->
+<a name="CHILD_LINKS"><strong>Subsections</strong></a>
+<ul>
+<li><a name="tex2html47" href="http://homepages.inf.ed.ac.uk/rbf/CVonline/LOCAL_COPIES/OWENS/LECT10/node3.html#SECTION00031000000000000000">
+The essential matrix and the fundamental matrix</a>
+</li></ul>
+<!--End of Table of Child-Links-->
+<hr>
+<h1><a name="SECTION00030000000000000000">
+Epipolar geometry</a>
+</h1>
+<p>
+Firstly, a word on notation. Points, as entities in their own right,
+will be denoted in italics. When such points are expressed in
+Euclidean coordinates, we will use bold notation, and when they are
+expressed in projective coordinates, they will be bold with a tilde.
+Thus a point <i>M</i> in three space might be imaged at <i>m</i>, and <i>m</i> might
+have coordinates <img src="Epipolar%20geometry_archivos/img1.gif" alt="${\bf m} = (u, v)$" border="0" align="MIDDLE" height="33" width="89"> or <img src="Epipolar%20geometry_archivos/img2.gif" alt="$\tilde{\bf m} = (u, v, 1)$" border="0" align="MIDDLE" height="33" width="106">.Of course, image points can also be expressed in the camera
+coordinate system. When we do this we will write <i>m</i> as
+<img src="Epipolar%20geometry_archivos/img3.gif" alt="${\bf x} = (u - u_c, v - v_c)$" border="0" align="MIDDLE" height="33" width="162"> or <img src="Epipolar%20geometry_archivos/img4.gif" alt="$\tilde{\bf x} = (u - u_c, v - v_c, 1)$" border="0" align="MIDDLE" height="33" width="180">.</p><p>
+Moreover, as with the last lecture, much of the development in this lecture
+is done in the setting of projective geometry, which was first
+introduced in Lecture 1. There is one result which we will use constantly,
+so it is important to have it clearly understood.
+</p><p><b>Result</b>: A line going through two points, <img src="Epipolar%20geometry_archivos/img5.gif" alt="$\tilde{\bf m}_1$" border="0" align="MIDDLE" height="30" width="28"> and
+<img src="Epipolar%20geometry_archivos/img6.gif" alt="$\tilde{\bf m}_2$" border="0" align="MIDDLE" height="30" width="28"> is represented by the cross product <img src="Epipolar%20geometry_archivos/img7.gif" alt="$\tilde{\bf m}_1
+\wedge \tilde{\bf m}_2$" border="0" align="MIDDLE" height="30" width="75">.</p><p><b>Proof</b>. A point on the line is given by <img src="Epipolar%20geometry_archivos/img8.gif" alt="$\tilde{\bf x} = \alpha
+\tilde{\bf m}_1 + \beta \tilde{\bf m}_2$" border="0" align="MIDDLE" height="30" width="137">, for arbitrary values of the
+scalars <img src="Epipolar%20geometry_archivos/img9.gif" alt="$\alpha$" border="0" align="BOTTOM" height="15" width="14"> and <img src="Epipolar%20geometry_archivos/img10.gif" alt="$\beta$" border="0" align="MIDDLE" height="30" width="14">. This is equivalent to writing that
+the determinant <img src="Epipolar%20geometry_archivos/img11.gif" alt="$(\tilde{\bf x}, \tilde{\bf m}_1, \tilde{\bf m}_2) = 0$" border="0" align="MIDDLE" height="33" width="131">.But this determinant can also be written as
+
+</p><p align="CENTER"><img src="Epipolar%20geometry_archivos/img12.gif" alt="\begin{displaymath}
+\tilde{\bf x}^{\top}(\tilde{\bf m}_1 \wedge \tilde{\bf m}_2) = 0, \end{displaymath}" height="31" width="147"></p>
+so the result follows.
+<p>
+In the last lecture, we considered in detail the geometry of a single
+camera. We will now introduce a second view and study the geometric
+properties of the set of two views. The main new geometric property
+is known in computer vision as the <em>epipolar constraint</em>.
+</p><p>
+There are two ways of extracting three-dimensional structure from a
+pair of images. In the first, and classical method, known as the <em>
+calibrated route</em>, we firstly need to calibrate both cameras (or
+viewpoints) with respect to some world coordinate system, calculate
+the so-called <em>epipolar</em> geometry by extracting the <em>
+essential</em> matrix of the system, and from this compute the
+three-dimensional Euclidean structure of the imaged scene.
+</p><p>
+However it is the second, or <em>uncalibrated route</em>, that more
+likely corresponds to the way in which biological systems determine
+three-dimensional structure from vision. In an uncalibrated system, a
+quantity known as the <em>fundamental</em> matrix is calculated from
+image correspondences, and this is then used to determine the
+projective three-dimensional structure of the imaged scene.
+</p><p>
+In both approaches the underlying principle of binocular vision is that
+of <em>triangulation</em>. Given a single image, the three-dimensional
+location of any visible object point must lie on the straight
+line that passes through the centre of projection and the image
+of the object point (see figure 1). The determination of the
+intersection of two such lines generated from two independent
+images is called triangulation.
+</p><p>
+</p><div align="CENTER">
+<br>
+<div align="CENTER"><a name="48">&nbsp;</a>
+<table>
+<caption><strong>Figure:</strong>
+<small>The principle of triangulation in stereo imaging.</small></caption>
+<tbody><tr><td><img src="Epipolar%20geometry_archivos/img13.gif" alt="\begin{figure}
+\par
+\centerline{
+\psfig {figure=figure1.ps}
+}
+\par\end{figure}" height="325" width="520"></td></tr>
+</tbody></table>
+</div>
+<br></div>
+<p>
+Clearly, the determination of the scene position of an object point
+through triangulation depends upon matching the image location of the
+object point in one image to the location of the same object point in the
+other image. The process of establishing such matches between points in
+a pair of images is called <em>correspondence</em>, and will be dealt
+with at length in the next lecture.
+</p><p>
+At first it might seem that correspondence requires a search through
+the whole image, but the <em>epipolar constraint</em> reduces this
+search to a single line. To see this, we consider figure 2.
+</p><p>
+</p><div align="CENTER">
+<br>
+<div align="CENTER"><a name="56">&nbsp;</a>
+<table>
+<caption><strong>Figure:</strong>
+<small>The epipolar constraint.</small></caption>
+<tbody><tr><td><img src="Epipolar%20geometry_archivos/img14.gif" alt="\begin{figure}
+\par
+\centerline{
+\psfig {figure=figure2.ps,width=12cm}
+}
+\par\end{figure}" height="272" width="541"></td></tr>
+</tbody></table>
+</div>
+<br></div>
+<p>
+The <em>epipole</em> is the point of intersection of the line joining
+the optical centres, that is the <em>baseline</em>, with the image plane.
+Thus the epipole is the image, in one camera, of the optical centre
+of the other camera.
+</p><p>
+The <em>epipolar plane</em> is the plane defined by a 3D point <i>M</i> and the
+optical centres <i>C</i> and <i>C</i>'.
+</p><p>
+The <em>epipolar line</em> is the straight line of intersection of the
+epipolar plane with the image plane. It is the image in one camera of
+a ray through the optical centre and image point in the other
+camera. All epipolar lines intersect at the epipole.
+</p><p>
+Thus, a point <b>x</b> in one image generates a <em>line</em> in the
+other on which its corresponding point <img src="Epipolar%20geometry_archivos/img15.gif" alt="$\bf x'$" border="0" align="BOTTOM" height="16" width="18"> must lie. We see that the
+search for correspondences is thus reduced from a region to a line.
+This is illustrated in figure 3.
+</p><p>
+</p><div align="CENTER">
+<br>
+<div align="CENTER"><a name="68">&nbsp;</a>
+<table>
+<caption><strong>Figure:</strong>
+<small>The epipolar line along which the corresponding point
+for <img src="Epipolar%20geometry_archivos/img16.gif" alt="$\bf x$" border="0" align="BOTTOM" height="15" width="14"> must lie.</small></caption>
+<tbody><tr><td><img src="Epipolar%20geometry_archivos/img17.gif" alt="\begin{figure}
+\par
+\centerline{
+\psfig {figure=figure3.ps}
+}
+\par\end{figure}" height="314" width="561"></td></tr>
+</tbody></table>
+</div>
+<br></div><h2><a name="SECTION00031000000000000000">
+The essential matrix and the fundamental matrix</a>
+</h2>
+<p>
+To calculate depth information from a pair of images we need to
+compute the epipolar geometry. In the calibrated environment we
+capture this geometric constraint in an algebraic representation known
+as the <em>essential</em> matrix. In the uncalibrated environment, it is
+captured in the <em>fundamental</em> matrix.
+</p><p>
+With two views, the two camera coordinate systems are related by a
+rotation <img src="Epipolar%20geometry_archivos/img18.gif" alt="$\cal R$" border="0" align="BOTTOM" height="16" width="19"> and a translation <img src="Epipolar%20geometry_archivos/img19.gif" alt="$\cal T$" border="0" align="BOTTOM" height="16" width="18"> (see figure 4):
+
+</p><p align="CENTER"><img src="Epipolar%20geometry_archivos/img20.gif" alt="\begin{displaymath}
+\bf x' = \cal R \bf x + \cal T.\end{displaymath}" height="28" width="111"></p>
+<div align="CENTER">
+<br>
+<div align="CENTER"><a name="77">&nbsp;</a>
+<table>
+<caption><strong>Figure:</strong>
+<small>The Euclidean relationship between the two view-centred
+coordinate systems.</small></caption>
+<tbody><tr><td><img src="Epipolar%20geometry_archivos/img21.gif" alt="\begin{figure}
+\par
+\centerline{
+\psfig {figure=figure7.ps}
+}
+\par\end{figure}" height="270" width="454"></td></tr>
+</tbody></table>
+</div>
+<br></div>
+Taking the vector product with <img src="Epipolar%20geometry_archivos/img19.gif" alt="$\cal T$" border="0" align="BOTTOM" height="16" width="18">, followed by the scalar
+product with <img src="Epipolar%20geometry_archivos/img15.gif" alt="$\bf x'$" border="0" align="BOTTOM" height="16" width="18"> we obtain
+
+<table align="CENTER" width="100%">
+<tbody><tr valign="MIDDLE"><td></td><td align="CENTER" nowrap="nowrap"><img src="Epipolar%20geometry_archivos/img22.gif" alt="\begin{displaymath}
+\bf x'.({\cal T} \wedge {\cal R} \bf x) = \rm 0, \end{displaymath}" height="31" width="137"></td>
+<td align="CENTER">(1)</td></tr>
+</tbody></table>
+which expresses the fact that the vectors <b>Cx</b>, <img src="Epipolar%20geometry_archivos/img23.gif" alt="$\bf C'x'$" border="0" align="BOTTOM" height="16" width="38"> and
+<img src="Epipolar%20geometry_archivos/img24.gif" alt="$\bf CC'$" border="0" align="BOTTOM" height="16" width="38"> are coplanar.  This can also be written as
+
+<table align="CENTER" width="100%">
+<tbody><tr valign="MIDDLE"><td></td><td align="CENTER" nowrap="nowrap"><img src="Epipolar%20geometry_archivos/img25.gif" alt="\begin{displaymath}
+{\bf x'}^{\top} \bf E \bf x = 0, \end{displaymath}" height="30" width="93"></td>
+<td align="CENTER">(2)</td></tr>
+</tbody></table>
+where
+
+<p align="CENTER"><img src="Epipolar%20geometry_archivos/img26.gif" alt="\begin{displaymath}
+\bf E = \left[ \begin{array}
+{ccc}
+ 0 &amp; -t_z &amp; t_y \\  t_z &amp; 0 &amp; -t_x \\  -t_y &amp; t_x &amp; 0
+ \end{array} \right]. \cal R \end{displaymath}" height="74" width="220"></p>
+is the <em>essential</em> matrix, and <img src="Epipolar%20geometry_archivos/img27.gif" alt="${\cal T} = (t_x, t_y, t_z)^{\top}$" border="0" align="MIDDLE" height="35" width="130">.Equation (2) is the algebraic representation of epipolar geometry for 
+known calibration, and the essential matrix relates corresponding
+image points expressed in the camera coordinate system.
+<p>
+Notice that equation (1) is homogeneous with respect to <img src="Epipolar%20geometry_archivos/img19.gif" alt="$\cal T$" border="0" align="BOTTOM" height="16" width="18">. This
+reflects the fact that scale is undetermined and we cannot recover the
+absolute scale of the scene without some extra information, such as
+knowing the distance in space between two points. Thus <img src="Epipolar%20geometry_archivos/img28.gif" alt="$\bf E$" border="0" align="BOTTOM" height="16" width="17"> is a <img src="Epipolar%20geometry_archivos/img29.gif" alt="$3
+\times 3$" border="0" align="MIDDLE" height="28" width="45"> matrix but it only depends on five parameters. Note also
+that the case <img src="Epipolar%20geometry_archivos/img30.gif" alt="${\cal T} = {\bf 0}$" border="0" align="BOTTOM" height="16" width="54"> is a trivial solution but one from which we
+are unable to calculate any information about the depth of points in
+space; for this reason, it is usually excluded.
+</p><p>
+In the uncalibrated case, we don't know <img src="Epipolar%20geometry_archivos/img18.gif" alt="$\cal R$" border="0" align="BOTTOM" height="16" width="19"> and <img src="Epipolar%20geometry_archivos/img19.gif" alt="$\cal T$" border="0" align="BOTTOM" height="16" width="18">; all we
+have are image coordinates in the image plane. Nevertheless, the correspondence
+between an image point <i>m</i> and its epipolar line <i>l</i><sub><i>m</i></sub> is very
+simple; in fact it is linear in projective coordinates, as we can see
+by the following analysis.
+</p><p>
+Suppose we have two views of a point <i>M</i> in three dimensional
+space, with <i>M</i> imaged at <i>m</i> in view 1 and <i>m</i>' in view 2. From
+the last lecture we know that there are projective matrices <img src="Epipolar%20geometry_archivos/img31.gif" alt="$\tilde{\bf P}$" border="0" align="BOTTOM" height="20" width="17"> 
+and <img src="Epipolar%20geometry_archivos/img32.gif" alt="$\tilde{\bf P'}$" border="0" align="BOTTOM" height="20" width="22">such that in projective coordinates
+
+</p><p align="CENTER"><img src="Epipolar%20geometry_archivos/img33.gif" alt="\begin{displaymath}
+(u, v, 1)^{\top} = \tilde{\bf m} = \tilde{\bf P} \tilde{\bf M}\end{displaymath}" height="31" width="173"></p>
+and
+
+<p align="CENTER"><img src="Epipolar%20geometry_archivos/img34.gif" alt="\begin{displaymath}
+(u', v',1)^{\top} = \tilde{\bf m'} = \tilde{\bf P'} \tilde{\bf M}.\end{displaymath}" height="31" width="196"></p>
+Also, the coordinates of the two optical centres <i>C</i> and <i>C</i>' are obtained,
+in the world reference frame, by solving the two systems of linear
+equations
+
+<p align="CENTER"><img src="Epipolar%20geometry_archivos/img35.gif" alt="\begin{displaymath}
+\tilde{\bf P} \tilde{\bf X} = {\bf 0}, \end{displaymath}" height="30" width="70"></p>
+and
+
+<p align="CENTER"><img src="Epipolar%20geometry_archivos/img36.gif" alt="\begin{displaymath}
+\tilde{\bf P'} \tilde{\bf X} = {\bf 0}. \end{displaymath}" height="26" width="74"></p>
+Thus, since <img src="Epipolar%20geometry_archivos/img37.gif" alt="$\tilde{\bf P} \left[ \begin{array}
+{c}
+ {\bf C} \\  1
+ \end{array} \right] = 0$" border="0" align="MIDDLE" height="61" width="105">, we
+can rewrite this as <img src="Epipolar%20geometry_archivos/img38.gif" alt="${\bf C} = -{\bf P}^{-1}{\bf p}$" border="0" align="MIDDLE" height="34" width="103">, where <img src="Epipolar%20geometry_archivos/img39.gif" alt="$\tilde{\bf P}
+= [{\bf P}~~ {\bf p}]$" border="0" align="MIDDLE" height="39" width="92">.So, given a point <i>m</i> in the first view, its corresponding 
+epipolar line <i>l</i><sub><i>m</i></sub>
+can be computed from two points known to lie on it. One of these is the
+epipole <img src="Epipolar%20geometry_archivos/img40.gif" alt="${\bf e}'$" border="0" align="BOTTOM" height="16" width="17"> and is given by
+
+<p align="CENTER"><img src="Epipolar%20geometry_archivos/img41.gif" alt="\begin{displaymath}
+{\bf e}' = \tilde{\bf P'} \left[ \begin{array}
+{c}
+ -{\bf P}^{-1}{\bf p} \\  1
+ \end{array} \right]. \end{displaymath}" height="53" width="162"></p>
+Another is the point at infinity of the optical ray joining the
+optical centre <i>C</i> and the point <i>m</i>. The image of this point
+in the second image plane is given by
+
+<p align="CENTER"><img src="Epipolar%20geometry_archivos/img42.gif" alt="\begin{displaymath}
+\tilde{\bf m'} = {\bf P'}{\bf P}^{-1}\tilde{\bf m}, \end{displaymath}" height="30" width="120"></p>
+because if we write the point at infinity as <img src="Epipolar%20geometry_archivos/img43.gif" alt="$[{\bf D}, 0]^{\top}$" border="0" align="MIDDLE" height="35" width="59"> then
+<img src="Epipolar%20geometry_archivos/img44.gif" alt="$\tilde{\bf P} \left[ \begin{array}
+{c}
+ {\bf D} \\  0
+ \end{array} \right] = \tilde{\bf m}$" border="0" align="MIDDLE" height="61" width="114"> and so
+<img src="Epipolar%20geometry_archivos/img45.gif" alt="${\bf D} = {\bf P}^{-1}\tilde{\bf m}$" border="0" align="BOTTOM" height="18" width="95">.Now, the line going through two points can be represented as the cross
+product of those two points, so we have
+
+<p align="CENTER"><img src="Epipolar%20geometry_archivos/img46.gif" alt="\begin{displaymath}
+{l}_{m} = \tilde{\bf e'} \wedge \tilde{\bf m'} \end{displaymath}" height="29" width="101"></p>
+and this can be written as <img src="Epipolar%20geometry_archivos/img47.gif" alt="${\bf F}\tilde{\bf m}$" border="0" align="BOTTOM" height="16" width="34">, where
+<b>F</b> is a <img src="Epipolar%20geometry_archivos/img29.gif" alt="$3
+\times 3$" border="0" align="MIDDLE" height="28" width="45"> matrix which can be computed as follows:
+
+<p align="CENTER"><img src="Epipolar%20geometry_archivos/img48.gif" alt="\begin{displaymath}
+{\bf F} = \left[ \begin{array}
+{ccc}
+ 0 &amp; -e'_z &amp; e'_y \\  e...
+ ...  -e'_y &amp; e'_x &amp; 0
+ \end{array} \right] {\bf P'} {\bf P}^{-1}. \end{displaymath}" height="75" width="260"></p>
+Thus, there is a very clear linear relationship between a pixel
+and its epipolar line in projective coordinates, and this
+relationship is given by the <em>fundamental</em> matrix <b>F</b>.
+Moreover, any pixel <i>m</i>' on the epipolar line for <i>m</i> satisfies
+the equation
+
+<table align="CENTER" width="100%">
+<tbody><tr valign="MIDDLE"><td></td><td align="CENTER" nowrap="nowrap"><img src="Epipolar%20geometry_archivos/img49.gif" alt="\begin{displaymath}
+\tilde{\bf m'}^{\top} {\bf F} \tilde{\bf m} = 0. \end{displaymath}" height="26" width="102"></td>
+<td align="CENTER">(3)</td></tr>
+</tbody></table>
+<p>
+Now, image points and rays in 
+Euclidean 3-space are related by
+</p><p>
+</p><p align="CENTER"><img src="Epipolar%20geometry_archivos/img50.gif" alt="\begin{displaymath}
+\left[ \begin{array}
+{c}
+ u \\  v \\  1
+ \end{array} \right]...
+ ...rray}
+{c}
+ u' - u'_c \\  v' - v'_c \\  f'
+ \end{array} \right],\end{displaymath}" height="74" width="438"></p>
+so that if <img src="Epipolar%20geometry_archivos/img51.gif" alt="$\tilde{\bf m} =(u, v, 1)^T$" border="0" align="MIDDLE" height="35" width="117"> and <img src="Epipolar%20geometry_archivos/img52.gif" alt="$\tilde{\bf m'}$" border="0" align="BOTTOM" height="19" width="25"> 
+is its corresponding
+image point, then
+
+<p align="CENTER"><img src="Epipolar%20geometry_archivos/img53.gif" alt="\begin{displaymath}
+\tilde{\bf m'}^{\top} \bf A'^{-{\top}}{\bf E} \bf A^{-1} \tilde{\bf m} = 0. \end{displaymath}" height="26" width="182"></p>
+Thus, when the system is calibrated, it is easy to write down the
+relationship between the essential and the fundamental matrices:
+
+<p align="CENTER"><img src="Epipolar%20geometry_archivos/img54.gif" alt="\begin{displaymath}
+{\bf F} = {\bf A}'^{-{\top}}{\bf E}{\bf A}^{-1}. \end{displaymath}" height="26" width="132"></p>
+<p>
+The essential and the fundamental matrices have the following properties:
+</p><ul>
+<li> the fundamental matrix encapsulates both the intrinsic and
+the extrinsic parameters of the camera, whilst the essential matrix
+encapsulates only the extrinsic parameters.
+</li><li> the essential matrix <b>E</b> is a <img src="Epipolar%20geometry_archivos/img29.gif" alt="$3
+\times 3$" border="0" align="MIDDLE" height="28" width="45"> matrix with
+only 5 degrees of freedom. To estimate it using corresponding
+image points, the intrinsic parameters of both cameras must be
+known.
+</li><li> <b>F</b> maps image points to their corresponding epipolar lines,
+that is, <img src="Epipolar%20geometry_archivos/img55.gif" alt="${\bf Fm = l_m}$" border="0" align="MIDDLE" height="30" width="79">, since <img src="Epipolar%20geometry_archivos/img56.gif" alt="${\bf m'^{\top}l_m = m'^{\top}Fm} = 0$" border="0" align="MIDDLE" height="35" width="179">. 
+Likewise,
+<img src="Epipolar%20geometry_archivos/img57.gif" alt="${\bf F^{\top}m' = l_{m'}}$" border="0" align="MIDDLE" height="35" width="99"> since <img src="Epipolar%20geometry_archivos/img58.gif" alt="${\bf l_{m'}^{\top}m} = 0$" border="0" align="MIDDLE" height="35" width="79">.</li><li> <b>F</b> maps epipoles to the origin of the corresponding image
+plane.
+</li><li> <b>F</b> has 7 degrees of freedom. There are 9 matrix elements,
+but only their ratio is significant, which leaves 8 degrees of freedom.
+In addition, the constraint that det<b>F</b> = 0 leaves only 7.
+</li></ul><hr>
+<!--Navigation Panel-->
+<a name="tex2html45" href="http://homepages.inf.ed.ac.uk/rbf/CVonline/LOCAL_COPIES/OWENS/LECT10/node4.html">
+<img alt="next" src="Epipolar%20geometry_archivos/next_motif.gif" border="0" align="BOTTOM" height="24" width="37"></a> 
+<a name="tex2html43" href="http://homepages.inf.ed.ac.uk/rbf/CVonline/LOCAL_COPIES/OWENS/LECT10/lect10.html">
+<img alt="up" src="Epipolar%20geometry_archivos/up_motif.gif" border="0" align="BOTTOM" height="24" width="26"></a> 
+<a name="tex2html37" href="http://homepages.inf.ed.ac.uk/rbf/CVonline/LOCAL_COPIES/OWENS/LECT10/node2.html">
+<img alt="previous" src="Epipolar%20geometry_archivos/previous_motif.gif" border="0" align="BOTTOM" height="24" width="63"></a>   
+<br>
+<b> Next:</b> <a name="tex2html46" href="http://homepages.inf.ed.ac.uk/rbf/CVonline/LOCAL_COPIES/OWENS/LECT10/node4.html">Calculating the fundamental matrix</a>
+<b> Up:</b> <a name="tex2html44" href="http://homepages.inf.ed.ac.uk/rbf/CVonline/LOCAL_COPIES/OWENS/LECT10/lect10.html">Computer Vision IT412</a>
+<b> Previous:</b> <a name="tex2html38" href="http://homepages.inf.ed.ac.uk/rbf/CVonline/LOCAL_COPIES/OWENS/LECT10/node2.html">Self-calibration and the fundamental</a>
+<!--End of Navigation Panel-->
+<address>
+<a href="mailto:robyn@cs.uwa.edu.au">Robyn Owens</a>
+<br> 
+<i>10/29/1997</i>
+</address>
+
+
+</body></html>
