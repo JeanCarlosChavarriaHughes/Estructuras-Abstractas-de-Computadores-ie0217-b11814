@@ -8,5 +8,5 @@ test:
 	evince triangulacion.pdf
 
 clean:
-	rm -r *.log *.aux *.pdf *.gz *.toc *.out *.lof *.blg *.bbl
+	rm -r *.log *.aux *.gz *.toc *.out *.lof *.blg *.bbl
 

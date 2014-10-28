@@ -51,7 +51,7 @@
 \rfoot{Universidad de Costa Rica}
 
 \author{Autor: \\ \\Jean Carlos Chavarría Hughes, B11814\\ \\ \\ \\ \\Profesor:\\ \\Dr. rer. nat. Francisco Siles Canales \vspace*{2.0in}}
-\title{Universidad de Costa Rica\\{\small Escuela de Ingeniería eléctrica\\ IE-0217 - Estructuras abstractas de datos y algor\' itmos para ingeniería\\II ciclo 2014\\\vspace*{0.55in} Investigación bibliográfica II}\\ Triangulac\' on geom\' etrica, con enf\' asis en el MoCap.
+\title{Universidad de Costa Rica\\{\small Escuela de Ingeniería eléctrica\\ IE-0217 - Estructuras abstractas de datos y algor\' itmos para ingeniería\\II ciclo 2014\\\vspace*{0.55in} Investigación bibliográfica II}\\ Triangulaci\' on geom\' etrica, con enf\' asis en el MoCap.
 \vspace*{1.35in}}
 
 %% Settings of tikz figures
@@ -74,19 +74,19 @@
 \newpage
 
 \section{Resumen}
-En este proyecto se presentan una investigaci\' on bibliogr\' afica de la triangulaci\' on como t\' ecnica geom\' etrica para la determinaci\' on de posiciones de puntos, medidas de distancias o \' areas de figuras. As\' i como tambi\' en su implementaci\' on en las t\' ecnicas de MoCaps \' opticos con m\' as de una c\' amara, como por ejemplo el OptiTrack.
+En este proyecto se presentan una investigaci\' on bibliogr\' afica de la triangulaci\' on como t\' ecnica geom\' etrica para la determinaci\' on de las posiciones de puntos, medidas de distancias o \' areas de figuras. Espec\' ificamente en su implementaci\' on en las t\' ecnicas de MoCaps \' opticos con m\' as de una c\' amara, como por ejemplo el OptiTrack.
 
 \section{T\' itulo}
 El uso de la triangulaci\' on en el MoCap.
 
 \section{Problema Principal}
-El desconomiento interno de los m\' etodos internos que se implementan en dispositivos tecnol\' ogicos, como por ejemplo el OptiTrack generalmente no tiene consecuencias que lamentar. Sin embargo cuando se refiere a usos de investigaci\' on acad\' emica, resulta crucial conocer a fondo como se realizan todos los m\' etodos para lograr explotar al m\' aximo sus capacidades y obtener el m\' aximo desempe\~ no posible.
+El desconomiento de los m\' etodos internos que se implementan en dispositivos tecnol\' ogicos, como por ejemplo el OptiTrack generalmente no tiene consecuencias que lamentar. Sin embargo cuando se refiere a usos de investigaci\' on acad\' emica, resulta crucial conocer a fondo como se realizan todos los m\' etodos para lograr explotar al m\' aximo sus capacidades y obtener el m\' aximo desempe\~ no posible.
 
 \section{Justificación}
-Con esta investigaci\' on se busca resolver el problema que existe en la actualidad dentro de la Escuela de Ingenier\' ia El\' ectrica relacionado con el desconocimiento del funcionamiento interno de ciertos equipos tecnol\' ogicos, espec\' ificamente brindar una descripci\' on breve y precisa del c\' omo se implementa la triangulaci\' on en el OptiTrack que se encuentra dentro del Laboratorio de Investigaci\' on: PRISLAB.
+Con esta investigaci\' on se busca resolver el problema que existe en la actualidad dentro de la Escuela de Ingenier\' ia El\' ectrica relacionado con el desconocimiento del funcionamiento interno de ciertos equipos tecnol\' ogicos, espec\' ificamente brindar una descripci\' on breve y precisa del c\' omo se implementa la triangulaci\' on en el OptiTrack que se encuentra dentro del Laboratorio de Investigaci\' on: PRISLAB, y de esta manera brindar un documento que permita comprender la implementaci\' on de dicha t\' ecnica y posibles alcances. en otra \' areas.
 
 \section{Metodolog\' ia}
-La presente investigaci\' on es de car\' acter bibliogr\' afico que se centra en la recolecci\' on principal de informaci\' on en libros, art\' iculos y la p\' agina virtual principal del OptiTrack.
+La presente investigaci\' on es de car\' acter bibliogr\' afico, se centra en la recolecci\' on de material principal  de informaci\' on como libros, art\' iculos y la p\' agina virtual principal del OptiTrack.
 
 \section{Objetivos}
 \subsection{Objetivo General}
@@ -104,12 +104,12 @@ Presentar una base te\' orica comprensible sobre la t\' ecnica geom\' etrica de 
 
 \section{Introducci\' on}
 
-El m\' etodo de la triangulaci\' on de ha utilizado desde la antiguidad para medir distancias y posiciones por los antiguos egipcios y debido a su gran capacidad, la t\' ecnica fue evolucionando a trav\' es de los a\~ nos hasta llegar a las t\' ecnicas modernas de redes de triangulaci\' on que se utilizan en la actualidad, como por ejemplo los sistemas de posicionamiento global, GPS.
+El m\' etodo de la triangulaci\' on se ha utilizado desde la antiguidad para medir distancias y posiciones por los antiguos egipcios y debido a su gran capacidad, la t\' ecnica fue evolucionando a trav\' es de los a\~ nos hasta llegar a las t\' ecnicas modernas de redes de triangulaci\' on que se utilizan en la actualidad, como por ejemplo los sistemas de posicionamiento global, GPS.
 
-Se puede hablar de que los grades investigadores y pioneras del tema son: Snell, Tales, Pei Xiu, Liu Hui y Picard.
+Se puede hablar de que los grades investigadores y pioneros del tema son: Snell, Tales, Pei Xiu, Liu Hui y Picard.
 En lo que concierne a la t\' ecnica del \textbf{Motion Capture}, lo que se hace en t\' erminos generales es implementar marcadores especiales como reflectores de luz que envien de regreso un rayo de luz hacia la c\' amara, y mediante el proceso de la triangulaci\' on con varias c\' amaras, la posici\' on de los marcadores se almacenan en puntos (X,Y,Z), tal como se puede observar en la Figura \ref{fig:usoMOCAP}.
 
-Por otra parte, la geometr\' ia epipolar es un surgimiento de la necesirar del estudio de visi\' on est\' erea en su total generalidad, mediante t\' ecnicas de c\' alculo avanzada y el uso de la matriz fundamental y la matriz escencial.
+Por otra parte, la geometr\' ia epipolar es un surgimiento de la necesidad del estudio de visi\' on est\' erea en su total generalidad, mediante t\' ecnicas de c\' alculo avanzada y el uso de la matriz fundamental y la matriz escencial.
 
 \begin{figure}[hbtp]
 \caption{Uso del MOCAP de la Escuela}
@@ -122,7 +122,7 @@ Por otra parte, la geometr\' ia epipolar es un surgimiento de la necesirar del e
 
 \section{Desarrollo}
 %%Capitulo 1
-\subsection{Capitulo 1:Pormenorizaci \'on de la triangulaci\' on trigonom\' etrica}
+\subsection{Capitulo 1:Pormenorizaci\' on de la triangulaci\' on trigonom\' etrica}
 La resolución de triángulos es un ejercicio matemático de infinidad de aplicaciones prácticas. Una de estas aplicaciones, quizá la más usada en distintos ámbitos es el cálculo de distancias que, de manera directa, serían imposibles de medir por problemas de situación, de entorno. 
 En t\' erminos generales, la t\' ecnica consiste en completar triángulos de manera que sean resolubles, es decir, que se conozcan los elementos suficientes como para calcular los demás, y aplicar los teoremas de seno o del coseno y la definición de las razones trigonométricas para hacer el resto. 
 
@@ -131,7 +131,7 @@ Este m\' etodo se remonta desde los a\~ nos 1625, con el cient\' ifico Giovanni 
 La demostraci\' on formal, se basa en la geometr\' ia Euclideana y la ley de senos y cosenos se puede observar en el documento:  \url{http://scimath.unl.edu/MIM/files/MATExamFiles/Sehnert_FinalMEXP_LA_WS.pdf}
  pero el enfoque de este documento pretende dar una explicaci\' on menos formal del m\' etodo por lo que se omite su demostraci\' on. 
  
- Se puede entender f\'  acilmente con el ejemplo de la Figura \ref{fig:ejemplo1}, donde se tiene un punto B, del cual se desconoce su ubicaci\' on en el espacio, pero se cuenta tres dispositivos que son capaces de determinar la distancia entre tal dispositivo y el punto B. As\' i, se forman tres circunferencias conc\' entricas en cada dispositivo, y de radio igual a la distancia entre dicho dispositivo y el punto B. Entonces la intersecci\' on de las tres circunferencias es la posici\' on del punto B en el espacio.
+ Se puede entender f\'  acilmente con el ejemplo de la Figura \ref{fig:ejemplo1}, donde se tiene un punto B, del cual se desconoce su ubicaci\' on en el espacio, pero se cuenta tres dispositivos que son capaces de determinar la distancia entre tal dispositivo y el punto B. As\' i, se forman tres circunferencias conc\' entricas en cada dispositivo, y de radio igual a la distancia entre dicho dispositivo y el punto B. Entonces la intersecci\' on de las tres circunferencias es la posici\' onlos  del punto B en el espacio.
 
 \begin{figure}[hbtp]
 \caption{Ejemplo de triangulaci\' on}
@@ -160,8 +160,8 @@ Las c\' amaras de captura de movimiento son colocadas alrededor del volumen en p
 
 La obtenci\' on de esta informaci\' on no es trivial, de hecho se lleva a cabo mediante el seguimiento óptico, la cual utiliza una señal de emisión de luz o marcadores pasivos a detectar a la persona u objeto. Con el marcador, el movimiento de las imágenes capturadas  se puede calcular por triangulación, as\' i como tambi\' en la posición de los marcadores en 3D. 
 Métodos estereoscópicas a menudo hacen que sea más fácil de detectar la localizaci\' on del objeto, ya que el objeto puede ser detectado a partir de la triangulación de con la posición de la cámara.
-
-Adem\' as, se menciona que aunque la t\' ecnica solo puede ser implementada por dos c\' amaras, se necesitan tres y esto es debido a que si en un momento de que se deba determinar la interseccion entre dos lineas, otro marcados esta estorbando, entonces se use una tercer camara para evitar el problema.
+los 
+Adem\' as, se menciona que aunque la t\' ecnica solo puede ser implementada por dos c\' amaras, se necesitan tres y esto es debido a que si en un momento de que se deba determinar la intersecci\' on entre dos lineas, otro marcados esta estorbando, entonces se use una tercer c\' amara para evitar el problema.
 
 En t\' erminos generales, dentro del proceso de seguimiento de marcadores hasta la implementaci\' on del modelo abstracto, se siguen una serie de pasos por parte del MoCap, los cuales se pueden emnumerar como:
 
@@ -223,7 +223,7 @@ Alternativamente este conocimiento tambi\' en se puede usar para verificar s\' i
 \begin{figure}[hbtp]
 \caption{Principio del plano epipolar}
 \centering
-\includegraphics[scale=0.21]{imagenes/planoEpipolar.png}
+\includegraphics[scale=0.4]{imagenes/planoEpipolar.png}
 \label{fig:epipolar}
 \end{figure}
 
